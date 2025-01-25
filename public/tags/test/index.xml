@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Test on 哥布林 . 一起 . 強大</title>
+    <link>//localhost:1313/tags/test/</link>
+    <description>Recent content in Test on 哥布林 . 一起 . 強大</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 13 Jan 2025 15:16:56 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>測試文章</title>
+      <link>//localhost:1313/posts/first/</link>
+      <pubDate>Mon, 13 Jan 2025 15:16:56 +0800</pubDate>
+      <guid>//localhost:1313/posts/first/</guid>
+      <description>&lt;h1 id=&#34;這是我的第一篇部落格文章&#34;&gt;這是我的第一篇部落格文章&lt;/h1&gt;
+&lt;h2 id=&#34;尚在學習&#34;&gt;尚在學習&lt;/h2&gt;
+&lt;p&gt;這是一則簡單的句子哈哈。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

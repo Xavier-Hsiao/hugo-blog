@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>電腦科學 on 哥布林 . 一起 . 強大</title>
+    <link>//localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/</link>
+    <description>Recent content in 電腦科學 on 哥布林 . 一起 . 強大</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 18 Jan 2025 11:54:14 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>迴圈 - 以 Python 為例</title>
+      <link>//localhost:1313/posts/loop/</link>
+      <pubDate>Sat, 18 Jan 2025 11:54:14 +0800</pubDate>
+      <guid>//localhost:1313/posts/loop/</guid>
+      <description>&lt;h2 id=&#34;為什麼要有迴圈&#34;&gt;為什麼要有迴圈？&lt;/h2&gt;
+&lt;p&gt;原因只有一個，那就是人類很懶，假設今天要輸出 100 萬筆資料，我們需要一筆一筆手刻出來嗎？在被主管開除之前，我們應該會先無聊到開始裸奔吧。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Patrick Star wants to run naked&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/img/patrick_star_nacked.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;這個時候善用迴圈，用一組程式碼就能搞定大量的重複工作：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1_000_000&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(i)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;拆解-for-迴圈運作流程&#34;&gt;拆解 for 迴圈運作流程&lt;/h2&gt;
+&lt;p&gt;上面以 &lt;code&gt;for&lt;/code&gt; 關鍵字起頭的迴圈被稱為 &lt;strong&gt;for 迴圈&lt;/strong&gt;，除了 Python 之外，Golang、JavaScript 等等眾多程式語言也都有類似的語法。本篇文章就以 Python 為例，拆解 for 迴圈的運作流程。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;迴圈從 i 等於 0 啟動 -&amp;gt; &lt;code&gt;i in range(0)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;檢查若 i 不少於 1,000,000 就跳出迴圈運作 -&amp;gt; &lt;code&gt;range(0, 1_000_000)&lt;/code&gt;，否則繼續執行以下動作:
+&lt;ul&gt;
+&lt;li&gt;列印出 i 變數 -&amp;gt; &lt;code&gt;print(i)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;i 變數值加一 (&lt;code&gt;range&lt;/code&gt; 預設會加一)&lt;/li&gt;
+&lt;li&gt;回到第二步驟檢查 i 是否不少於 1,000,000&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最後我們會看到 0 ~ 999,999 列印出來。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 Python 中，&lt;code&gt;range(a, b)&lt;/code&gt; 會包含 &lt;code&gt;a&lt;/code&gt; 但不包含 &lt;code&gt;b&lt;/code&gt;。所以 &lt;code&gt;range(0, 1_000_000)&lt;/code&gt; 才不會列印出 1,000,000。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>作用域 - 以 Python 為例</title>
+      <link>//localhost:1313/posts/scope/</link>
+      <pubDate>Wed, 15 Jan 2025 15:16:56 +0800</pubDate>
+      <guid>//localhost:1313/posts/scope/</guid>
+      <description>&lt;h2 id=&#34;什麼是作用域&#34;&gt;什麼是作用域？&lt;/h2&gt;
+&lt;p&gt;作用域 (Scope) 是指&lt;strong&gt;變數或函示名稱可以被使用的範圍&lt;/strong&gt;。我自己是想像成結界，外面的世界無法接觸、取用到結界內的萬事萬物。&lt;/p&gt;
+&lt;p&gt;舉例來說，當我們在函式中建立一個變數，包含給函示參數，那這些資料就無法在函示的作用域範圍之外使用，會跑出該變數沒有定義的錯誤。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(x, y):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; y
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; add(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(x) &lt;span style=&#34;color:#75715e&#34;&gt;# ERROR! &amp;#34;name &amp;#39;x&amp;#39; is not defined&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;
+上述範例中，&lt;code&gt;x&lt;/code&gt; 和 &lt;code&gt;y&lt;/code&gt; 都是 &lt;code&gt;add&lt;/code&gt; 函式的參數，因此只能在 &lt;code&gt;add&lt;/code&gt; 函式作用域範圍內被使用。我們在作用域之外嘗試列印 &lt;code&gt;x&lt;/code&gt;，Python 的編譯器會跳出 &lt;code&gt;x&lt;/code&gt; 沒有被定義的錯誤警告。&lt;/p&gt;
+&lt;h2 id=&#34;全域作用域&#34;&gt;全域作用域&lt;/h2&gt;
+&lt;p&gt;我們知道函式中所定義的變數和參數，是無法在函式作用域以外被使用的。但如果今天有多個函式都要用同一組變數該怎麼辦呢？我們可以在全域環境中定義變數，這樣每個函式都能夠取用該變數了。&lt;/p&gt;
+&lt;p&gt;以結界來比喻，我覺得就像結界內的人可以把外面世界的物品拉進去，但外部世界的人無法看透結界內發生什麼事情，自然也就無法取用結界內的物品了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;outside_stuff &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pull me in baby!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pull_outside_stuff_into_function_scope&lt;/span&gt;(target):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; outside_stuff &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; - success&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(pull_outside_stuff(outside_stuff))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;
+上述範例中，&lt;code&gt;pull_outside_stuff_into_function_scope&lt;/code&gt; 最終會成功回傳 &lt;code&gt;pull me in baby! - success&lt;/code&gt;。因為 &lt;code&gt;outside_stuff&lt;/code&gt; 變數是在權域作用域 (global scope) 定義的，所以能夠被函式拉到函式作用域當中使用。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
