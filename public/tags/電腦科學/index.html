@@ -9,20 +9,20 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="//localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/">
+<link rel="canonical" href="http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/">
 <meta name="google-site-verification" content="XYZabc">
 <meta name="yandex-verification" content="XYZabc">
 <meta name="msvalidate.01" content="XYZabc">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.7ecba9155679497232a52a03a6854a6ea53ce363fa03502fa95779f1657d7a2e.css" integrity="sha256-fsupFVZ5SXIypSoDpoVKbqU842P6A1AvqVd58WV9ei4=" rel="preload stylesheet" as="style">
-<link rel="icon" href="//localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="//localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/index.xml">
-<link rel="alternate" hreflang="zh" href="//localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/index.xml">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/">
 <noscript>
     <style>
         #theme-toggle,
@@ -77,7 +77,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="//localhost:1313/" accesskey="h" title="哥布林 . 一起 . 強大 (Alt + H)">哥布林 . 一起 . 強大</a>
+            <a href="http://localhost:1313/" accesskey="h" title="哥布林 . 一起 . 強大 (Alt + H)">哥布林 . 一起 . 強大</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -103,12 +103,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="//localhost:1313/posts/" title="文章">
+                <a href="http://localhost:1313/posts/" title="文章">
                     <span>文章</span>
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/tags/" title="標籤">
+                <a href="http://localhost:1313/tags/" title="標籤">
                     <span>標籤</span>
                 </a>
             </li>
@@ -116,7 +116,7 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="//localhost:1313/">首頁</a>&nbsp;»&nbsp;<a href="//localhost:1313/tags/">標籤頁</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">主页</a>&nbsp;»&nbsp;<a href="http://localhost:1313/tags/">標籤頁</a></div>
   <h1>
     電腦科學
   </h1>
@@ -128,49 +128,15 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>
-      
-       ...
-    </p>
+    <p>為什麼要有迴圈？ 原因只有一個，那就是人類很懶，假設今天要輸出 100 萬筆資料，我們需要一筆一筆手刻出來嗎？在被主管開除之前，我們應該會先無聊到開始裸奔吧。
+這個時候善用迴圈，用一組程式碼就能搞定大量的重複工作：
+for i in range(0, 1_000_000): print(i) 拆解 for 迴圈運作流程 上面以 for 關鍵字起頭的迴圈被稱為 for 迴圈，除了 Python 之外，Golang、JavaScript 等等眾多程式語言也都有類似的語法。本篇文章就以 Python 為例，拆解 for 迴圈的運作流程。
+迴圈從 i 等於 0 啟動 -&gt; i in range(0) 檢查若 i 不少於 1,000,000 就跳出迴圈運作 -&gt; range(0, 1_000_000)，否則繼續執行以下動作: 列印出 i 變數 -&gt; print(i) i 變數值加一 (range 預設會加一) 回到第二步驟檢查 i 是否不少於 1,000,000 最後我們會看到 0 ~ 999,999 列印出來。
+在 Python 中，range(a, b) 會包含 a 但不包含 b。所以 range(0, 1_000_000) 才不會列印出 1,000,000。
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-18 11:54:14 +0800 CST'>一月 18, 2025</span></footer>
-  <a
-    class="entry-link"
-    aria-label="post link to 迴圈 - 以 Python 為例"
-    href="//localhost:1313/posts/loop/"
-  ></a>
-  
-  <div class="tags">
-    <div style="display: flex; flex-wrap: wrap; justify-content: flex-end">
-      
-      <a
-        href="/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        電腦科學
-      </a>
-      
-      <a
-        href="/tags/python"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        Python
-      </a>
-      
-    </div>
-  </div>
+  <a class="entry-link" aria-label="post link to 迴圈 - 以 Python 為例" href="http://localhost:1313/posts/programming/python/loop/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -179,54 +145,21 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>
-      
-       
-    </p>
+    <p>什麼是作用域？ 作用域 (Scope) 是指變數或函示名稱可以被使用的範圍。我自己是想像成結界，外面的世界無法接觸、取用到結界內的萬事萬物。
+舉例來說，當我們在函式中建立一個變數，包含給函示參數，那這些資料就無法在函示的作用域範圍之外使用，會跑出該變數沒有定義的錯誤。
+def add(x, y): return x &#43; y result = add(2, 6) print(x) # ERROR! &#34;name &#39;x&#39; is not defined&#34; 上述範例中，x 和 y 都是 add 函式的參數，因此只能在 add 函式作用域範圍內被使用。我們在作用域之外嘗試列印 x，Python 的編譯器會跳出 x 沒有被定義的錯誤警告。
+全域作用域 我們知道函式中所定義的變數和參數，是無法在函式作用域以外被使用的。但如果今天有多個函式都要用同一組變數該怎麼辦呢？我們可以在全域環境中定義變數，這樣每個函式都能夠取用該變數了。
+以結界來比喻，我覺得就像結界內的人可以把外面世界的物品拉進去，但外部世界的人無法看透結界內發生什麼事情，自然也就無法取用結界內的物品了。
+outside_stuff = &#34;pull me in baby!&#34; def pull_outside_stuff_into_function_scope(target): return outside_stuff &#43; &#34; - success&#34; print(pull_outside_stuff(outside_stuff)) 上述範例中，pull_outside_stuff_into_function_scope 最終會成功回傳 pull me in baby! - success。因為 outside_stuff 變數是在權域作用域 (global scope) 定義的，所以能夠被函式拉到函式作用域當中使用。
+</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-15 15:16:56 +0800 CST'>一月 15, 2025</span></footer>
-  <a
-    class="entry-link"
-    aria-label="post link to 作用域 - 以 Python 為例"
-    href="//localhost:1313/posts/scope/"
-  ></a>
-  
-  <div class="tags">
-    <div style="display: flex; flex-wrap: wrap; justify-content: flex-end">
-      
-      <a
-        href="/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        電腦科學
-      </a>
-      
-      <a
-        href="/tags/python"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        Python
-      </a>
-      
-    </div>
-  </div>
+  <a class="entry-link" aria-label="post link to 作用域 - 以 Python 為例" href="http://localhost:1313/posts/programming/python/scope/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="//localhost:1313/">哥布林 . 一起 . 強大</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">哥布林 . 一起 . 強大</a></span> · 
 
     <span>
         Powered by

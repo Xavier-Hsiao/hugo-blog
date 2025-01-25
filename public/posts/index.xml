@@ -2,30 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>文章列表 on 哥布林 . 一起 . 強大</title>
-    <link>//localhost:1313/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in 文章列表 on 哥布林 . 一起 . 強大</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>zh-tw</language>
     <lastBuildDate>Thu, 23 Jan 2025 22:15:24 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>初探 Python 元組 (List)</title>
-      <link>//localhost:1313/posts/tuples/</link>
+      <title>初探 Python 元組 (Tuples)</title>
+      <link>http://localhost:1313/posts/programming/python/tuples/</link>
       <pubDate>Thu, 23 Jan 2025 22:15:24 +0800</pubDate>
-      <guid>//localhost:1313/posts/tuples/</guid>
+      <guid>http://localhost:1313/posts/programming/python/tuples/</guid>
       <description>&lt;h2 id=&#34;什麼是元組-tuples&#34;&gt;什麼是元組 (Tuples)？&lt;/h2&gt;
 &lt;p&gt;元組是 Python 其中一種資料集合的型別，具有以下兩種特色：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;資料有序排列，可用索引提取資料&lt;/li&gt;
 &lt;li&gt;資料無法變更&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;所以基本上，我們可以將元組看作是&lt;strong&gt;固定長定、無法變更的列表&lt;/strong&gt;。&lt;/p&gt;</description>
+&lt;p&gt;所以基本上，我們可以將元組看作是&lt;strong&gt;固定長定、無法變更的列表&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在建立列表時，我們通常不會置入不同型別的資料，但這在元組中不成問題，因為元組的長度是固定的，所以能輕易追蹤哪個索引儲存哪種型別的資料。&lt;/p&gt;
+&lt;p&gt;和列表的 &lt;code&gt;[]&lt;/code&gt; 不同，元組需要使用 &lt;code&gt;()&lt;/code&gt; 來建立：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;my_tuple &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;this is a tuple&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;45&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(my_tuple[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# this is a tuple&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(my_tuple[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 45&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(my_tuple[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# True&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;元組通常用來儲存少量、固定不變的資料。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;元組和列表混用&#34;&gt;元組和列表混用&lt;/h2&gt;
+&lt;p&gt;由於元組本身就是資料的容器，所以我們&lt;strong&gt;可以將多個元組儲存在列表當中&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;語法上和一般資料相同，用半形逗號區隔不同的元組，然後每個元組在列表中都有自己的索引。也就是說，當我們要提取列表中的元組資料，第一個索引代表要選取哪個元組，而第二個索引代表要選取該元組中哪筆資料。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;my_tuples &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;this is the first tuple in the list&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;45&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;),(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;this is the second tuple in the list&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;21&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(my_tuples[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]) &lt;span style=&#34;color:#75715e&#34;&gt;# this is the first tuple in the list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(my_tuples[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]) &lt;span style=&#34;color:#75715e&#34;&gt;# 45&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(my_tuples[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]) &lt;span style=&#34;color:#75715e&#34;&gt;# this is the second tuple in the list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(my_tuples[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;]) &lt;span style=&#34;color:#75715e&#34;&gt;# False&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;開箱元組&#34;&gt;開箱元組&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Tuple Unpacking&lt;/code&gt; 好像網路上有人翻譯成元組拆包，但我自己是習慣用「開箱元組」來指稱，因為開箱聽起來比較開心。&lt;/p&gt;</description>
     </item>
     <item>
       <title>初探 Python 列表 (List) - 續</title>
-      <link>//localhost:1313/posts/list_continued/</link>
+      <link>http://localhost:1313/posts/programming/python/list_continued/</link>
       <pubDate>Mon, 20 Jan 2025 22:30:06 +0800</pubDate>
-      <guid>//localhost:1313/posts/list_continued/</guid>
+      <guid>http://localhost:1313/posts/programming/python/list_continued/</guid>
       <description>&lt;h2 id=&#34;不靠索引也能提取列表資料&#34;&gt;不靠索引也能提取列表資料&lt;/h2&gt;
 &lt;p&gt;如果不需要更新列表中的資料，我們其實可以用更精簡的語法去遞迴列表。&lt;code&gt;in&lt;/code&gt; 關鍵字負責宣告 &lt;code&gt;friend&lt;/code&gt; 變數，儲存每一次遞迴所提取的列表資料：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;friends &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Cute Goblin&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Big Goblin&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Small Goblin&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Taipei Goblin&amp;#34;&lt;/span&gt;]
@@ -64,9 +88,9 @@
     </item>
     <item>
       <title>初探 Python 列表 (List)</title>
-      <link>//localhost:1313/posts/list/</link>
+      <link>http://localhost:1313/posts/programming/python/list/</link>
       <pubDate>Sun, 19 Jan 2025 15:34:41 +0800</pubDate>
-      <guid>//localhost:1313/posts/list/</guid>
+      <guid>http://localhost:1313/posts/programming/python/list/</guid>
       <description>&lt;h2 id=&#34;什麼是列表&#34;&gt;什麼是列表？&lt;/h2&gt;
 &lt;p&gt;程式語言通常都會有&lt;strong&gt;負責組織、儲存多筆資料&lt;/strong&gt;的資料型別。在 JavaScript 和 Golang 中，這種資料型別被稱為陣列 (array)，而 Python 則是列表 (list)。&lt;/p&gt;
 &lt;p&gt;Python 中的列表用 &lt;code&gt;[...]&lt;/code&gt; 宣告，每項資料中間以半形逗號區隔：&lt;/p&gt;
@@ -104,12 +128,12 @@
     </item>
     <item>
       <title>迴圈 - 以 Python 為例</title>
-      <link>//localhost:1313/posts/loop/</link>
+      <link>http://localhost:1313/posts/programming/python/loop/</link>
       <pubDate>Sat, 18 Jan 2025 11:54:14 +0800</pubDate>
-      <guid>//localhost:1313/posts/loop/</guid>
+      <guid>http://localhost:1313/posts/programming/python/loop/</guid>
       <description>&lt;h2 id=&#34;為什麼要有迴圈&#34;&gt;為什麼要有迴圈？&lt;/h2&gt;
 &lt;p&gt;原因只有一個，那就是人類很懶，假設今天要輸出 100 萬筆資料，我們需要一筆一筆手刻出來嗎？在被主管開除之前，我們應該會先無聊到開始裸奔吧。&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Patrick Star wants to run naked&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/img/patrick_star_nacked.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Patrick Star wants to run naked&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/img/patrick_star_nacked.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;這個時候善用迴圈，用一組程式碼就能搞定大量的重複工作：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1_000_000&lt;/span&gt;):
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(i)
@@ -132,9 +156,9 @@
     </item>
     <item>
       <title>作用域 - 以 Python 為例</title>
-      <link>//localhost:1313/posts/scope/</link>
+      <link>http://localhost:1313/posts/programming/python/scope/</link>
       <pubDate>Wed, 15 Jan 2025 15:16:56 +0800</pubDate>
-      <guid>//localhost:1313/posts/scope/</guid>
+      <guid>http://localhost:1313/posts/programming/python/scope/</guid>
       <description>&lt;h2 id=&#34;什麼是作用域&#34;&gt;什麼是作用域？&lt;/h2&gt;
 &lt;p&gt;作用域 (Scope) 是指&lt;strong&gt;變數或函示名稱可以被使用的範圍&lt;/strong&gt;。我自己是想像成結界，外面的世界無法接觸、取用到結界內的萬事萬物。&lt;/p&gt;
 &lt;p&gt;舉例來說，當我們在函式中建立一個變數，包含給函示參數，那這些資料就無法在函示的作用域範圍之外使用，會跑出該變數沒有定義的錯誤。&lt;/p&gt;
@@ -159,9 +183,9 @@
     </item>
     <item>
       <title>自由書寫術 - 找回靈感的絕佳方法</title>
-      <link>//localhost:1313/posts/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</link>
+      <link>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</link>
       <pubDate>Mon, 13 Jan 2025 15:16:56 +0800</pubDate>
-      <guid>//localhost:1313/posts/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</guid>
+      <guid>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</guid>
       <description>學會自由書寫，主動挖掘靈感，解放大腦內的豐富素材。不用再煩惱沒有好想法了！</description>
     </item>
   </channel>

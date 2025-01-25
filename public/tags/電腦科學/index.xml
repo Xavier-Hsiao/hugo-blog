@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>電腦科學 on 哥布林 . 一起 . 強大</title>
-    <link>//localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/</link>
+    <link>http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/</link>
     <description>Recent content in 電腦科學 on 哥布林 . 一起 . 強大</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>zh-tw</language>
     <lastBuildDate>Sat, 18 Jan 2025 11:54:14 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>迴圈 - 以 Python 為例</title>
-      <link>//localhost:1313/posts/loop/</link>
+      <link>http://localhost:1313/posts/programming/python/loop/</link>
       <pubDate>Sat, 18 Jan 2025 11:54:14 +0800</pubDate>
-      <guid>//localhost:1313/posts/loop/</guid>
+      <guid>http://localhost:1313/posts/programming/python/loop/</guid>
       <description>&lt;h2 id=&#34;為什麼要有迴圈&#34;&gt;為什麼要有迴圈？&lt;/h2&gt;
 &lt;p&gt;原因只有一個，那就是人類很懶，假設今天要輸出 100 萬筆資料，我們需要一筆一筆手刻出來嗎？在被主管開除之前，我們應該會先無聊到開始裸奔吧。&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Patrick Star wants to run naked&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/img/patrick_star_nacked.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Patrick Star wants to run naked&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/img/patrick_star_nacked.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;這個時候善用迴圈，用一組程式碼就能搞定大量的重複工作：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1_000_000&lt;/span&gt;):
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(i)
@@ -38,9 +38,9 @@
     </item>
     <item>
       <title>作用域 - 以 Python 為例</title>
-      <link>//localhost:1313/posts/scope/</link>
+      <link>http://localhost:1313/posts/programming/python/scope/</link>
       <pubDate>Wed, 15 Jan 2025 15:16:56 +0800</pubDate>
-      <guid>//localhost:1313/posts/scope/</guid>
+      <guid>http://localhost:1313/posts/programming/python/scope/</guid>
       <description>&lt;h2 id=&#34;什麼是作用域&#34;&gt;什麼是作用域？&lt;/h2&gt;
 &lt;p&gt;作用域 (Scope) 是指&lt;strong&gt;變數或函示名稱可以被使用的範圍&lt;/strong&gt;。我自己是想像成結界，外面的世界無法接觸、取用到結界內的萬事萬物。&lt;/p&gt;
 &lt;p&gt;舉例來說，當我們在函式中建立一個變數，包含給函示參數，那這些資料就無法在函示的作用域範圍之外使用，會跑出該變數沒有定義的錯誤。&lt;/p&gt;

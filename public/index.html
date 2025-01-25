@@ -10,20 +10,20 @@
 
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="//localhost:1313/">
+<link rel="canonical" href="http://localhost:1313/">
 <meta name="google-site-verification" content="XYZabc">
 <meta name="yandex-verification" content="XYZabc">
 <meta name="msvalidate.01" content="XYZabc">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.7ecba9155679497232a52a03a6854a6ea53ce363fa03502fa95779f1657d7a2e.css" integrity="sha256-fsupFVZ5SXIypSoDpoVKbqU842P6A1AvqVd58WV9ei4=" rel="preload stylesheet" as="style">
-<link rel="icon" href="//localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="//localhost:1313/index.xml">
-<link rel="alternate" hreflang="zh" href="//localhost:1313/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/">
 <noscript>
     <style>
         #theme-toggle,
@@ -78,7 +78,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="//localhost:1313/" accesskey="h" title="哥布林 . 一起 . 強大 (Alt + H)">哥布林 . 一起 . 強大</a>
+            <a href="http://localhost:1313/" accesskey="h" title="哥布林 . 一起 . 強大 (Alt + H)">哥布林 . 一起 . 強大</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -104,12 +104,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="//localhost:1313/posts/" title="文章">
+                <a href="http://localhost:1313/posts/" title="文章">
                     <span>文章</span>
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/tags/" title="標籤">
+                <a href="http://localhost:1313/tags/" title="標籤">
                     <span>標籤</span>
                 </a>
             </li>
@@ -167,36 +167,18 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>
-      
-       ...
-    </p>
+    <p>什麼是元組 (Tuples)？ 元組是 Python 其中一種資料集合的型別，具有以下兩種特色：
+資料有序排列，可用索引提取資料 資料無法變更 所以基本上，我們可以將元組看作是固定長定、無法變更的列表。
+在建立列表時，我們通常不會置入不同型別的資料，但這在元組中不成問題，因為元組的長度是固定的，所以能輕易追蹤哪個索引儲存哪種型別的資料。
+和列表的 [] 不同，元組需要使用 () 來建立：
+my_tuple = (&#34;this is a tuple&#34;, 45, True) print(my_tuple[0]) # this is a tuple print(my_tuple[1]) # 45 print(my_tuple[2]) # True 元組通常用來儲存少量、固定不變的資料。
+元組和列表混用 由於元組本身就是資料的容器，所以我們可以將多個元組儲存在列表當中。
+語法上和一般資料相同，用半形逗號區隔不同的元組，然後每個元組在列表中都有自己的索引。也就是說，當我們要提取列表中的元組資料，第一個索引代表要選取哪個元組，而第二個索引代表要選取該元組中哪筆資料。
+my_tuples = [(&#34;this is the first tuple in the list&#34;, 45, True),(&#34;this is the second tuple in the list&#34;, 21, False)] print(my_tuples[0][0]) # this is the first tuple in the list print(my_tuples[0][1]) # 45 print(my_tuples[1][0]) # this is the second tuple in the list print(my_tuples[1][2]) # False 開箱元組 Tuple Unpacking 好像網路上有人翻譯成元組拆包，但我自己是習慣用「開箱元組」來指稱，因為開箱聽起來比較開心。
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-23 22:15:24 +0800 CST'>一月 23, 2025</span></footer>
-  <a
-    class="entry-link"
-    aria-label="post link to 初探 Python 元組 (Tuples)"
-    href="//localhost:1313/posts/tuples/"
-  ></a>
-  
-  <div class="tags">
-    <div style="display: flex; flex-wrap: wrap; justify-content: flex-end">
-      
-      <a
-        href="/tags/python"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        Python
-      </a>
-      
-    </div>
-  </div>
+  <a class="entry-link" aria-label="post link to 初探 Python 元組 (Tuples)" href="http://localhost:1313/posts/programming/python/tuples/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -205,36 +187,15 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>
-      
-       ...
-    </p>
+    <p>不靠索引也能提取列表資料 如果不需要更新列表中的資料，我們其實可以用更精簡的語法去遞迴列表。in 關鍵字負責宣告 friend 變數，儲存每一次遞迴所提取的列表資料：
+friends = [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Small Goblin&#34;, &#34;Taipei Goblin&#34;] for friend in friends: print(friend) # Cute Goblin # Big Goblin # Small Goblin # Taipei Goblin 這種簡潔的語法在尋找列表資料時尤其方便，因為我們只在乎列表的資料值，索引直接捨棄也不用在意，像極了哥布林的愛情：
+def contains_small_goblin(friends): found = False for friend in friends: if friend == &#34;Small Goblin&#34;: found = True return found 尋找最大數 這算是個小技巧(?)，如果我們想從列表中找出最大數，可以先將初始值宣告為float(&#34;-inf&#34;)，這樣便能確保列表中每個數字都比它更大。接下來用遞迴陸續找出更大的數值，然後取代它就可以了。
+def find_max(nums): max_so_far = float(&#34;-inf&#34;) for num in nums: if num &gt; max_so_far: max_so_far = num return max_so_far 同理，若是要找出最小數，將初始值變數宣告為float(&#34;inf&#34;)即可。
+切割列表 我們可以用 : 切割出列表的特定區段，那回傳的會是一個新的列表。除了從哪裡開始、到哪裡結束之外，我們還能指定中間要跳過幾筆資料 (step)。
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-20 22:30:06 +0800 CST'>一月 20, 2025</span></footer>
-  <a
-    class="entry-link"
-    aria-label="post link to 初探 Python 列表 (List) - 續"
-    href="//localhost:1313/posts/list_continued/"
-  ></a>
-  
-  <div class="tags">
-    <div style="display: flex; flex-wrap: wrap; justify-content: flex-end">
-      
-      <a
-        href="/tags/python"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        Python
-      </a>
-      
-    </div>
-  </div>
+  <a class="entry-link" aria-label="post link to 初探 Python 列表 (List) - 續" href="http://localhost:1313/posts/programming/python/list_continued/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -243,36 +204,18 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>
-      
-       ...
-    </p>
+    <p>什麼是列表？ 程式語言通常都會有負責組織、儲存多筆資料的資料型別。在 JavaScript 和 Golang 中，這種資料型別被稱為陣列 (array)，而 Python 則是列表 (list)。
+Python 中的列表用 [...] 宣告，每項資料中間以半形逗號區隔：
+friends = [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Small Goblin&#34;, &#34;Taipei Goblin&#34;] 上面的列表中清一色都是字串，但我們其實可以在列表中加入各種型別的資料。
+若資料量持續增加，我們可以將每筆資料一行一行拆開，讓程式碼更容易閱讀。畢竟很多東西，不是越長就越好：
+friends = [ &#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Small Goblin&#34;, &#34;Taipei Goblin&#34; ] goblin_age = [ 25, 18, 55 ] 用索 (index) 提取列表中的資料 首先我們要知道在程式的世界，通常都是從 0 開始計數的，而非日常生活中直覺的 1。
+列表中每一筆資料都有其索引 (index)，也就是該筆資料在列表中的位置。再提醒一次，務必要從 0 開始算起。
+friends = [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Small Goblin&#34;, &#34;Taipei Goblin&#34;] 以上述列表為例，每筆資料的索引如下：
+0：Cute Goblin 1：Big Goblin 2：Small Goblin 3：Taipei Goblin 再舉個例子，索引 1 等於列表當中第二筆資料。
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-19 15:34:41 +0800 CST'>一月 19, 2025</span></footer>
-  <a
-    class="entry-link"
-    aria-label="post link to 初探 Python 列表 (List)"
-    href="//localhost:1313/posts/list/"
-  ></a>
-  
-  <div class="tags">
-    <div style="display: flex; flex-wrap: wrap; justify-content: flex-end">
-      
-      <a
-        href="/tags/python"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        Python
-      </a>
-      
-    </div>
-  </div>
+  <a class="entry-link" aria-label="post link to 初探 Python 列表 (List)" href="http://localhost:1313/posts/programming/python/list/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -281,49 +224,15 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>
-      
-       ...
-    </p>
+    <p>為什麼要有迴圈？ 原因只有一個，那就是人類很懶，假設今天要輸出 100 萬筆資料，我們需要一筆一筆手刻出來嗎？在被主管開除之前，我們應該會先無聊到開始裸奔吧。
+這個時候善用迴圈，用一組程式碼就能搞定大量的重複工作：
+for i in range(0, 1_000_000): print(i) 拆解 for 迴圈運作流程 上面以 for 關鍵字起頭的迴圈被稱為 for 迴圈，除了 Python 之外，Golang、JavaScript 等等眾多程式語言也都有類似的語法。本篇文章就以 Python 為例，拆解 for 迴圈的運作流程。
+迴圈從 i 等於 0 啟動 -&gt; i in range(0) 檢查若 i 不少於 1,000,000 就跳出迴圈運作 -&gt; range(0, 1_000_000)，否則繼續執行以下動作: 列印出 i 變數 -&gt; print(i) i 變數值加一 (range 預設會加一) 回到第二步驟檢查 i 是否不少於 1,000,000 最後我們會看到 0 ~ 999,999 列印出來。
+在 Python 中，range(a, b) 會包含 a 但不包含 b。所以 range(0, 1_000_000) 才不會列印出 1,000,000。
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-18 11:54:14 +0800 CST'>一月 18, 2025</span></footer>
-  <a
-    class="entry-link"
-    aria-label="post link to 迴圈 - 以 Python 為例"
-    href="//localhost:1313/posts/loop/"
-  ></a>
-  
-  <div class="tags">
-    <div style="display: flex; flex-wrap: wrap; justify-content: flex-end">
-      
-      <a
-        href="/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        電腦科學
-      </a>
-      
-      <a
-        href="/tags/python"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        Python
-      </a>
-      
-    </div>
-  </div>
+  <a class="entry-link" aria-label="post link to 迴圈 - 以 Python 為例" href="http://localhost:1313/posts/programming/python/loop/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -332,49 +241,16 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>
-      
-       
-    </p>
+    <p>什麼是作用域？ 作用域 (Scope) 是指變數或函示名稱可以被使用的範圍。我自己是想像成結界，外面的世界無法接觸、取用到結界內的萬事萬物。
+舉例來說，當我們在函式中建立一個變數，包含給函示參數，那這些資料就無法在函示的作用域範圍之外使用，會跑出該變數沒有定義的錯誤。
+def add(x, y): return x &#43; y result = add(2, 6) print(x) # ERROR! &#34;name &#39;x&#39; is not defined&#34; 上述範例中，x 和 y 都是 add 函式的參數，因此只能在 add 函式作用域範圍內被使用。我們在作用域之外嘗試列印 x，Python 的編譯器會跳出 x 沒有被定義的錯誤警告。
+全域作用域 我們知道函式中所定義的變數和參數，是無法在函式作用域以外被使用的。但如果今天有多個函式都要用同一組變數該怎麼辦呢？我們可以在全域環境中定義變數，這樣每個函式都能夠取用該變數了。
+以結界來比喻，我覺得就像結界內的人可以把外面世界的物品拉進去，但外部世界的人無法看透結界內發生什麼事情，自然也就無法取用結界內的物品了。
+outside_stuff = &#34;pull me in baby!&#34; def pull_outside_stuff_into_function_scope(target): return outside_stuff &#43; &#34; - success&#34; print(pull_outside_stuff(outside_stuff)) 上述範例中，pull_outside_stuff_into_function_scope 最終會成功回傳 pull me in baby! - success。因為 outside_stuff 變數是在權域作用域 (global scope) 定義的，所以能夠被函式拉到函式作用域當中使用。
+</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-15 15:16:56 +0800 CST'>一月 15, 2025</span></footer>
-  <a
-    class="entry-link"
-    aria-label="post link to 作用域 - 以 Python 為例"
-    href="//localhost:1313/posts/scope/"
-  ></a>
-  
-  <div class="tags">
-    <div style="display: flex; flex-wrap: wrap; justify-content: flex-end">
-      
-      <a
-        href="/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        電腦科學
-      </a>
-      
-      <a
-        href="/tags/python"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        Python
-      </a>
-      
-    </div>
-  </div>
+  <a class="entry-link" aria-label="post link to 作用域 - 以 Python 為例" href="http://localhost:1313/posts/programming/python/scope/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -383,54 +259,47 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>
-      
-      學會自由書寫，主動挖掘靈感，解放大腦內的豐富素材。不用再煩惱沒有好想法了！ 
-    </p>
+    <p>自由書寫術 - 找回靈感的絕佳方法 靈感絕對讓世上的創作者又愛又恨。無論你是公司行銷企劃、學校研究人員，或是快被截稿壓力逼瘋的作家，勢必都體驗過絞盡腦汁仍擠不出一咪咪靈感的痛苦。
+普男我前陣子就面臨嚴重的靈感乾旱期，完全找不到下一篇小說的創作想法，因此努力尋找相關資源後，發現了一本名為《自由書寫術》的書十分受人推崇，就抱著死馬當活馬醫的心情買來試試看，結果功效出奇地好！
+為了將這種排便通暢後的快感分享給更多人，我將從這本書受益的部分整理成心得文章，希望能幫助同樣身陷靈感地獄的創作者們，早日脫離苦海。
+故事只會發生在說故事的人身上 我們的大腦每一天都承載著巨量的印象、想法，但我們卻渾然不知。假如我們能善加掌握、深入挖掘這些原始素材，就有機會激發出靈感。所以自由書寫術，其實就是善用日常生活中看似平凡甚至荒誕的思緒或遭遇，幫助我們想出創意點子和問題解決方案。
+不要認為這些無聊的瑣事不值得紀錄。作者在書中提到，並不是所有的寫作內容都在我們面對電腦或拿著筆時所產生的，大多數內容是在我們打開信封或是和異性搭訕時發生的。
+只要我們秉持著寫作的意圖，就會開始留意身邊的事物並發揮創意，屆時原先平凡無趣的兩點一線生活，也能成為創作素材來源。所以找回靈感的第一步，就是要時時刻刻提醒自己：你是個說故事的人。
+有了這層認知還不夠。由於大多數人對自己的記性都太過自信，因而時常延宕不把想法和發現記錄下來，導致這些蘊含潛力的寶藏隱沒在記憶的流沙當中。所以千萬不要妥協，唯有白紙黑字寫下的想法，才有機會在日後化為靈感，否則轉瞬之間都只是場白日夢而已。
+安撫我們腦袋中的編輯 了解到透過書寫紀錄想法的重要性後，我們很容易落入第二個陷阱：腦袋中的編輯。沒錯，我們每個人腦中都住著一位編輯，如果你有看過海綿寶寶的話，可以直接套用正經八百小姐的形象。
+這位編輯的職責就是過濾我們的想法，讓我們表達出來的東西理性又符合社會的期待，聽起來很棒對吧？但這同時也阻礙了我們提出與眾不同的想法，限制住大腦發揮創意。
+那我們該做的倒也不是要宰了這位編輯，而是要適時安撫他，讓他暫時放下工作，給我們一個自由發想的空間。但說起來總比實際行動容易，由於我們已經長期受這位編輯控制，不用些方法實在很難脫離他的掌控。而這便是自由書寫術大放異彩的時候了！
+假如你能將自己從原本認定的刻板情境中釋放出來，採取不同的觀點，你一定可以找到出路。
+\ 不停地快寫，來場私密的腦力激盪
+透過不停地快寫，讓書寫的速度與思考的速度同步，我們便能有效地安撫腦袋的編輯，並將注意力集中到正在書寫的內容上。
+作者建議限定一段 10 ~ 20 分鐘左右的時間，順著思路將所有的想法忠實地記錄下來，無論內容有多麽違反常理，甚至不合邏輯，都要付諸文字。
+這樣的做法其實和腦力激盪非常類似，只不過傳統的腦力激盪是在公開場合進行，因此我們無法擺脫腦袋編輯進行價值判斷與審查，容易產生妥協，或是急就章的結論。
+相較之下，自由書寫只有你自己才會看見寫出來的東西，因此能夠捕捉到最為原始，而且不受約束的想法。所以當你回頭查看自由書寫的內容，發現裡面出現你專屬於你的「廚房語言」，很有可能你已經成功表達出內心真實的想法了。
+瀏覽過自由書寫的產物後，我們可能已經從中找出幾個有意思的觀點或方向，這時候可以再進行新一輪的自由書寫，或是參考其他領域的資料探詢更多可能性。當然這些「思緒片段」也很適合節錄到其他空間（我本身是建立 Heptabase 的卡片），作為日後公開發表文章的肥料，或是建立你專屬的點子資料庫。
+自由書寫的原則與心態 雖說自由書寫讓我們任意發揮的空間很大，但作者還是在書中提及了不少值得注意的大原則。這些原則也的確都對應到我實際進行自由書寫時遭逢的困難，所以我紀錄在這邊，以防同樣想嘗試的朋友踩雷。
+點子和想法越多越好，不存在最棒的想法 通常我們自由書寫背後都帶有目的，好比說尋找絕妙的靈感或是問題解決方案，但抱持這種心態，往往會因為吹毛求疵而對結果感到失望，最後索性狗急跳牆，隨便找個點子交差。
+作者提出一百個點子比一個點子還有幫助，畢竟我們必須先有材料，才能夠加以衡量與評斷。我自己則認為，自由書寫就像是從垃圾堆中挑黃金，同時提供自己回溯思考路徑的線索。但還是那句話，如果你死都不寫，等於放棄化腐朽為神奇的機會。
+放下自己的聰明才智，就算是顯而易見的事實也值得記錄下來。一項事實往往會帶出另一項事實，這是一個連鎖效應。
+把寫作和修改的步驟分開來做 我自己剛開始嘗試自由書寫時，每寫一句或是一個段落，就會忍不住想去潤飾文字，或是將語句修改得更符合邏輯。但這樣完全違背了「讓書寫的速度與思考的速度同步」這項原則。
+畢竟正如同作者所言，寫作是一項工作，而讓作品如行雲流水般流暢又是另一項工作。想要同時做好這兩樣工作，會讓你的腦袋超載。而腦袋超載會怎麼樣？當然就是負能量爆棚，結果又決定放棄不幹了。
+在自由書寫時，我們應該專注在書寫這項工作上，化身為無情的想法捕捉工具，等寫完之後，再來決定思緒片段的去留，如果要讓內容讀起來更為通順，也該是這時候才進行。
+從自己著迷的事物或想法入手 常言道無風不起浪，就算是自由書寫，我們總也該有個書寫的起點才能動筆。如果今天我們已經有想要釐清的困擾，或是希望解決的問題，那大可以直接延伸啟動。但如果是想寫一篇公開發表的文章，甚或是出書呢？
+針對這點，作者認為大家常常會把焦點放錯地方，放棄掉我們自己最擅長的事物，反而一昧盲猜讀者的喜好。老實說在流量為大的時代，這麼做好像問題也不大，但既然自由書寫是要從我們的腦袋中挖掘出寶藏，又何必捨近求遠呢？
+我們其實可以換個角度，尋找出某個能當作思考起點的概念。這個概念不需要具有深度，只要能引發我們想寫的衝動即可。所以就算是倒垃圾時覺得隔壁棟阿姨老是插隊很煩，這種生活瑣事，都是珍貴的靈感泉源。
+把自己想成一個過濾器。你在這個世界上的生活經驗、累積了無數的體驗、想法、故事與回憶，對你來說，都是獨一無二且意義重大的。
+結語：垃圾堆中也能綻放出鮮花，只要你肯動筆 我沒有想到自己有一天也會得出這麼雞湯類型的結論，但是經歷了自由書寫的洗禮後，我確實從原本不屑一顧的瑣碎雜念中，獲取了持續創作的靈感和方向，無論是你正在閱讀的這篇讀書心得，或是我其他的短篇小說。
+能透過寫作來解決問題當然很棒。不過截至目前，我認為自由書寫帶給我的最大收穫，還是重新讓我認識，一個人再怎麼普通，都蘊藏著尚未發掘的獨特故事。
+如果你也正好為寫作而苦，甚或體認到自身的平凡而感覺消沈的話，都歡迎和我交流看看。我們可以一同向上，或是一同沈淪。
+📭 tim88776@gmail.com
+</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-13 15:16:56 +0800 CST'>一月 13, 2025</span></footer>
-  <a
-    class="entry-link"
-    aria-label="post link to 自由書寫術 - 找回靈感的絕佳方法"
-    href="//localhost:1313/posts/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/"
-  ></a>
-  
-  <div class="tags">
-    <div style="display: flex; flex-wrap: wrap; justify-content: flex-end">
-      
-      <a
-        href="/tags/%E5%AF%AB%E4%BD%9C%E6%8A%80%E5%B7%A7"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        寫作技巧
-      </a>
-      
-      <a
-        href="/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87"
-        style="
-          margin-right: 5px;
-          color: black;
-          background-color: rgb(217, 230, 225);
-          border-radius: 20px;
-          padding: 1px 12px;
-        "
-      >
-        自我提升
-      </a>
-      
-    </div>
-  </div>
+  <a class="entry-link" aria-label="post link to 自由書寫術 - 找回靈感的絕佳方法" href="http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="//localhost:1313/">哥布林 . 一起 . 強大</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">哥布林 . 一起 . 強大</a></span> · 
 
     <span>
         Powered by

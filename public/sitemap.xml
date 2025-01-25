@@ -2,43 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/tags/python/</loc>
+    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2025-01-23T22:15:24+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-01-23T22:15:24+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/tuples/</loc>
+    <loc>http://localhost:1313/posts/programming/python/tuples/</loc>
     <lastmod>2025-01-23T22:15:24+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-01-23T22:15:24+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-01-23T22:15:24+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/list_continued/</loc>
+    <loc>http://localhost:1313/posts/programming/python/list_continued/</loc>
     <lastmod>2025-01-20T22:30:06+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/list/</loc>
+    <loc>http://localhost:1313/posts/programming/python/list/</loc>
     <lastmod>2025-01-19T15:34:41+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/</loc>
+    <loc>http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/</loc>
     <lastmod>2025-01-18T11:54:14+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/loop/</loc>
+    <loc>http://localhost:1313/posts/programming/python/loop/</loc>
     <lastmod>2025-01-18T11:54:14+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/scope/</loc>
+    <loc>http://localhost:1313/posts/programming/python/scope/</loc>
     <lastmod>2025-01-15T15:16:56+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/%E5%AF%AB%E4%BD%9C%E6%8A%80%E5%B7%A7/</loc>
+    <loc>http://localhost:1313/tags/%E5%AF%AB%E4%BD%9C%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2025-01-13T15:16:56+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/</loc>
+    <loc>http://localhost:1313/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/</loc>
     <lastmod>2025-01-13T15:16:56+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</loc>
+    <loc>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2025-01-13T15:16:56+08:00</lastmod>
   </url>
 </urlset>

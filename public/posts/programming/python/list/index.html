@@ -5,45 +5,44 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>初探 Python 列表 (List) - 續 | 哥布林 . 一起 . 強大</title>
+<title>初探 Python 列表 (List) | 哥布林 . 一起 . 強大</title>
 <meta name="keywords" content="Python">
-<meta name="description" content="不靠索引也能提取列表資料
-如果不需要更新列表中的資料，我們其實可以用更精簡的語法去遞迴列表。in 關鍵字負責宣告 friend 變數，儲存每一次遞迴所提取的列表資料：
+<meta name="description" content="什麼是列表？
+程式語言通常都會有負責組織、儲存多筆資料的資料型別。在 JavaScript 和 Golang 中，這種資料型別被稱為陣列 (array)，而 Python 則是列表 (list)。
+Python 中的列表用 [...] 宣告，每項資料中間以半形逗號區隔：
 friends = [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Small Goblin&#34;, &#34;Taipei Goblin&#34;]
-for friend in friends:
-    print(friend)
 
-# Cute Goblin
-# Big Goblin
-# Small Goblin
-# Taipei Goblin
+上面的列表中清一色都是字串，但我們其實可以在列表中加入各種型別的資料。
 
-這種簡潔的語法在尋找列表資料時尤其方便，因為我們只在乎列表的資料值，索引直接捨棄也不用在意，像極了哥布林的愛情：
-def contains_small_goblin(friends):
-    found = False
+若資料量持續增加，我們可以將每筆資料一行一行拆開，讓程式碼更容易閱讀。畢竟很多東西，不是越長就越好：
+friends = [
+    &#34;Cute Goblin&#34;,
+    &#34;Big Goblin&#34;,
+    &#34;Small Goblin&#34;,
+    &#34;Taipei Goblin&#34;
+]
 
-    for friend in friends:
-        if friend == &#34;Small Goblin&#34;:
-            found = True
+goblin_age = [
+    25,
+    18,
+    55
+]
 
-    return found
+用索 (index) 提取列表中的資料
+首先我們要知道在程式的世界，通常都是從 0 開始計數的，而非日常生活中直覺的 1。
+列表中每一筆資料都有其索引 (index)，也就是該筆資料在列表中的位置。再提醒一次，務必要從 0 開始算起。
+friends = [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Small Goblin&#34;, &#34;Taipei Goblin&#34;]
 
-尋找最大數
-這算是個小技巧(?)，如果我們想從列表中找出最大數，可以先將初始值宣告為float(&quot;-inf&quot;)，這樣便能確保列表中每個數字都比它更大。接下來用遞迴陸續找出更大的數值，然後取代它就可以了。
-def find_max(nums):
-    max_so_far = float(&#34;-inf&#34;)
-    for num in nums:
-        if num &gt; max_so_far:
-            max_so_far = num
+以上述列表為例，每筆資料的索引如下：
 
-    return max_so_far
+0：Cute Goblin
+1：Big Goblin
+2：Small Goblin
+3：Taipei Goblin
 
-同理，若是要找出最小數，將初始值變數宣告為float(&quot;inf&quot;)即可。
-
-切割列表
-我們可以用 : 切割出列表的特定區段，那回傳的會是一個新的列表。除了從哪裡開始、到哪裡結束之外，我們還能指定中間要跳過幾筆資料 (step)。">
+再舉個例子，索引 1 等於列表當中第二筆資料。">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/list_continued/">
+<link rel="canonical" href="http://localhost:1313/posts/programming/python/list/">
 <meta name="google-site-verification" content="XYZabc">
 <meta name="yandex-verification" content="XYZabc">
 <meta name="msvalidate.01" content="XYZabc">
@@ -55,7 +54,7 @@ def find_max(nums):
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="zh" href="http://localhost:1313/posts/list_continued/">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/posts/programming/python/list/">
 <noscript>
     <style>
         #theme-toggle,
@@ -154,9 +153,9 @@ def find_max(nums):
   <header class="post-header">
     <div class="breadcrumbs"><a href="http://localhost:1313/">主页</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">文章列表</a></div>
     <h1 class="post-title entry-hint-parent">
-      初探 Python 列表 (List) - 續
+      初探 Python 列表 (List)
     </h1>
-    <div class="post-meta"><span title='2025-01-20 22:30:06 +0800 CST'>一月 20, 2025</span>
+    <div class="post-meta"><span title='2025-01-19 15:34:41 +0800 CST'>一月 19, 2025</span>
 
 </div>
   </header> <div class="toc">
@@ -167,120 +166,112 @@ def find_max(nums):
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#%e4%b8%8d%e9%9d%a0%e7%b4%a2%e5%bc%95%e4%b9%9f%e8%83%bd%e6%8f%90%e5%8f%96%e5%88%97%e8%a1%a8%e8%b3%87%e6%96%99" aria-label="不靠索引也能提取列表資料">不靠索引也能提取列表資料</a></li>
+                    <a href="#%e4%bb%80%e9%ba%bc%e6%98%af%e5%88%97%e8%a1%a8" aria-label="什麼是列表？">什麼是列表？</a></li>
                 <li>
-                    <a href="#%e5%b0%8b%e6%89%be%e6%9c%80%e5%a4%a7%e6%95%b8" aria-label="尋找最大數">尋找最大數</a></li>
+                    <a href="#%e7%94%a8%e7%b4%a2-index-%e6%8f%90%e5%8f%96%e5%88%97%e8%a1%a8%e4%b8%ad%e7%9a%84%e8%b3%87%e6%96%99" aria-label="用索 (index) 提取列表中的資料">用索 (index) 提取列表中的資料</a></li>
                 <li>
-                    <a href="#%e5%88%87%e5%89%b2%e5%88%97%e8%a1%a8" aria-label="切割列表">切割列表</a><ul>
+                    <a href="#%e8%a8%88%e7%ae%97%e5%88%97%e8%a1%a8%e9%95%b7%e5%ba%a6" aria-label="計算列表長度">計算列表長度</a></li>
+                <li>
+                    <a href="#%e6%9b%b4%e6%96%b0%e5%88%97%e8%a1%a8%e8%b3%87%e6%96%99" aria-label="更新列表資料">更新列表資料</a></li>
+                <li>
+                    <a href="#%e5%b0%87%e8%b3%87%e6%96%99%e5%8a%a0%e5%85%a5%e8%87%b3%e5%88%97%e8%a1%a8%e5%be%9e%e5%88%97%e8%a1%a8%e7%a7%bb%e5%87%ba" aria-label="將資料加入至列表、從列表移出">將資料加入至列表、從列表移出</a><ul>
                         
                 <li>
-                    <a href="#%e7%94%a8%e8%b2%a0%e6%8c%87%e6%95%b8%e4%be%86%e5%88%87%e5%89%b2%e5%88%97%e8%a1%a8" aria-label="用負指數來切割列表">用負指數來切割列表</a></li></ul>
+                    <a href="#append" aria-label="append">append</a></li>
+                <li>
+                    <a href="#pop" aria-label="pop">pop</a>
                 </li>
-                <li>
-                    <a href="#%e5%90%88%e4%bd%b5%e5%88%97%e8%a1%a8" aria-label="合併列表">合併列表</a></li>
-                <li>
-                    <a href="#%e6%9f%a5%e8%a9%a2%e5%88%97%e8%a1%a8" aria-label="查詢列表">查詢列表</a></li>
-                <li>
-                    <a href="#%e5%88%aa%e9%99%a4%e5%88%97%e8%a1%a8%e4%b8%ad%e7%9a%84%e8%b3%87%e6%96%99" aria-label="刪除列表中的資料">刪除列表中的資料</a>
-                </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><h2 id="不靠索引也能提取列表資料">不靠索引也能提取列表資料<a hidden class="anchor" aria-hidden="true" href="#不靠索引也能提取列表資料">#</a></h2>
-<p>如果不需要更新列表中的資料，我們其實可以用更精簡的語法去遞迴列表。<code>in</code> 關鍵字負責宣告 <code>friend</code> 變數，儲存每一次遞迴所提取的列表資料：</p>
+  <div class="post-content"><h2 id="什麼是列表">什麼是列表？<a hidden class="anchor" aria-hidden="true" href="#什麼是列表">#</a></h2>
+<p>程式語言通常都會有<strong>負責組織、儲存多筆資料</strong>的資料型別。在 JavaScript 和 Golang 中，這種資料型別被稱為陣列 (array)，而 Python 則是列表 (list)。</p>
+<p>Python 中的列表用 <code>[...]</code> 宣告，每項資料中間以半形逗號區隔：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>friends <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Cute Goblin&#34;</span>, <span style="color:#e6db74">&#34;Big Goblin&#34;</span>, <span style="color:#e6db74">&#34;Small Goblin&#34;</span>, <span style="color:#e6db74">&#34;Taipei Goblin&#34;</span>]
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> friend <span style="color:#f92672">in</span> friends:
-</span></span><span style="display:flex;"><span>    print(friend)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Cute Goblin</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Big Goblin</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Small Goblin</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Taipei Goblin</span>
-</span></span></code></pre></div><p><br>
-這種簡潔的語法在尋找列表資料時尤其方便，因為我們只在乎列表的資料值，索引直接捨棄也不用在意，像極了哥布林的愛情：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">contains_small_goblin</span>(friends):
-</span></span><span style="display:flex;"><span>    found <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> friend <span style="color:#f92672">in</span> friends:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> friend <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Small Goblin&#34;</span>:
-</span></span><span style="display:flex;"><span>            found <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> found
-</span></span></code></pre></div><hr>
-<h2 id="尋找最大數">尋找最大數<a hidden class="anchor" aria-hidden="true" href="#尋找最大數">#</a></h2>
-<p>這算是個小技巧(?)，如果我們想從列表中找出最大數，可以先將初始值宣告為<code>float(&quot;-inf&quot;)</code>，這樣便能確保列表中每個數字都比它更大。接下來用遞迴陸續找出更大的數值，然後取代它就可以了。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_max</span>(nums):
-</span></span><span style="display:flex;"><span>    max_so_far <span style="color:#f92672">=</span> float(<span style="color:#e6db74">&#34;-inf&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> nums:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> num <span style="color:#f92672">&gt;</span> max_so_far:
-</span></span><span style="display:flex;"><span>            max_so_far <span style="color:#f92672">=</span> num
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> max_so_far
-</span></span></code></pre></div><p><br>
-同理，若是要找出最小數，將初始值變數宣告為<code>float(&quot;inf&quot;)</code>即可。</p>
-<hr>
-<h2 id="切割列表">切割列表<a hidden class="anchor" aria-hidden="true" href="#切割列表">#</a></h2>
-<p>我們可以用 <code>:</code> 切割出列表的特定區段，那回傳的會是一個新的列表。除了從哪裡開始、到哪裡結束之外，我們還能指定中間要跳過幾筆資料 (step)。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>my_list[ start : stop : step ]
-</span></span></code></pre></div><p><br>
-舉個 🌰 :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>scores <span style="color:#f92672">=</span> [<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">50</span>]
-</span></span><span style="display:flex;"><span>print(scores[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">5</span>:<span style="color:#ae81ff">2</span>])
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列印出 [70, 20]</span>
-</span></span></code></pre></div><p>上述案例用中文翻譯：從索引 1 開始，切到索引 4 (不包含 5)，中間每 2 個位置跳過。</p>
-<p>但其實<strong>切割列表不一定要填滿三個條件</strong>。比方說 <code>numbers[:3]</code> 代表「從頭開始切到索引 3，但不包含它」。而 <code>numbers[:3]</code> 則表示「從索引 3 開始切到尾端」。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]
-</span></span><span style="display:flex;"><span>numbers[:<span style="color:#ae81ff">3</span>] <span style="color:#75715e"># [0, 1, 2]</span>
-</span></span><span style="display:flex;"><span>numbers[<span style="color:#ae81ff">3</span>:] <span style="color:#75715e"># [3, 4, 5, 6, 7, 8, 9]</span>
-</span></span></code></pre></div><p>雖然平常比較少看到，但也可以只帶入 <code>step</code>，也就是從頭切到尾，中間跳過 x 個位置。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]
-</span></span><span style="display:flex;"><span>numbers[::<span style="color:#ae81ff">2</span>] <span style="color:#75715e"># [0, 2, 4, 6, 8]</span>
-</span></span></code></pre></div><p> </p>
-<h3 id="用負指數來切割列表">用負指數來切割列表<a hidden class="anchor" aria-hidden="true" href="#用負指數來切割列表">#</a></h3>
-<p>有時候我們會想<strong>從尾端往前考慮要如何切割列表</strong>，剛好 Python 提供了負指數滿足這個需求。舉例來說，<code>numbers[-1]</code> 會切出列表最後一筆資料，而 <code>numbers[-2]</code> 則切出倒數第二筆資料，以此類推。</p>
-<p>負指數當然也能結合上述的切割運算式：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]
-</span></span><span style="display:flex;"><span>numbers[<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>:] <span style="color:#75715e"># [7, 8, 9]</span>
-</span></span></code></pre></div><hr>
-<h2 id="合併列表">合併列表<a hidden class="anchor" aria-hidden="true" href="#合併列表">#</a></h2>
-<p>在 Python 合併列表超簡單，直接用 <code>+</code> 就好，我真的可以這麼幸福嗎？</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>total <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>] <span style="color:#f92672">+</span> [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
-</span></span><span style="display:flex;"><span>print(total)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># [1, 2, 3, 4, 5, 6]</span>
-</span></span></code></pre></div><hr>
-<h2 id="查詢列表">查詢列表<a hidden class="anchor" aria-hidden="true" href="#查詢列表">#</a></h2>
-<p>別急，還有更幸福的。在 Python 查詢列表是否含有特定資料，直接用 <code>in</code> 關鍵字即可！回傳值為 <code>True</code> 或是 <code>False</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>friends <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Cute Goblin&#34;</span>, <span style="color:#e6db74">&#34;Big Goblin&#34;</span>, <span style="color:#e6db74">&#34;Small Goblin&#34;</span>, <span style="color:#e6db74">&#34;Taipei Goblin&#34;</span>]
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Cute Goblin&#34;</span> <span style="color:#f92672">in</span> friends) <span style="color:#75715e"># True</span>
-</span></span></code></pre></div><hr>
-<h2 id="刪除列表中的資料">刪除列表中的資料<a hidden class="anchor" aria-hidden="true" href="#刪除列表中的資料">#</a></h2>
-<p>Python 提供了 <code>del</code> 關鍵字方便我們移除列表中的資料。我們只需要指定資料的索引位置，或是切割範圍即可。</p>
-<blockquote>
-<p>注意，<code>del</code> 會直接更動 (mutate) 列表中的資料。</p>
+</span></span></code></pre></div><blockquote>
+<p>上面的列表中清一色都是字串，但我們其實<strong>可以在列表中加入各種型別的資料</strong>。</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 第四筆資料被刪除</span>
-</span></span><span style="display:flex;"><span>nums <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]
+<p>若資料量持續增加，我們可以將每筆資料一行一行拆開，讓程式碼更容易閱讀。畢竟很多東西，不是越長就越好：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>friends <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Cute Goblin&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Big Goblin&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Small Goblin&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Taipei Goblin&#34;</span>
+</span></span><span style="display:flex;"><span>]
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> nums[<span style="color:#ae81ff">3</span>]
-</span></span><span style="display:flex;"><span>print(nums)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># [1, 2, 3, 5, 6, 7, 8, 9]</span>
+</span></span><span style="display:flex;"><span>goblin_age <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">25</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">18</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">55</span>
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><hr>
+<h2 id="用索-index-提取列表中的資料">用索 (index) 提取列表中的資料<a hidden class="anchor" aria-hidden="true" href="#用索-index-提取列表中的資料">#</a></h2>
+<p>首先我們要知道<strong>在程式的世界，通常都是從 0 開始計數</strong>的，而非日常生活中直覺的 1。</p>
+<p>列表中每一筆資料都有其索引 (index)，也就是該筆資料在列表中的位置。再提醒一次，務必要從 0 開始算起。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>friends <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Cute Goblin&#34;</span>, <span style="color:#e6db74">&#34;Big Goblin&#34;</span>, <span style="color:#e6db74">&#34;Small Goblin&#34;</span>, <span style="color:#e6db74">&#34;Taipei Goblin&#34;</span>]
+</span></span></code></pre></div><p><br>
+以上述列表為例，每筆資料的索引如下：</p>
+<ul>
+<li>0：<code>Cute Goblin</code></li>
+<li>1：<code>Big Goblin</code></li>
+<li>2：<code>Small Goblin</code></li>
+<li>3：<code>Taipei Goblin</code></li>
+</ul>
+<p>再舉個例子，<strong>索引 1 等於列表當中第二筆資料</strong>。</p>
+<p>我們可以運用<code>[索引]</code>來提取特定的列表資料：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>friends <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Cute Goblin&#34;</span>, <span style="color:#e6db74">&#34;Big Goblin&#34;</span>, <span style="color:#e6db74">&#34;Small Goblin&#34;</span>, <span style="color:#e6db74">&#34;Taipei Goblin&#34;</span>]
+</span></span><span style="display:flex;"><span>print(friends[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列印出 &#34;Cute Goblin&#34;，因為我們輸入了 0 作為索引</span>
+</span></span></code></pre></div><h2 id="計算列表長度">計算列表長度<a hidden class="anchor" aria-hidden="true" href="#計算列表長度">#</a></h2>
+<p>在 Python 中，我們能使用 <code>len(list_name)</code> 直接取得列表長度。</p>
+<blockquote>
+<p>注意，別把「列表長度」和「列表中最後一筆資料的索引」混為一談了。由於索引是從 0 開始算起，所以「列表長度 + 1」才等於最後一筆資料的索引！</p>
+</blockquote>
+<p>但相對來說，我們其實能利用上述兩者的關係，在不知道列表長度的情況下取得最後一筆資料的索引：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_last_index</span>(inventory):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> len(inventory) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><hr>
+<h2 id="更新列表資料">更新列表資料<a hidden class="anchor" aria-hidden="true" href="#更新列表資料">#</a></h2>
+<p>同樣運用索引，我們能夠更新列表中特定位置的資料。比方說以下就將 <code>Small Goblin</code> 更新為 <code>Baby Goblin</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>friends <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Cute Goblin&#34;</span>, <span style="color:#e6db74">&#34;Big Goblin&#34;</span>, <span style="color:#e6db74">&#34;Small Goblin&#34;</span>, <span style="color:#e6db74">&#34;Taipei Goblin&#34;</span>]
+</span></span><span style="display:flex;"><span>friends[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Baby Goblin&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># friends: [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Baby Goblin&#34;, &#34;Taipei Goblin&#34;]</span>
+</span></span></code></pre></div><hr>
+<h2 id="將資料加入至列表從列表移出">將資料加入至列表、從列表移出<a hidden class="anchor" aria-hidden="true" href="#將資料加入至列表從列表移出">#</a></h2>
+<h3 id="append">append<a hidden class="anchor" aria-hidden="true" href="#append">#</a></h3>
+<p>append()` 方法，將資料加入至列表的最末端：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>teams <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>teams<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;Fubon Guardians&#34;</span>)
+</span></span><span style="display:flex;"><span>teams<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;Uni Lions&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 從第二筆資料刪除到第三筆資料</span>
-</span></span><span style="display:flex;"><span>nums <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># teams = [&#34;Fubon Guardians&#34;, &#34;Uni Lions&#34;]</span>
+</span></span></code></pre></div><p><br>
+實際上我們會時常建立空白的列表，然後透過迴圈和 <code>append()</code> 將資料加入至列表當中。比方說底下 <code>generate_user_list</code> 函式透過迴圈產生 <code>id</code>，然後在每次遞迴都將新產生的 <code>id</code> 加入至 <code>player_list</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_user_list</span>(num_of_users):
+</span></span><span style="display:flex;"><span>    player_ids <span style="color:#f92672">=</span> []
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> nums[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>]
-</span></span><span style="display:flex;"><span>print(nums)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># [1, 4, 5, 6, 7, 8, 9]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, num_of_users):
+</span></span><span style="display:flex;"><span>        player_ids<span style="color:#f92672">.</span>append(i)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 刪除所有資料</span>
-</span></span><span style="display:flex;"><span>nums <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> player_ids
+</span></span></code></pre></div><h3 id="pop">pop<a hidden class="anchor" aria-hidden="true" href="#pop">#</a></h3>
+<p><code>pop()</code> 的功能和 <code>append()</code> 相反，會<strong>從列表最尾端移除資料，並回傳被移除的那筆資料</strong>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>friends <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Cute Goblin&#34;</span>, <span style="color:#e6db74">&#34;Big Goblin&#34;</span>, <span style="color:#e6db74">&#34;Small Goblin&#34;</span>, <span style="color:#e6db74">&#34;Taipei Goblin&#34;</span>]
+</span></span><span style="display:flex;"><span>last_friend <span style="color:#f92672">=</span> friends<span style="color:#f92672">.</span>pop()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> nums[:]
-</span></span><span style="display:flex;"><span>print(nums)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># []</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># friends = [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Baby Goblin&#34;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># last_friend = &#34;Taipei Goblin&#34;</span>
+</span></span></code></pre></div><p><br>
+<code>pop()</code> 提供我們帶入參數，指定要將列表中哪個索引的資料移除。再次提醒，索引要從 0 開始算起。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>friends <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Cute Goblin&#34;</span>, <span style="color:#e6db74">&#34;Big Goblin&#34;</span>, <span style="color:#e6db74">&#34;Small Goblin&#34;</span>, <span style="color:#e6db74">&#34;Taipei Goblin&#34;</span>]
+</span></span><span style="display:flex;"><span>removed_friend <span style="color:#f92672">=</span> friends<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># friends = [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Taipei Goblin&#34;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># removed_friend = &#34; &#34;Small Goblin&#34;&#34;</span>
 </span></span></code></pre></div>
 
   </div>
@@ -290,23 +281,23 @@ def find_max(nums):
       <li><a href="http://localhost:1313/tags/python/">Python</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/programming/python/tuples/">
+  <a class="prev" href="http://localhost:1313/posts/programming/python/list_continued/">
     <span class="title">« 上一页</span>
     <br>
-    <span>初探 Python 元組 (Tuples)</span>
+    <span>初探 Python 列表 (List) - 續</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/list/">
+  <a class="next" href="http://localhost:1313/posts/programming/python/loop/">
     <span class="title">下一页 »</span>
     <br>
-    <span>初探 Python 列表 (List)</span>
+    <span>迴圈 - 以 Python 為例</span>
   </a>
 </nav>
 
 
 <ul class="share-buttons">
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) - 續 on x"
-            href="https://x.com/intent/tweet/?text=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29%20-%20%e7%ba%8c&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2flist_continued%2f&amp;hashtags=Python">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) on x"
+            href="https://x.com/intent/tweet/?text=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2flist%2f&amp;hashtags=Python">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
@@ -314,8 +305,8 @@ def find_max(nums):
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) - 續 on linkedin"
-            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2flist_continued%2f&amp;title=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29%20-%20%e7%ba%8c&amp;summary=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29%20-%20%e7%ba%8c&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2flist_continued%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2flist%2f&amp;title=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29&amp;summary=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2flist%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
@@ -323,8 +314,8 @@ def find_max(nums):
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) - 續 on reddit"
-            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2flist_continued%2f&title=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29%20-%20%e7%ba%8c">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2flist%2f&title=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
@@ -332,8 +323,8 @@ def find_max(nums):
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) - 續 on facebook"
-            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2flist_continued%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2flist%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
@@ -341,8 +332,8 @@ def find_max(nums):
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) - 續 on whatsapp"
-            href="https://api.whatsapp.com/send?text=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29%20-%20%e7%ba%8c%20-%20http%3a%2f%2flocalhost%3a1313%2fposts%2flist_continued%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) on whatsapp"
+            href="https://api.whatsapp.com/send?text=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29%20-%20http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2flist%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
@@ -350,8 +341,8 @@ def find_max(nums):
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) - 續 on telegram"
-            href="https://telegram.me/share/url?text=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29%20-%20%e7%ba%8c&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2flist_continued%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) on telegram"
+            href="https://telegram.me/share/url?text=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2flist%2f">
             <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
@@ -359,8 +350,8 @@ def find_max(nums):
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) - 續 on ycombinator"
-            href="https://news.ycombinator.com/submitlink?t=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29%20-%20%e7%ba%8c&u=http%3a%2f%2flocalhost%3a1313%2fposts%2flist_continued%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 初探 Python 列表 (List) on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=%e5%88%9d%e6%8e%a2%20Python%20%e5%88%97%e8%a1%a8%20%28List%29&u=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2flist%2f">
             <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
                 xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
                 <path
