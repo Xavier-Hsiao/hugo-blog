@@ -127,6 +127,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">初探 Python 字典 (Dictionary)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>什麼是字典 (Dictionary)？ 在 Python 中，字典用來儲存 key -&gt; value 組合的資料，和 JavaScript 的物件 (objects) 非常類似。字典使用 {} 來包裹住資料，每個鍵 (key) 都會對應到一個值 (value)：
+goblin = { &#34;name&#34;: &#34;Xavier&#34;, &#34;age&#34;: 28, &#34;pet&#34;: &#34;Mimiball&#34; } 不要重複 key 列表利用索引 (index) 來辨別資料，而字典則是依靠鍵 (key)。所以實作上我們不應該在字典中重複使用 key，如果不信邪，你會發現原先的值被覆寫過去了！
+goblin = { &#34;name&#34;: &#34;Xavier&#34;, &#34;name&#34;: &#34;Neo-Xavier&#34; &#34;age&#34;: 28, &#34;pet&#34;: &#34;Mimiball&#34; } 上面範例中，哥布林的名字從 Xavier 變成了 Neo-Xavier，因為兩筆資料的 key 都是 name，而後面的資料覆寫了前面一筆 key 相同的資料。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-25 22:47:27 +0800 CST'>一月 25, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to 初探 Python 字典 (Dictionary)" href="http://localhost:1313/posts/programming/python/dictionary/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">初探 Python 元組 (Tuples)
     </h2>
   </header>
