@@ -74,6 +74,7 @@
 &lt;h3 id=&#34;給予者能為團隊營造出心理安全感&#34;&gt;給予者能為團隊營造出心理安全感&lt;/h3&gt;
 &lt;p&gt;所謂的心理安全感是指大家在團體中&lt;strong&gt;相信自己做有風險的事情也不會受到懲罰&lt;/strong&gt;。根據研究，這樣的環境有助於學習以及創新，畢竟人只要想著「我就怕會被罵啊」，便容易裹足不前、不敢接受新事物或挑戰。而給予者平時嚴以律己、寬以待人，尤其能為團隊營造心理安全感。&lt;/p&gt;
 &lt;p&gt;除此之外，由於給予者具備同理心，通常能夠克服「觀點落差」。舉例來說，今天團隊有人失戀了，身為一隻普通的哥布林此生自然和戀愛無緣，因此容易評論：「對象再找就好啦，幹嘛搞到像世界末日一樣啊？」但若是具備同理心的給予型哥布林則會反思：「嗯……雖然我是個戀愛絕緣體，沒有失戀的經驗，但那想必很難受、需要時間和空間來調適吧」，因而選擇給予對方心情上的支持。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;team&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/img/vlad-hilitanu-1FI2QAYPa-Y-unsplash.jpg&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;給予者的協商之道&#34;&gt;給予者的協商之道&lt;/h2&gt;
 &lt;p&gt;提及影響力，我們習慣聯想到講話鏗鏘有力、態度堅定不移、不放手直到夢想到手的索取型人物。但亞當 ．葛蘭特發現，給予者在協商、發揮影響力方面其實不輸他人，關鍵就在於&lt;strong&gt;柔軟溝通術&lt;/strong&gt;。&lt;/p&gt;
@@ -82,8 +83,14 @@
 &lt;blockquote&gt;
 &lt;p&gt;採取柔軟溝通法的人通常言語平實，不把話說滿，會大量聆聽別人的意見，他們言談間流露出自己的不完美及短處，也會使用免責的話語、委婉的規避語及不確定的語氣。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;老實說看到這邊，我對於免責的話語和不確定的語氣心存懷疑，這樣真的能夠取信於人嗎？不知道是不是翻譯的問題，但我認為作者想強調的應該是：&lt;strong&gt;用討論的心態，從對方的觀點和利益出發去溝通。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;有了上述的認知，我們才明白給予者溝通時傾向問問題而非急著給建議或答案，因為他們不希望一昧將自身觀點強加在別人身上。我覺得最典型的例子是：「我不是為了自己啦，但是……」或「我是為了你好啊，所以……」，像這種單純的委婉規避雨反倒容易踢到鐵板，任誰都聽得出來你只是想叫別人安靜聽你說而已。&lt;/p&gt;</description>
+&lt;p&gt;老實說看到這邊，我對於免責的話語和不確定的語氣心存懷疑，這樣真的能夠取信於人嗎？不知道是不是翻譯的問題，但我認為作者想強調的應該是：&lt;strong&gt;用討論的心態，從對方的觀點和利益出發去溝通。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>自由書寫術 - 找回靈感的絕佳方法</title>
+      <link>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 13 Jan 2025 15:16:56 +0800</pubDate>
+      <guid>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</guid>
+      <description>學會自由書寫，主動挖掘靈感，解放大腦內的豐富素材。不用再煩惱沒有好想法了！</description>
     </item>
     <item>
       <title>初探 Python 字典 (Dictionary)</title>
@@ -294,13 +301,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(pull_outside_stuff(outside_stuff))
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;
 上述範例中，&lt;code&gt;pull_outside_stuff_into_function_scope&lt;/code&gt; 最終會成功回傳 &lt;code&gt;pull me in baby! - success&lt;/code&gt;。因為 &lt;code&gt;outside_stuff&lt;/code&gt; 變數是在權域作用域 (global scope) 定義的，所以能夠被函式拉到函式作用域當中使用。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>自由書寫術 - 找回靈感的絕佳方法</title>
-      <link>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Mon, 13 Jan 2025 15:16:56 +0800</pubDate>
-      <guid>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</guid>
-      <description>學會自由書寫，主動挖掘靈感，解放大腦內的豐富素材。不用再煩惱沒有好想法了！</description>
     </item>
   </channel>
 </rss>

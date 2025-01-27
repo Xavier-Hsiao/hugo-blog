@@ -21,13 +21,19 @@ menu:
       url: /posts/
       weight: 10
 
+    - identifier: categories
+      name: 分類
+      url: /categories/
+      weight: 20
+
     - identifier: tags
       name: 標籤
       url: /tags/
-      weight: 20
+      weight: 30
 
 taxonomies:
   tag: "tags"
+  category: "categories"
 
 params:
   socialIcons:

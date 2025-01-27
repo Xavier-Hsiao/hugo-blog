@@ -86,6 +86,13 @@
 &lt;p&gt;老實說看到這邊，我對於免責的話語和不確定的語氣心存懷疑，這樣真的能夠取信於人嗎？不知道是不是翻譯的問題，但我認為作者想強調的應該是：&lt;strong&gt;用討論的心態，從對方的觀點和利益出發去溝通。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>自由書寫術 - 找回靈感的絕佳方法</title>
+      <link>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 13 Jan 2025 15:16:56 +0800</pubDate>
+      <guid>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</guid>
+      <description>學會自由書寫，主動挖掘靈感，解放大腦內的豐富素材。不用再煩惱沒有好想法了！</description>
+    </item>
+    <item>
       <title>初探 Python 字典 (Dictionary)</title>
       <link>http://localhost:1313/posts/programming/python/dictionary/</link>
       <pubDate>Sat, 25 Jan 2025 22:47:27 +0800</pubDate>
@@ -294,13 +301,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(pull_outside_stuff(outside_stuff))
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;
 上述範例中，&lt;code&gt;pull_outside_stuff_into_function_scope&lt;/code&gt; 最終會成功回傳 &lt;code&gt;pull me in baby! - success&lt;/code&gt;。因為 &lt;code&gt;outside_stuff&lt;/code&gt; 變數是在權域作用域 (global scope) 定義的，所以能夠被函式拉到函式作用域當中使用。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>自由書寫術 - 找回靈感的絕佳方法</title>
-      <link>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Mon, 13 Jan 2025 15:16:56 +0800</pubDate>
-      <guid>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</guid>
-      <description>學會自由書寫，主動挖掘靈感，解放大腦內的豐富素材。不用再煩惱沒有好想法了！</description>
     </item>
   </channel>
 </rss>
