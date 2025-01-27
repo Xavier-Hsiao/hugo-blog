@@ -36,7 +36,8 @@ goblin = {
 }
 
 print(goblin[&#34;name&#34;])
-">
+新增字典資料
+實務上我們常常會先建立一個空字典，然後依照商業邏輯陸續新增動態資料到字典中。而新增資料到字典的方式和提取資料大同小異，一樣使用 [key_name] 的模式即可。">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/programming/python/dictionary/">
 <meta name="google-site-verification" content="XYZabc">
@@ -169,7 +170,15 @@ print(goblin[&#34;name&#34;])
                     <a href="#%e6%93%8d%e4%bd%9c%e5%ad%97%e5%85%b8%e4%b8%ad%e7%9a%84%e8%b3%87%e6%96%99" aria-label="操作字典中的資料">操作字典中的資料</a><ul>
                         
                 <li>
-                    <a href="#%e6%8f%90%e5%8f%96%e5%ad%97%e5%85%b8%e4%b8%ad%e7%9a%84%e8%b3%87%e6%96%99" aria-label="提取字典中的資料">提取字典中的資料</a>
+                    <a href="#%e6%8f%90%e5%8f%96%e5%ad%97%e5%85%b8%e4%b8%ad%e7%9a%84%e8%b3%87%e6%96%99" aria-label="提取字典中的資料">提取字典中的資料</a></li>
+                <li>
+                    <a href="#%e6%96%b0%e5%a2%9e%e5%ad%97%e5%85%b8%e8%b3%87%e6%96%99" aria-label="新增字典資料">新增字典資料</a></li>
+                <li>
+                    <a href="#%e6%9b%b4%e6%96%b0%e5%ad%97%e5%85%b8%e8%b3%87%e6%96%99" aria-label="更新字典資料">更新字典資料</a></li>
+                <li>
+                    <a href="#%e5%88%aa%e9%99%a4%e5%ad%97%e5%85%b8%e8%b3%87%e6%96%99" aria-label="刪除字典資料">刪除字典資料</a></li>
+                <li>
+                    <a href="#%e9%81%9e%e8%bf%b4%e5%ad%97%e5%85%b8" aria-label="遞迴字典">遞迴字典</a>
                 </li>
             </ul>
             </li>
@@ -207,6 +216,52 @@ print(goblin[&#34;name&#34;])
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>print(goblin[<span style="color:#e6db74">&#34;name&#34;</span>])
+</span></span></code></pre></div><h3 id="新增字典資料">新增字典資料<a hidden class="anchor" aria-hidden="true" href="#新增字典資料">#</a></h3>
+<p>實務上我們常常會先建立一個空字典，然後依照商業邏輯陸續新增動態資料到字典中。而新增資料到字典的方式和提取資料大同小異，一樣使用 <code>[key_name]</code> 的模式即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>goblin <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>goblin[<span style="color:#e6db74">&#34;name&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Xavier&#34;</span>
+</span></span><span style="display:flex;"><span>goblin[<span style="color:#e6db74">&#34;age&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">28</span>
+</span></span><span style="display:flex;"><span>goblin[<span style="color:#e6db74">&#34;single&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>goblin[<span style="color:#e6db74">&#34;name&#34;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">{</span>goblin[<span style="color:#e6db74">&#34;age&#34;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">. Single? </span><span style="color:#e6db74">{</span>goblin[<span style="color:#e6db74">&#34;single&#34;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><h3 id="更新字典資料">更新字典資料<a hidden class="anchor" aria-hidden="true" href="#更新字典資料">#</a></h3>
+<p>不廢話，一樣透過 <code>[key_name]</code> 來更新值。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>goblin <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Xavier&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>goblin[<span style="color:#e6db74">&#34;name&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mimiball&#34;</span>
+</span></span></code></pre></div><h3 id="刪除字典資料">刪除字典資料<a hidden class="anchor" aria-hidden="true" href="#刪除字典資料">#</a></h3>
+<p>和列表一樣，若要刪除資料的話，字典需使用 <code>del</code> 關鍵字。如果我們執意刪除不存在的資料，Python 編譯器會跳錯誤。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>goblins_dict <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;cute&#34;</span>: <span style="color:#e6db74">&#34;cute_goblin&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;small&#34;</span>: <span style="color:#e6db74">&#34;small_goblin&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;big&#34;</span>: <span style="color:#e6db74">&#34;big_goblin&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">del</span> goblins_dict[<span style="color:#e6db74">&#34;big&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(goblins_dict)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Prints: {&#39;cute&#39;: &#39;cute_goblin&#39;, &#39;small&#39;: &#39;small_goblin&#39;}</span>
+</span></span></code></pre></div><h3 id="遞迴字典">遞迴字典<a hidden class="anchor" aria-hidden="true" href="#遞迴字典">#</a></h3>
+<p>透過 <code>in</code> 關鍵字，我們可以輕鬆遞迴字典資料的 <code>key</code>，而透過 <code>key</code> 又可以提取該筆資料的值。另外，若想知道字典的長度，一樣可以使用 <code>len()</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_most_common_enemy</span>(enemies_dict):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Return the name of the enemy with the highest count</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># If there are no enemies -&gt; return None</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># If there are multiple enemies with the same count -&gt; return the first one found</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    highest_count_so_far <span style="color:#f92672">=</span> float(<span style="color:#e6db74">&#34;-inf&#34;</span>)
+</span></span><span style="display:flex;"><span>    most_common_enemy <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(enemies_dict) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> enemies_dict:
+</span></span><span style="display:flex;"><span>        count <span style="color:#f92672">=</span> enemies_dict[name]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> count <span style="color:#f92672">&gt;</span> highest_count_so_far:
+</span></span><span style="display:flex;"><span>            highest_count_so_far <span style="color:#f92672">=</span> enemies_dict[name]
+</span></span><span style="display:flex;"><span>            most_common_enemy <span style="color:#f92672">=</span> name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> most_common_enemy
 </span></span></code></pre></div>
 
   </div>
@@ -216,6 +271,11 @@ print(goblin[&#34;name&#34;])
       <li><a href="http://localhost:1313/tags/python/">Python</a></li>
     </ul>
 <nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/reading/giveness/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>讀書心得 - 給予</span>
+  </a>
   <a class="next" href="http://localhost:1313/posts/programming/python/tuples/">
     <span class="title">下一页 »</span>
     <br>
