@@ -1,7 +1,8 @@
 ---
 date: "2025-02-16T13:09:10+08:00"
-draft: true
+draft: false
 title: "哥布林學 Python 物件導向 (OOP)"
+description: "透過 Python 學習封裝、抽象化、繼承、多型等物件導向概念"
 categories:
   - 程式學習
 tags:
