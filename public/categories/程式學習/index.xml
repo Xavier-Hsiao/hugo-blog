@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>程式學習 on 哥布林 . 一起 . 強大</title>
+    <link>http://localhost:1313/categories/%E7%A8%8B%E5%BC%8F%E5%AD%B8%E7%BF%92/</link>
+    <description>Recent content in 程式學習 on 哥布林 . 一起 . 強大</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 16 Feb 2025 13:09:10 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E7%A8%8B%E5%BC%8F%E5%AD%B8%E7%BF%92/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>哥布林學 Python 物件導向 (OOP)</title>
+      <link>http://localhost:1313/posts/programming/python/oop-overview/</link>
+      <pubDate>Sun, 16 Feb 2025 13:09:10 +0800</pubDate>
+      <guid>http://localhost:1313/posts/programming/python/oop-overview/</guid>
+      <description>透過 Python 學習封裝、抽象化、繼承、多型等物件導向概念</description>
+    </item>
+  </channel>
+</rss>

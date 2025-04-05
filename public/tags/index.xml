@@ -6,8 +6,22 @@
     <description>Recent content in 標籤頁 on 哥布林 . 一起 . 強大</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 27 Jan 2025 17:04:19 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2025 13:09:10 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Sun, 16 Feb 2025 13:09:10 +0800</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>電腦科學</title>
+      <link>http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/</link>
+      <pubDate>Sun, 16 Feb 2025 13:09:10 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/</guid>
+      <description></description>
+    </item>
     <item>
       <title>人際關係</title>
       <link>http://localhost:1313/tags/%E4%BA%BA%E9%9A%9B%E9%97%9C%E4%BF%82/</link>
@@ -20,20 +34,6 @@
       <link>http://localhost:1313/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/</link>
       <pubDate>Mon, 27 Jan 2025 17:04:19 +0800</pubDate>
       <guid>http://localhost:1313/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
-      <pubDate>Sat, 25 Jan 2025 22:47:27 +0800</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>電腦科學</title>
-      <link>http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/</link>
-      <pubDate>Sat, 18 Jan 2025 11:54:14 +0800</pubDate>
-      <guid>http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/</guid>
       <description></description>
     </item>
     <item>

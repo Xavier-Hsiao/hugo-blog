@@ -2,7 +2,7 @@
 date: "2025-01-27T17:04:19+08:00"
 draft: false
 title: "讀書心得 - 給予"
-weight: 1
+weight: 2
 categories:
   - 讀書心得
 tags:

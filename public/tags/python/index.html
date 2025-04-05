@@ -129,6 +129,27 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">哥布林學 Python 物件導向 (OOP)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>物件導向 (OOP) 是一種程式設計的規範 (paradigm)，遵循之後有助於寫出更容易管理、容易維護，且容易閱讀的程式碼。而 Python 本身借鏡了許多 OOP 的概念，雖然沒有像 Java 那樣嚴格，但諸如 flask、Pygame 等等熱門框架也以 OOP 為主旋律，多去了解絕對不吃虧。
+一切都由物件組成 OOP 的核心概念其實很簡單，那就是將我們日常生活中的人事物「建模」成一個一個又一個的物件，而每個物件當中會包含：
+屬性 (attribute)：類似於字典 (dictionary) 的 key-value 資料 方法 (method)：函式，沒錯，就是函式 舉個例子，假設我們用一個物件來代表「人」這個概念，那該物件裡面可能會有以下屬性：
+姓名 年齡 住址 興趣 職業 除此之外，該物件也會包含人的行為，這些行為便是所謂的方法，所以物件將包含以下函式：
+走路 跑步 吃飯 嗚啦 先有藍圖，才有物件 想像你是全知全能的天神，某日心血來潮想為世界增添趣味，於是決定創造名為哥布林的生物，讓他們自生自滅繁衍生息。你給自己泡了杯咖啡，創造了一隻、兩隻、三隻哥布林，漸漸發現如此單調重複的工作 超 . 級 . 無 . 聊，於是靈機一動，先打造了一套哥布林模型，注入神力讓模型依照既定規則自動生成哥布林……
+這基本上就是我們建立物件的方式。Python 透過 class 關鍵字讓我們先產出物件的藍圖，後續依循藍圖去建立單一物件。所以物件的屬性、方法都要在 class 當中先定義好。
+class Goblin: health = 5 damage = 3 Xavier = Goblin() print(Xavier.health) # 5 可以注意到若要從物件中提取屬性值，語法為 &lt;object_name&gt;.&lt;attribute&gt;。
+相較於 class 是物件的藍圖，我們依據藍圖所生成的物件則是 instance，實體。真實的資料會包裹在實體中。
+為物件增添函式 - method 前面提過綁定在 class 當中的函式被稱之為方法。方法和一般函式最大的差異，在於它能夠直接存取該物件的屬性。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-16 13:09:10 +0800 CST'>二月 16, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to 哥布林學 Python 物件導向 (OOP)" href="http://localhost:1313/posts/programming/python/oop-overview/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">初探 Python 字典 (Dictionary)
     </h2>
   </header>

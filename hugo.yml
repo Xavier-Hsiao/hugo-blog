@@ -37,12 +37,14 @@ taxonomies:
 
 params:
   socialIcons:
-    - name: x
-      url: "https://x.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/yu-ting-hsaio-ba4619231/"
+    - name: medium
+      url: "https://vocus.cc/salon/65a48290fd89780001e5b11f"
+    - name: email
+      url: "tim88776@gmail.com"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/Xavier-Hsiao"
 
   analytics:
     google:
@@ -64,8 +66,8 @@ params:
   homeInfoParams:
     Title: "Xavier Hsiao 的部落格"
     Content: |
-      哥布林 . 現居台北市 . 讀書心得 . 程式學習 . 碎碎念
+      哥布林 . 現居台北市 . 讀書心得 . 小說創作 . 碎碎念
 
       - 📕&nbsp; 小說、小說創作、自我成長書籍的閱讀心得
-      - 👨🏻‍💻&nbsp; 程式學習筆記，目前使用 Python、Golang
+      - 👨🏻‍💻&nbsp; 業餘程式學習，喜歡 Golang
       - ⚾️&nbsp; 前興農牛迷，現富邦悍將，我只是想證明自己很能面對挫折

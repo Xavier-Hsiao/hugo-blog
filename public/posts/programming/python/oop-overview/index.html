@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>哥布林學 Python 物件導向 (OOP) | 哥布林 . 一起 . 強大</title>
+<meta name="keywords" content="Python, 電腦科學">
+<meta name="description" content="透過 Python 學習封裝、抽象化、繼承、多型等物件導向概念">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/programming/python/oop-overview/">
+<meta name="google-site-verification" content="XYZabc">
+<meta name="yandex-verification" content="XYZabc">
+<meta name="msvalidate.01" content="XYZabc">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/posts/programming/python/oop-overview/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="哥布林 . 一起 . 強大 (Alt + H)">哥布林 . 一起 . 強大</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/" title="分類">
+                    <span>分類</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="標籤">
+                    <span>標籤</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">主页</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">文章列表</a></div>
+    <h1 class="post-title entry-hint-parent">
+      哥布林學 Python 物件導向 (OOP)
+    </h1>
+    <div class="post-description">
+      透過 Python 學習封裝、抽象化、繼承、多型等物件導向概念
+    </div>
+    <div class="post-meta"><span title='2025-02-16 13:09:10 +0800 CST'>二月 16, 2025</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e4%b8%80%e5%88%87%e9%83%bd%e7%94%b1%e7%89%a9%e4%bb%b6%e7%b5%84%e6%88%90" aria-label="一切都由物件組成">一切都由物件組成</a><ul>
+                        
+                <li>
+                    <a href="#%e5%85%88%e6%9c%89%e8%97%8d%e5%9c%96%e6%89%8d%e6%9c%89%e7%89%a9%e4%bb%b6" aria-label="先有藍圖，才有物件">先有藍圖，才有物件</a></li>
+                <li>
+                    <a href="#%e7%82%ba%e7%89%a9%e4%bb%b6%e5%a2%9e%e6%b7%bb%e5%87%bd%e5%bc%8f---method" aria-label="為物件增添函式 - method">為物件增添函式 - method</a></li>
+                <li>
+                    <a href="#__init__-%e5%bb%ba%e6%a7%8b%e6%96%b9%e6%b3%95" aria-label="__init__ 建構方法">__init__ 建構方法</a></li>
+                <li>
+                    <a href="#%e5%af%a6%e9%ab%94%e8%ae%8a%e6%95%b8-vs-class-%e8%ae%8a%e6%95%b8" aria-label="實體變數 vs. class 變數">實體變數 vs. class 變數</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%b0%81%e8%a3%9d%e8%88%87%e6%8a%bd%e8%b1%a1%e5%8c%96" aria-label="封裝與抽象化">封裝與抽象化</a><ul>
+                        
+                <li>
+                    <a href="#%e5%85%ac%e9%96%8b%e8%88%87%e9%9a%b1%e7%a7%81%e4%b8%80%e5%a0%b4%e4%bf%a1%e4%bb%bb%e6%89%80%e5%bb%ba%e7%ab%8b%e7%9a%84%e9%81%8a%e6%88%b2" aria-label="公開與隱私，一場信任所建立的遊戲">公開與隱私，一場信任所建立的遊戲</a></li>
+                <li>
+                    <a href="#%e7%94%a8%e4%b8%8b%e5%ba%95%e7%b7%9a-_-%e4%be%86%e6%90%ad%e5%bb%ba%e4%bf%a1%e4%bb%bb%e7%9a%84%e6%a9%8b%e6%a8%91%e5%90%a7" aria-label="用下底線 _ 來搭建信任的橋樑吧">用下底線 _ 來搭建信任的橋樑吧</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><strong>物件導向 (OOP)</strong> 是一種程式設計的規範 (paradigm)，遵循之後有助於寫出更容易管理、容易維護，且容易閱讀的程式碼。而 Python 本身借鏡了許多 OOP 的概念，雖然沒有像 Java 那樣嚴格，但諸如 <code>flask</code>、<code>Pygame</code> 等等熱門框架也以 OOP 為主旋律，多去了解絕對不吃虧。</p>
+<h2 id="一切都由物件組成">一切都由物件組成<a hidden class="anchor" aria-hidden="true" href="#一切都由物件組成">#</a></h2>
+<p>OOP 的核心概念其實很簡單，那就是將我們日常生活中的人事物「建模」成一個一個又一個的物件，而每個物件當中會包含：</p>
+<ul>
+<li>屬性 (attribute)：類似於字典 (dictionary) 的 key-value 資料</li>
+<li>方法 (method)：函式，沒錯，就是函式</li>
+</ul>
+<p>舉個例子，假設我們用一個物件來代表「人」這個概念，那該物件裡面可能會有以下屬性：</p>
+<ul>
+<li>姓名</li>
+<li>年齡</li>
+<li>住址</li>
+<li>興趣</li>
+<li>職業</li>
+</ul>
+<p>除此之外，該物件也會包含人的<strong>行為</strong>，這些行為便是所謂的方法，所以物件將包含以下函式：</p>
+<ul>
+<li>走路</li>
+<li>跑步</li>
+<li>吃飯</li>
+<li>嗚啦</li>
+</ul>
+<hr>
+<h3 id="先有藍圖才有物件">先有藍圖，才有物件<a hidden class="anchor" aria-hidden="true" href="#先有藍圖才有物件">#</a></h3>
+<blockquote>
+<p>想像你是全知全能的天神，某日心血來潮想為世界增添趣味，於是決定創造名為哥布林的生物，讓他們<del>自生自滅</del>繁衍生息。你給自己泡了杯咖啡，創造了一隻、兩隻、三隻哥布林，漸漸發現如此單調重複的工作 <strong>超 . 級 . 無 . 聊</strong>，於是靈機一動，先打造了一套哥布林模型，注入神力讓模型依照既定規則自動生成哥布林&hellip;&hellip;</p>
+</blockquote>
+<p>這基本上就是我們建立物件的方式。Python 透過 <code>class</code> 關鍵字讓我們先產出<strong>物件的藍圖</strong>，後續依循藍圖去建立單一物件。所以物件的屬性、方法都要在 <code>class</code> 當中先定義好。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Goblin</span>:
+</span></span><span style="display:flex;"><span>  health <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>  damage <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Xavier <span style="color:#f92672">=</span> Goblin()
+</span></span><span style="display:flex;"><span>print(Xavier<span style="color:#f92672">.</span>health) <span style="color:#75715e"># 5</span>
+</span></span></code></pre></div><p> </p>
+<p>可以注意到若要從物件中提取屬性值，語法為 <code>&lt;object_name&gt;.&lt;attribute&gt;</code>。</p>
+<p>相較於 <code>class</code> 是物件的藍圖，我們依據藍圖所生成的物件則是 <code>instance</code>，實體。真實的資料會包裹在實體中。</p>
+<hr>
+<h3 id="為物件增添函式---method">為物件增添函式 - method<a hidden class="anchor" aria-hidden="true" href="#為物件增添函式---method">#</a></h3>
+<p>前面提過綁定在 <code>class</code> 當中的函式被稱之為方法。方法和一般函式最大的差異，在於它能夠直接存取該物件的屬性。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Goblin</span>:
+</span></span><span style="display:flex;"><span>  health <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">take_damage</span>(self, damage):
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>health <span style="color:#f92672">-=</span> damage
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Xavier <span style="color:#f92672">=</span> Goblin()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Xaiver 會被帶入成 `take_damage` 方法的第一個參數 (self)</span>
+</span></span><span style="display:flex;"><span>Xavier<span style="color:#f92672">.</span>take_damage(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>print(Xavier<span style="color:#f92672">.</span>health) <span style="color:#75715e"># 3</span>
+</span></span></code></pre></div><p>方法的第一個參數永遠都是呼叫 <code>class</code> 的物件實體本身。其實這個參數要叫什麼名字都可以，Python 是依照參數位置區別，但慣例上使用 <a href="https://app.heptabase.com/45a73641-738c-418c-ab35-9f2954232222/card/618f10df-56df-4f30-942c-e34ee8b29b2a"><code>self</code></a> 這個名稱，淺顯易懂。</p>
+<p>換個說法，<code>self</code> 是指向到物件實體的參數，我們需要使用它來讀取或更新 <code>class</code> 裡面所定義的屬性值。因此物件中的方法比起一般函式，比較少去回傳資料，而是直接修改資料。但方法一樣可以回傳資料的喔。</p>
+<p>看到這裡我們發現了一個大問題，目前 <code>class</code> 的屬性都是固定值，比方說 <code>health = 5</code>，造成每個建立出來的物件實體屬性值都相同，但每隻哥布林的健康狀況理當不一樣才對。有沒有辦法把屬性值當作參數，在建立物件實體的時候丟進去生成呢？</p>
+<hr>
+<h3 id="__init__-建構方法"><code>__init__</code> 建構方法<a hidden class="anchor" aria-hidden="true" href="#__init__-建構方法">#</a></h3>
+<p>既然方法都能透過 <code>self</code> 參數來存取屬性了，我們不妨也在 <code>class</code> 建立一個方法來為屬性賦值。</p>
+<p>Python 其實提供了 <code>__init__()</code> 這個特殊函式，負責為物件實體屬性賦值。當我們建立新的物件實體，Python 便會自動去呼叫 <code>__init__()</code>，省去了我們手動為每個物件賦值的苦勞，可謂懶人救星。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Goblin</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> __init__(self, name, health, damage):
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;Goby&#34;</span> <span style="color:#75715e"># Computed prop!</span>
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>health <span style="color:#f92672">=</span> health
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>damage <span style="color:#f92672">=</span> damage
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Xaiver will be passed into the &#39;__init__&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># method as the first argument (self)</span>
+</span></span><span style="display:flex;"><span>Xavier <span style="color:#f92672">=</span> Goblin(<span style="color:#e6db74">&#34;Xavier&#34;</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>print(Xavier<span style="color:#f92672">.</span>name) <span style="color:#75715e"># XaiverGoby</span>
+</span></span><span style="display:flex;"><span>print(Xaviier<span style="color:#f92672">.</span>health) <span style="color:#75715e"># 5</span>
+</span></span><span style="display:flex;"><span>print(Xavier<span style="color:#f92672">.</span>damage) <span style="color:#75715e"># 10</span>
+</span></span></code></pre></div><p> </p>
+<p>我們一樣在 <code>__init__()</code> 帶入 <code>self</code> 參數，代表物件實體本身。接著陸續帶入其他屬性參數，完成賦值即可。當然如果有些屬性是透過其他屬性計算出來的，也直接在 <code>__init__()</code> 中定義。</p>
+<p>但這又引發了另一個問題，如果某些屬性就剛好是每個物件實體都相同，該怎麼辦？只能在建立物件時重複帶入參數嗎？</p>
+<hr>
+<h3 id="實體變數-vs-class-變數">實體變數 vs. class 變數<a hidden class="anchor" aria-hidden="true" href="#實體變數-vs-class-變數">#</a></h3>
+<p>前面我們都是透過 <code>self</code> 來宣告變數，由於 <code>self</code> 代表物件實體本身，因此這些綁定 <code>self</code> 的變數，自然而然會跟著物件實體。</p>
+<p>倘若我們是在 <code>class</code> 的範圍內宣告變數，而非 <code>__int__()</code> 建構方法的話，該變數在不同的物件實體仍會保持相同值。不過還是能以 <code>&lt;class_name.&lt;attribute&gt;</code> 來變更變數值。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bear</span>:
+</span></span><span style="display:flex;"><span>    mood <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;happy&#34;</span>  <span style="color:#75715e"># This is a class variable</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">change_mood</span>(self, new_mood):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>mood <span style="color:#f92672">=</span> new_mood  <span style="color:#75715e"># This creates an instance variable</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create two bear instances</span>
+</span></span><span style="display:flex;"><span>bear1 <span style="color:#f92672">=</span> Bear()
+</span></span><span style="display:flex;"><span>bear2 <span style="color:#f92672">=</span> Bear()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Access the class variable</span>
+</span></span><span style="display:flex;"><span>print(Bear<span style="color:#f92672">.</span>mood)  <span style="color:#75715e"># &#34;happy&#34;</span>
+</span></span><span style="display:flex;"><span>print(bear1<span style="color:#f92672">.</span>mood)  <span style="color:#75715e"># &#34;happy&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Modify using the instance</span>
+</span></span><span style="display:flex;"><span>bear1<span style="color:#f92672">.</span>change_mood(<span style="color:#e6db74">&#34;grumpy&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Now:</span>
+</span></span><span style="display:flex;"><span>print(bear1<span style="color:#f92672">.</span>mood)  <span style="color:#75715e"># &#34;grumpy&#34; (instance variable)</span>
+</span></span><span style="display:flex;"><span>print(Bear<span style="color:#f92672">.</span>mood)  <span style="color:#75715e"># &#34;happy&#34; (class variable still unchanged)</span>
+</span></span><span style="display:flex;"><span>print(bear2<span style="color:#f92672">.</span>mood)  <span style="color:#75715e"># &#34;happy&#34; (still uses the class variable)</span>
+</span></span></code></pre></div><hr>
+<h2 id="封裝與抽象化">封裝與抽象化<a hidden class="anchor" aria-hidden="true" href="#封裝與抽象化">#</a></h2>
+<p>OOP 這種將屬性和行為包裹在一個物件當中的設計模式，背後蘊含了兩大原則：</p>
+<ul>
+<li><strong>封裝 (encapsulation)</strong>：將相關的公開 (public) 和隱私 (private) 資料包成一個群組</li>
+<li><strong>抽象化 (abstraction)</strong>：將複雜的邏輯藏起來，提供簡易使用的介面 (interface)。我們只需要知道車子怎麼開，不用理解引擎如何運作。</li>
+</ul>
+<p>兩者乍看之下非常相似，而事實上封裝和抽象化的確只是著重面向不同而已。</p>
+<blockquote>
+<p>因為有封裝，我們才能夠實現抽象化！</p>
+</blockquote>
+<p>這邊也值得注意，封裝所提到的公開和隱私資料，和我們一般認知中 <em>個資、密碼、機敏資料</em> 的資安概念不太一樣。封裝的意義在於更有效地管理程式碼，而非讓系統儲存的資料更加安全。在這層含義上，我們可以將封裝想像成未上鎖的檔案櫃，裡面的資料夾排列得井井有條，但知道檔案櫃所在位置的人都能自由查找資料。</p>
+<p>唉，不對啊，如果是這樣，那還分什麼公開和隱私資料？</p>
+<p>再想像一下，假設今天有甲、乙兩個開發團隊協作。甲團隊設計了一組 API，方便自己和乙團隊開發對應功能。如果乙團隊當中有人無心或刻意要攪亂一池春水，隨便亂調整背後邏輯的變數或函式，那大家就準備一起包包收拾滾回家去了。</p>
+<p>因此在一般開發協作，甚或函式庫開源的情境下，我們需要將資料分成公開、隱私變數，以免天下秩序大亂。</p>
+<p>接著底下會紀錄 Python 如何實現公開、隱私變數。爆個雷，不外乎兩個字：<strong>信任</strong>。</p>
+<hr>
+<h3 id="公開與隱私一場信任所建立的遊戲">公開與隱私，一場信任所建立的遊戲<a hidden class="anchor" aria-hidden="true" href="#公開與隱私一場信任所建立的遊戲">#</a></h3>
+<p>預設上所有在 <code>class</code> 宣告的屬性和方法都是公開的。也就是說任何人用 <code>.</code> 運算子即可提取資料。</p>
+<p>你可能會想說，只要在屬性或方法前面加上 <code>private</code> 或 <code>non-public</code> 之類的關鍵字，資料就會神奇地貼上隱私標籤對吧？</p>
+<p>我以前也是這麼以為的，但可惜事情沒有想像中那麼簡單。</p>
+<p>由於 Python 是動態語言 (dynamic language)，且由直譯器 (interpreter) 逐行執行程式碼，因此<strong>不會在執行前強制檢查變數的存取權限</strong>，這使得 Python 無法像 Golang、Rust 等靜態語言那樣，透過編譯 (compilation) 時的機制來嚴格限制屬性的可視性。</p>
+<p>因此 **Python 很吃重開發者之間<a href="https://app.heptabase.com/45a73641-738c-418c-ab35-9f2954232222/card/22afa5e2-fa7d-45b4-949f-9eb4012d7a85">約定俗成的慣例，也就是命名方式</a>**來實現資料公開與隱私。</p>
+<p> </p>
+<h3 id="用下底線-_-來搭建信任的橋樑吧">用下底線 <code>_</code> 來搭建信任的橋樑吧<a hidden class="anchor" aria-hidden="true" href="#用下底線-_-來搭建信任的橋樑吧">#</a></h3>
+<p>我們用以下範例來看看 Python 所謂的「慣例」長什麼模樣：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, name):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_name <span style="color:#f92672">=</span> name  <span style="color:#75715e"># Convention: &#34;this should be private&#34;</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>__password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;secret&#34;</span>  <span style="color:#75715e"># Name mangling, not true private</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>user <span style="color:#f92672">=</span> User(<span style="color:#e6db74">&#34;Xavier&#34;</span>)
+</span></span><span style="display:flex;"><span>print(user<span style="color:#f92672">.</span>_name)  <span style="color:#75715e"># Allowed, but conventionally discouraged</span>
+</span></span><span style="display:flex;"><span>print(user<span style="color:#f92672">.</span>__password)  <span style="color:#75715e"># AttributeError</span>
+</span></span><span style="display:flex;"><span>print(user<span style="color:#f92672">.</span>_User__password)  <span style="color:#75715e"># Bypasses name mangling!</span>
+</span></span></code></pre></div><p><strong>單一下底線 <code>_</code></strong>：</p>
+<ul>
+<li>純慣例，代表該屬性或方法僅供 <code>class</code> 內使用。</li>
+<li>注意這只是慣例，所以就算在 <code>class</code> 外部仍舊能夠提取資料。</li>
+</ul>
+<p><strong>雙底線 <code>__</code></strong>：</p>
+<ul>
+<li>除了慣例之外，雙底線還會觸發 <code>name mangling</code>，也就是 Python 會自動改變該屬性、方法的名稱。</li>
+<li>由於名稱被更改了，所以能預防該屬性、方法被刻意繼承到其他子 <code>class</code> 當中。</li>
+<li>名稱更改的模式並非秘密，就是多加上 <code>class</code> 名稱罷了，所以能<a href="https://app.heptabase.com/45a73641-738c-418c-ab35-9f2954232222/card/22afa5e2-fa7d-45b4-949f-9eb4012d7a85">施以小計提取資料</a>。</li>
+</ul>
+<p>額外加映～<strong>前後雙底線 <code>__keyword__</code></strong>：</p>
+<ul>
+<li>這些是 Python 內建的<em>特殊方法</em>，像是常用的 <code>__repr__</code>、<code>__init__</code>等等。</li>
+</ul>
+<p>雙底線是滿常見的隱私命名方式，如果希望其他子 <code>class</code> 繼承，可以改用單底線，或是保留雙底線然後建立 <code>get_something()</code> 之類的 getter 方法。總歸一句話，一切都源自於信任兩個字，所以和團隊或合作對象是先溝通清楚才為上策。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
+      <li><a href="http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/">電腦科學</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>自由書寫術 - 找回靈感的絕佳方法</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/programming/python/dictionary/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>初探 Python 字典 (Dictionary)</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 哥布林學 Python 物件導向 (OOP) on x"
+            href="https://x.com/intent/tweet/?text=%e5%93%a5%e5%b8%83%e6%9e%97%e5%ad%b8%20Python%20%e7%89%a9%e4%bb%b6%e5%b0%8e%e5%90%91%20%28OOP%29&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2foop-overview%2f&amp;hashtags=Python%2c%e9%9b%bb%e8%85%a6%e7%a7%91%e5%ad%b8">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 哥布林學 Python 物件導向 (OOP) on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2foop-overview%2f&amp;title=%e5%93%a5%e5%b8%83%e6%9e%97%e5%ad%b8%20Python%20%e7%89%a9%e4%bb%b6%e5%b0%8e%e5%90%91%20%28OOP%29&amp;summary=%e5%93%a5%e5%b8%83%e6%9e%97%e5%ad%b8%20Python%20%e7%89%a9%e4%bb%b6%e5%b0%8e%e5%90%91%20%28OOP%29&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2foop-overview%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 哥布林學 Python 物件導向 (OOP) on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2foop-overview%2f&title=%e5%93%a5%e5%b8%83%e6%9e%97%e5%ad%b8%20Python%20%e7%89%a9%e4%bb%b6%e5%b0%8e%e5%90%91%20%28OOP%29">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 哥布林學 Python 物件導向 (OOP) on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2foop-overview%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 哥布林學 Python 物件導向 (OOP) on whatsapp"
+            href="https://api.whatsapp.com/send?text=%e5%93%a5%e5%b8%83%e6%9e%97%e5%ad%b8%20Python%20%e7%89%a9%e4%bb%b6%e5%b0%8e%e5%90%91%20%28OOP%29%20-%20http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2foop-overview%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 哥布林學 Python 物件導向 (OOP) on telegram"
+            href="https://telegram.me/share/url?text=%e5%93%a5%e5%b8%83%e6%9e%97%e5%ad%b8%20Python%20%e7%89%a9%e4%bb%b6%e5%b0%8e%e5%90%91%20%28OOP%29&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2foop-overview%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 哥布林學 Python 物件導向 (OOP) on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=%e5%93%a5%e5%b8%83%e6%9e%97%e5%ad%b8%20Python%20%e7%89%a9%e4%bb%b6%e5%b0%8e%e5%90%91%20%28OOP%29&u=http%3a%2f%2flocalhost%3a1313%2fposts%2fprogramming%2fpython%2foop-overview%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">哥布林 . 一起 . 強大</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
