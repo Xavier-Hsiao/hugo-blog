@@ -1,10 +1,9 @@
 baseURL: "https://www.goblin-stronger.com"
-defaultContentLanguage: "zh"
+defaultContentLanguage: "zh-tw"
 defaultContentLanguageInSubdir: false
 title: "哥布林 . 一起 . 強大"
 theme: "hugo-theme-stack"
 
-DefaultContentLanguage: "zh-tw"
 newContentEditor: "yaml"
 contentDir: "content/zh-tw"
 
