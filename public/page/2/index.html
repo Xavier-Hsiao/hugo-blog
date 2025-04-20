@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head>
+	<meta name="generator" content="Hugo 0.140.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>標籤頁 | 哥布林 . 一起 . 強大</title>
-<meta name="keywords" content="">
-<meta name="description" content="點擊標籤，快速查看相關文章～">
+<title>哥布林 . 一起 . 強大</title>
+
+<meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/tags/">
+<link rel="canonical" href="http://localhost:1313/">
 <meta name="google-site-verification" content="XYZabc">
 <meta name="yandex-verification" content="XYZabc">
 <meta name="msvalidate.01" content="XYZabc">
@@ -21,8 +22,8 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/index.xml">
-<link rel="alternate" hreflang="zh" href="http://localhost:1313/tags/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/">
 <noscript>
     <style>
         #theme-toggle,
@@ -114,37 +115,38 @@
             </li>
             <li>
                 <a href="http://localhost:1313/tags/" title="標籤">
-                    <span class="active">標籤</span>
+                    <span>標籤</span>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
-<main class="main">
-<header class="page-header">
-    <h1>標籤頁</h1>
-    <div class="post-description">
-        點擊標籤，快速查看相關文章～
-    </div>
-</header>
+<main class="main"> 
 
-<ul class="terms-tags">
-    <li>
-        <a href="http://localhost:1313/tags/python/">Python <sup><strong><sup>7</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/">電腦科學 <sup><strong><sup>3</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="http://localhost:1313/tags/%E4%BA%BA%E9%9A%9B%E9%97%9C%E4%BF%82/">人際關係 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="http://localhost:1313/tags/%E5%AF%AB%E4%BD%9C%E6%8A%80%E5%B7%A7/">寫作技巧 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="http://localhost:1313/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升 <sup><strong><sup>4</sup></strong></sup> </a>
-    </li>
-</ul>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">作用域 - 以 Python 為例
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>什麼是作用域？ 作用域 (Scope) 是指變數或函示名稱可以被使用的範圍。我自己是想像成結界，外面的世界無法接觸、取用到結界內的萬事萬物。
+舉例來說，當我們在函式中建立一個變數，包含給函示參數，那這些資料就無法在函示的作用域範圍之外使用，會跑出該變數沒有定義的錯誤。
+def add(x, y): return x &#43; y result = add(2, 6) print(x) # ERROR! &#34;name &#39;x&#39; is not defined&#34; 上述範例中，x 和 y 都是 add 函式的參數，因此只能在 add 函式作用域範圍內被使用。我們在作用域之外嘗試列印 x，Python 的編譯器會跳出 x 沒有被定義的錯誤警告。
+全域作用域 我們知道函式中所定義的變數和參數，是無法在函式作用域以外被使用的。但如果今天有多個函式都要用同一組變數該怎麼辦呢？我們可以在全域環境中定義變數，這樣每個函式都能夠取用該變數了。
+以結界來比喻，我覺得就像結界內的人可以把外面世界的物品拉進去，但外部世界的人無法看透結界內發生什麼事情，自然也就無法取用結界內的物品了。
+outside_stuff = &#34;pull me in baby!&#34; def pull_outside_stuff_into_function_scope(target): return outside_stuff &#43; &#34; - success&#34; print(pull_outside_stuff(outside_stuff)) 上述範例中，pull_outside_stuff_into_function_scope 最終會成功回傳 pull me in baby! - success。因為 outside_stuff 變數是在權域作用域 (global scope) 定義的，所以能夠被函式拉到函式作用域當中使用。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-15 15:16:56 +0800 CST'>一月 15, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to 作用域 - 以 Python 為例" href="http://localhost:1313/posts/programming/python/scope/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/">
+      «&nbsp;上一页&nbsp;
+    </a>
+  </nav>
+</footer>
     </main>
     
 <footer class="footer">
