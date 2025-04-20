@@ -1,514 +1,348 @@
 <!DOCTYPE html>
-<html lang="zh" dir="auto">
+<html lang="zh-tw" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="所有的文章都整理在這邊～">
+<title>文章列表</title>
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>文章列表 | 哥布林 . 一起 . 強大</title>
-<meta name="keywords" content="">
-<meta name="description" content="所有的文章都整理在這邊～">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/">
-<meta name="google-site-verification" content="XYZabc">
-<meta name="yandex-verification" content="XYZabc">
-<meta name="msvalidate.01" content="XYZabc">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml">
-<link rel="alternate" hreflang="zh" href="http://localhost:1313/posts/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
+<link rel='canonical' href='http://localhost:1313/posts/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="文章列表">
+<meta property='og:description' content="所有的文章都整理在這邊～">
+<meta property='og:url' content='http://localhost:1313/posts/'>
+<meta property='og:site_name' content='哥布林 . 一起 . 強大'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-04-20T15:05:40&#43;08:00 '/>
+<meta name="twitter:title" content="文章列表">
+<meta name="twitter:description" content="所有的文章都整理在這邊～"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/posts/index.xml">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
         }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-</head>
-
-<body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
+    })();
 </script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
 
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="哥布林 . 一起 . 強大 (Alt + H)">哥布林 . 一起 . 強大</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu13739649187745961479.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">哥布林 . 一起 . 強大</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span></span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title"></h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/categories/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/" class="font_size_4">
+                讀書心得
+            </a>
+        
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E5%AD%B8%E7%BF%92/" class="font_size_1">
+                程式學習
+            </a>
+        
+    </div>
+</section>
+
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title"></h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/tags/python/" class="font_size_7">
+                Python
+            </a>
+        
+            <a href="/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/" class="font_size_4">
+                自我提升
+            </a>
+        
+            <a href="/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/" class="font_size_3">
+                電腦科學
+            </a>
+        
+            <a href="/tags/%E4%BA%BA%E9%9A%9B%E9%97%9C%E4%BF%82/" class="font_size_1">
+                人際關係
+            </a>
+        
+            <a href="/tags/%E5%AF%AB%E4%BD%9C%E6%8A%80%E5%B7%A7/" class="font_size_1">
+                寫作技巧
+            </a>
+        
+    </div>
+</section>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <header>
+        <h3 class="section-title">
+            
+                
+            
+        </h3>
+
+        <div class="section-card">
+            <div class="section-details">
+                <h3 class="section-count"></h3>
+                <h1 class="section-term">文章列表</h1>
+                
+                    <h2 class="section-description">所有的文章都整理在這邊～</h2>
+                
             </div>
         </div>
-        <ul id="menu">
-            <li>
-                <a href="http://localhost:1313/posts/" title="文章">
-                    <span class="active">文章</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/categories/" title="分類">
-                    <span>分類</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/tags/" title="標籤">
-                    <span>標籤</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">主页</a></div>
-  <h1>
-    文章列表
-  </h1>
-  <div class="post-description">
-    所有的文章都整理在這邊～
-  </div>
-</header>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">踏實感的練習
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>踏實感的練習 離開哥布林洞穴踏入人類社會之後，難免陷入永無止盡的競爭遊戲。尤其 AI 問世之後，大家無非追求更高效的作業方式，以及更多的產出量。然而空虛依舊未被填滿，焦慮也仍然如影隨形，於是我們加倍努力，說服自己付出更多心力，必定能過上幸福快樂的人生……倒帶重來。
-我們沒有意識到，原來踏實感是需要刻意練習的。
-洞穴外的世界，太可怕了。
-為何要讀這本書？ 因為我喜歡看成功人士不快樂的故事，這讓我感覺自己和成功人士的距離，因為大家都不快樂所以縮小了 (誤。
-好啦，說真的，雖然我和「成功人士」這四個字完全沾不上邊，但每天汲汲營營之後，或多或少也被空虛感糾纏過。原本我以為只是因為錢賺得不夠多，直到看見《踏實感的練習》書封才猶如醍醐灌頂。
-原來我缺乏的是踏實感！
-當然錢也是不太夠，不過那又是另一件事情了。
-接著我研究了作者背景。Brad Stulberg，美國知名的專爛作家和企業教練，也幫助過運動員追求更卓越的表現。他的前兩本著作《一流的人如何駕馭自我》和《一流的人如何保持顛峰 》同樣是暢銷的自我成長書籍。
-然而隨著成功案例不斷累積，他發現就算擁有良好的社經地位和過往成就，仍有許多人不曾感覺真正的滿足或踏實，連他自己也飽受焦慮、冒牌者症候群以及強迫症所苦。為此他重新檢視了自己前兩本著作，佐以大量科學研究以及古今中外的智慧經典，寫出了《踏實感的練習》。
-這種不卑不亢打臉自己的戲碼深得我心，鐵定要來觀摩觀摩。內容也確實帶給我不少啟發，我會嘗試把印象深刻的部分整理在這篇文章裡面。
-失控的個人英雄主義 無論職場還是生活，我們總覺得自己不夠好。Brad Stulberg 將以上現象稱之為個人英雄主義。而且個人英雄主義藉由現代文化推波助瀾，已經成為所有人生命中的一大課題。個人英雄主義就像死靈法師，攀附在你耳畔催促你要不斷超越自己、逼自己思考更正面，才能夠擁有得比他人更多。
-更可怕的是，個人英雄主義會污染原先美好的事物。
-我想舉運動為例。從小我們就被告知運動能維持身心健康、釋放壓力，然而在個人英雄主義摧殘之下，運動漸漸曾經淪為我又另一個生活壓力來源：
-短時間內看不見成效等於失敗：怎麼這星期的重量還是上不去？
-增加外表吸引力：結果還是單身，哥布林成為了比較壯的哥布林。
-懲罰性手段：今天吃了麥當勞，如果不運動的話就罪該萬死。
-Joseph Campbell 於《千面英雄》中提出英雄旅程的概念，而我認為個人英雄主義就像是被困在旅程中途無法順利蛻變的英雄，努力披荊斬棘結果越陷越深。通常這種時候會有智者之類的角色出來開導，所以我們不妨將 Brad Stulberg 的踏實感原則當作醒悟良言。
-首先，英雄需要接納自己並擁抱脆弱。
-接納現實與自己 我們從來不曾感到完全踏實，因為我們並非生活在完整的現實。
-這句話乍聽之下既像科幻小說內容，又像邪教團體佈道，但其實是我們邁向踏實的首要課題。而且我私心認為，也是最困難、最容易被柴米油鹽醬醋茶給掩蓋的修行。
-作者說我們並非生活在完整的現實，是因為人有動機性推理的傾向，翻成白話文就是逃避現實。我們會欺騙自己當前處境其實不嚴重，或是從其他地方尋找先入為主的證據來支持自己的想法。然而一昧將心力放在逃避、抗拒問題上的話，又該如何解決問題呢？
-承認自己能力不足、判斷失誤，或是認清結果不如預期都非常令人痛苦。也許我們已經非常努力了，但還是只能眼睜睜看著他人享受我們原先期待的成果。不過狀況越是如此，我們就越該接納現在的自己，而不是我們心目中理想的自己，更不是別人眼中我們該成為的樣子。
-乍聽之下和躺平沒兩樣嘛？
-作者確實提到這樣的心態容易招來誤會，但接納並非被動放棄，而是告訴自己評估狀況，無論喜歡與否都要認清現實，並接受自己就身在其中。當我們能夠接納自己和現況，就有更多餘裕選擇符合自身價值觀的方式進行回應。關鍵在於有意識地回應，取代意氣用事地反應。
-這邊我還是想舉運動為例，過程有點赤裸難堪，但我相信台灣有許多哥布林同胞遇過類似狀況。
-身為一隻哥布林，我從小便身形短小加上相貌不揚，而且從學生時代開始便蒐集了許多好人卡，都快可以折成一朵紙蓮花了。既然沒錢整形，我所能想到的方法只剩雕塑身材，然而就如前面列點所提，哥布林健身後頂多變成比較壯的哥布林，並持續受求偶焦慮所苦。
-運動固然是好事，但我並沒有接受自己就是不適合、也不可能走帥哥猛男路線的現實，當然也沒有接納當時的自己。我不肯承認自己陷入求偶焦慮的泥淖，我不敢擁抱自身的脆弱。
-擁抱脆弱 脆弱是我們基本的自然狀態，一種一直都在且無法避免的暗流。所以逃避脆弱，就是逃避我們本性的本質。
-本書所提到的脆弱，意思是對自己坦承，也對他人坦承，正面直視自己的弱點與恐懼。我們的擔憂、害怕、羞愧、極度等等負面情緒，我覺得也是脆弱的一部分。
-個人英雄主義強烈要求我們擊潰脆弱，當個永遠正面的完人，否則就會被淘汰出局。但其實脆弱並非我們能隨意割捨的腫瘤，脆弱是我們身而為人的一部分 (好啦，還有哥布林)， 而我們也都很熟悉佛地魔將自己拆成七個分靈體迎來什麼樣的下場。
-比起逃避、蠻幹脆弱，Brad Stulberg 在書中鼓勵我們主動擁抱脆弱，而我認為脆弱與接納具有相輔相成的關係：先有接納自己的念頭才有機會認識脆弱，擁抱脆弱後我們便能更接納自己。而且弔詭的是，當我們承認自己並非無所不知或總是井然有序，反而會讓自己更加堅強、踏實，同時也更強大、自信。
-至少在認清了自己以前被求偶焦慮遮蔽雙眼後，我確實能用坦然的心情面對自己比不上他人的部分，也不會再胡亂踏上錯誤的賽道。而節省下來的心力還能投入到對自己有意義的事物上，好比說此刻撰寫這篇讀書心得、坦承黑歷史。說真的，實際寫下來才發現沒有想像中難為情。
-現實生活難免產生壓力，我們處於逆境也不是一天兩天的事情。有時意志消沈不代表我們軟弱失敗，只代表我們是平凡的存在。我很喜歡作者於書中提到的其中一種練習：每當我們開始苛責自己或是所處的狀況時，嘗試復誦「這是現在的狀況，我正在盡全力了。」
-臨在與耐心 當我們懂得善用自己的時間、精力以及注意力，專注於有意義的人、事、物上，就更能擁有一個快樂、有意義的人生。
-科學研究發現我們的大腦很難在同一時間進行兩種以上的的認知能力工作，換而言之，我們自以為多工作業可以提升生產力，其實只能完成約莫一半的作業而已，而且還會降低作業品質以及工作的愉快程度。
-這個研究成果和 Carl Newport 在《慢速生產力》提到的「偽生產力」不謀而合。他認為現代知識工作者習以為常的生產力，其實只是人類將農工時代的傳統生產力強硬移植過來而已，導致大家不甩品質，一昧上演作秀式的裝忙大戲而渾然不知。
-Brad Stulberg 也有類似的想法，不過他進一步推論我們強迫自己忙碌、不停活躍於社交平台或回覆訊息，都是希望傳達「我們存在，而且我們很重要」的訊號。說到底，這很可能又是個人英雄主義在現代文化 (社群平台、必須忙碌否則將被淘汰) 中推波助瀾的結果。
-但這些終究是外界推送而來的回饋與刺激，真的符合我們內心的期待嗎？
-本書作者過往認為成功就像是努力將球送入球門，然而賽場是如此，現實生活可沒有什麼球門，只有每天所下的決定：我們想過上什麼日子？我們該把精力和注意力用在哪裡？我該專注在哪些事情上面。倘若我們願意接納自己，或甚至從脆弱延伸找出以上問題的答案，那便能用覺察取代意志力，慢慢將專注力矯正回真正有意義的人、事、物上。
-把我們自己想像成園丁，將臨在與注意力當作滋養種子的養分。我們平時灌溉的種子，終將決定我們會成為什麼樣的人。不過現實生活的壓力很難讓我們像個愜意的園丁一樣不受外界雜訊干擾，專心灌溉自己鍾情的花園。當你看見別人園中的花朵開得更加茂盛，心中難免湧現出著急、加快的念頭，然而未經過思考就盲從效法，最終可能只是揠苗助長。
-所以要時不時提醒自己保持耐心。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-04-20 15:05:40 +0800 CST'>四月 20, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 踏實感的練習" href="http://localhost:1313/posts/reading/%E8%B8%8F%E5%AF%A6%E6%84%9F%E7%9A%84%E7%B7%B4%E7%BF%92/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">慢速工作力 - 打破生產力迷思
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>慢速工作力 - 也許我們都誤會生產力的意義了 啊～～生產力，讓人又愛又恨的生產力。每當我們感嘆工作太過忙碌，或是遲遲無法達成目標，提高生產力往往是最終結論。然而隨著一款又一款號稱能提高生產力的應用程式和工具問世，我們依舊受困於永無停歇的工作追逐戰。應許之地就在前方，但無論列車如何加快，隧道永遠看不見盡頭。
-知識工作者疲憊不堪 ── 被越來越殘酷無情的忙碌折磨得筋疲力盡。與其說疫情引發了這項趨勢，倒不如說疫情將最惡劣的過度忙碌推到了令人無法忍受的地步。
-Carl Newport 在其最新著作《慢速工作力》提出了上述警訊。大家普遍相信唯有不斷忙碌，才能拿出傑出的工作表現，所以我們追求更快速地回覆電子郵件和 LINE 訊息、努力加入更多場會議、自發延長工作時數……結果換回倦怠以及功能受損的肝。
-經過多年的訪談、研究和推敲，Carl Newport 認為知識工作者的問題不在於廣義上的生產力夠不夠高，而在於當前社會大眾對於「**生產力」**一詞從最初便有誤解，導致後續越走越偏。 他提出了一種名為「慢速工作力」的替代方案，倡議用更緩慢的概念來理解生產力的根本意義。
-慢速工作力不需要瘋狂忙碌，就能讓工作既有意義又有價值。Carl Newport 將它分成以下三項原則說明：
-少做一些事情。
-以自然的步調工作。
-執著於品質。
-然而就像王道故事決戰前都要先認識反派的成魔之道，我們也需要來了解一下生產力是如何轉變為包著糖衣的詛咒。
-偽戀賺人熱淚、偽生產力使人倦怠 作者毫不囉唆，直接指出當前知識工作圈認知的生產力是偽生產力~~、是修正主義~~。因為這套生產力其實是從一、二級產業強加移植的。一、二級產業即為農業和製造業。
-由於一、二級產業講究於可視的產出，所以生產力定義和追蹤起來非常明確。然而當今知識產業的工作內容千變萬化，光是一個職位就肩負多種職能與責任，而且知識工作相較於傳統農業或製造業有著更高的個人自主性 (大家用自己一套方式工作)，造成知識工作者始終難以對「生產力」的涵義達成共識。
-既然討論不出個所以然，不如就直接參考過往的成功經驗吧！於是知識工作者們紛紛將可見的活動當作實際生產力的粗略替代指標。故事的結局我們再熟悉不過：更快的客戶回覆時間、更多陌生開發電話和信件，以及更長的工作時數。
-可以說知識工作者一直在追逐著海市蜃樓。我尤其對作者這句話印象深刻：
-偽生產力不是一項可以簡單解釋的規範化制度，更像是一種心情 ──一種透過狂熱動作來支撐有意義活動的總體氛圍。
-簡單來說，偽生產力容易讓大家「裝忙」。加上 Slack、LINE、視訊軟體等工具問世，我們更能不費吹灰之力傳送訊息顯示自己很忙，所以大家花越來越多時間傳訊息、開會，盡可能快速且發了瘋似地討論工作。生活各個角落都塞滿了工作，而我們則虔誠地相信這樣終將能累積成具有意義的東西。講難聽點，我們正盲目崇拜著名為生產力的邪教。
-這便是為什麼 Carl Newport 希望邀請大家一起重新思考生產力和工作的本質，並提出可行的替代方案。
-原則一、少做些事情 少做事情可以得到更好的結果？這其實違背了我們當代人對行動的偏好，因為我們普遍相信做越多事情等於擁有更多選擇，所以會產生更多獲取回報的機會。不過 Carl Newport 提出了兩個文學界和商界的案例來挑戰這個觀念：
-《傲慢與偏見》的作者珍 . 奧斯汀在人生最繁忙的時期，因緣際會之下大幅減輕了肩上的義務，才終於能夠好好完成最棒的作品，而非民間遙傳的掌握零碎時間撥空寫作。
-賈伯斯重新回到蘋果後，大幅度刪減產品線，將資源和動能投入到少數幾項產品，扭轉了蘋果公司的頹勢。
-少做一些事情不只增加了用於有效活動的工作時數，更提升了這些時間的品質。其實很好理解，因為我們不必到處滅火處理瑣事，而是專心聚焦在少數的重要專案上，便有餘裕嘗試更開闊的可能性。
-努力減少你必須履行的職責，直到你能輕易想像自己擁有綽綽有餘的時間來完成它們。借助較輕的負荷，更充分地投入和推展最重要的少數幾項計畫。
-至於要如何在生活中實踐這個主張，作者提供了以下方法給我們參考。
-減少主要目標才能管理工作量 作者認為工作超載並非知識工作與生俱來的詛咒，而是我們管理自身工作量的方式過於粗糙所產生的副作用。針對這個問題，他建議我們小至每日、大至生涯都該減少主要目標。
-每天只做一件大事，能帶來和諧的穩定性和踏實感。實際上我們取得了真正的進展，內心世界也抑制了焦慮。如此步調符合慢速工作力背後的哲學，雖然短期內看似緩慢，但若將鏡頭拉遠，經過數週、數月所累積出的成果將會非常豐碩。
-這個方法和原子習慣有異曲同工之妙，但我認為更強調「重質不重量」的層面。畢竟一次安排太多目標，後續往往自然消滅到一個都不剩，那還不如聚焦在少數重要的目標上，依循自然、踏實的節奏努力。
-評估新專案或合理的工作量時，要考量工作帶來的行政開銷 工作不會憑空產生，不是我們為自己設定目標，就是職場受他人委託辦事。這個時候若沒有堅守住「合理的工作量」，就很容易陷入偽生產力的惡性循環中。合理的工作量因人而異，重點是要對排程保持清晰和可控。
-作者提醒我們不要忘記每項職責和任務都伴隨經常性的行政開銷。例如為了搜集資訊而衍生的一長串郵件往來，或是無性生殖冒出來的會議。隨著待辦清單逐漸加長，我們得付出的行政開銷稅額就越來越高。由於一天就 24 小時，這些行政雜務勢必擠壓其他核心工作的時間，造成你收好筆電、吞下淚水、打卡下班後回家繼續做那些真正重要的工作。
-此外很多時候，讓我們分心的不是實際執行行政瑣事，而是要費心記住它、為它操心的腦力流失。總結來說，如果我們能盡量減少這類準備工作，就能遏止行政開銷稅給工作本身帶來的影響。
-有鑑於此，作者建議在選擇新專案時，要優先考慮行政、瑣碎開銷最少的選項，不要把專案難度或總時數當作遴選指標。
-採取拉式作業模式來維持合理工作量 作者發現許多人日常工作都是採用「推式作業」，也就是一旦判定手上任務該由其他人接手就直接將工作給推過去，也不理會對方是否早已工作量爆表。能當甩鍋方當然痛快，但我們更常淪為目睹工作不斷被推過來的接收方。因此 Carl Newport 提倡改採「拉式作業」模式。
-所謂拉式作業是指工作會先掉入暫存區，當我們確定現役工作區出現空檔，再主動從暫存區拉入新的工作。這樣的好處是整體流程步調將隨著運作最緩慢的階段開始調整，如此透明性進而幫助工作者找出系統失衡的地方。上述當然是理想狀態，而我們都知道現實總骨感，因此作者也建議我們以共事者察覺不到的方式，將拉式工作模式帶入到制度中。
-作者指出我們常誤以為共事者只關心盡快取得成果，但其實很多時候他們真正想要的是能將工作交付出去，壓根不擔心對方會不會完成工作。觀察到這點後，我們應該適時提出「反向任務清單」，要求對方花更多時間說明需求，這樣除了讓後續執行更加順利，有時甚至能直接讓對方打消推派工作的念頭。
-所以一份淺移默化的拉式工作流程大概長這樣：
-新工作先到暫存區
-我們讓對方知道反向任務清單的資訊
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-27 10:18:19 +0800 CST'>一月 27, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 慢速工作力 - 打破生產力迷思" href="http://localhost:1313/posts/reading/%E6%85%A2%E9%80%9F%E5%B7%A5%E4%BD%9C%E5%8A%9B---%E4%B9%9F%E8%A8%B1%E6%88%91%E5%80%91%E9%83%BD%E8%AA%A4%E6%9C%83%E7%94%9F%E7%94%A2%E5%8A%9B%E7%9A%84%E6%84%8F%E7%BE%A9%E4%BA%86/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">讀書心得 - 給予
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>施比受更有福終究是迷信和話術嗎？ 從小我們都被灌輸「施比受更有福」的觀念，即使幫助他人沒有即時性的好處，也應該要慷慨解囊。然而隨著年紀增長、見識開闊才赫然發現，似乎那些凡事以自身利益出發的人往往更有成就。然後我們不免感嘆又被師長狠狠騙了一輪，就像好好讀書工作，自然能交到女朋友一樣，卻忘了哥布林終究是異性絕緣體。
-難道「施比受更有福」真的只是用來騙小孩的話術嗎？
-華盛頓商學院教授亞當 . 葛蘭特的《給予》一書就在回應這個看似成理的誤解。
-他同意我們的成功取決於我們與他人互動的方式，但與其選擇盡量搜刮利益，或許不計較得失、盡可能貢獻出最大價值才是終極的成功之道。他在書中從四大領域切入，探討索取者、互利者、給予者的差異：
-人脈交際 - 新建人脈與鞏固舊有人脈
-合作原則 - 與同事高效合作並贏得信任與尊敬
-評價他人 - 培育人才，並激發他人潛力
-影響他人 - 表達、銷售、協商以及發揮影響力
-結果他發現了一個令人意想不到的模式：表現最差和最好的人都是給予者。還有這種事情？最好和最爛的全包牌就對了？
-根據他的研究，樂於付出確實可能成為絆腳石，不過這是在零和或非輸即贏的情況下才容易發生。而這種非黑即白的場面對大眾來說比較好理解，所以造成給予者通常沒有好下場的誤解。實際上，人生中並非一場零和賽局，而選擇成為給予者從長遠來看，往往能夠滿載而歸。
-其中還有一個關鍵：現代資訊傳播越來越方便及快速，有利於給予者脫穎而出。因為給予者要贏得他人善意和信任需要一些時間，而現代社會在社交媒體加持下，人際關係和聲譽建立起來都更加容易，加快了給予者邁向成功的腳步。
-以下我們就先來看看亞當 . 葛蘭特發現給予者在人脈經營方面的獨特認知。
-給予者對人脈的認知：創造價值 人脈是替所有人創造價值的管道，而非獨善其身的工具
-一般索取者和互利者在人脈網絡中也會付出，但他們付出是策略性的，也就是期待對方投桃報李，或甚至 ROI 爆表。所以一旦對方無法在短期內回報他們，索取者和互利者便不願意為對方付出，因為投資報酬率太差了。
-相較之下，給予者相信人脈是替大眾創造價值的管道。他們也相信秉持創造價值的信念付出，可以徹底改造傳統的利益交換思維，讓人脈網絡中的所有成員最大稱度受惠。人人有飯吃、人人有功練。
-理念很好，聽起來很偉大，但回到現實，這樣做憑什麼讓給予者成為人脈網絡中的最終贏家？
-給予者是人脈網絡中注入能量的太陽 東方紅、太陽升，東方出了個毛澤東 亞當 . 葛蘭特提出傳統研究社群網絡的學者習慣追蹤資訊交換，也就是人與人之間傳遞知識的狀況，但後來發現人脈網絡中的能量也能夠繪製出來。而且畫出來宛若星系模型一般。
-在「能量網絡圖」中，索取者就像黑洞，不斷吸走旁人的能量；而給予者則像太陽替旁人創作貢獻的機會，自然容易取得好感、信任、聲望。我知道太靠近太陽會被燒成灰，那我們不妨想像給予者像冬天難得探頭的暖陽，任誰都想沐浴在其溫暖的光輝之下。
-給予者更容易和次要、休眠人脈搭上線 一般我們想到人脈，都會聯想到業務做陌生開發，越多新鮮、強烈的連結越好，但亞當 . 葛蘭特提出了另一種思維：
-主要人脈可提供強而有力的連結，但次要人脈則是良好的中介橋樑，是取得新資源的高效管道。
-因為我們親近的主要人脈通常跟我們處在差不多的社交圈、同溫層，所以次要人脈比較可能帶我們深入不同的人脈網絡，找到更多潛在機會。休眠人脈同理，而且聯絡休眠人脈還能避免與次要人脈交涉的尷尬。
-回到給予者本身。給予者平時慷慨分享自己的知識和技術但不談利益交換，這樣當他們尋求幫助時，大家通常都非常樂意協助。換個角度想，給予者等於取得主要人脈和次要人脈好處的捷徑：透過主要人脈的信任，搭配上次要人脈的資訊，順利重新搭上線。
-給予者的人脈所帶來的價值通常更持久 綜合上述原因，儘管給予者和索取者都可能經營出廣大的人脈，但給予者更能夠經營出兼具廣度和深度的人脈。而這樣的人脈長期價值通常更加可觀。
-索取者因為擅長向上管理而得勢，卻也因此容易在得勢後虧待同儕或下屬，而被他眼中「好了，這傢伙沒有利用價值啦」的人反咬而失勢。至於互利者人脈因為其利益交換掛帥的特性，廣度遜於給予者和索取者。
-給予者注重價值創造及團隊成就 談到團隊合作，我們要先有個認知，那就是即便看似獨立的腦力工作，也十分倚重團隊合作。我們常以為知識工作者能夠將知識打包帶走，但事實上就算是公認的聰明狠角色，少了團隊一樣難以大施長才。
-前面提過給予者在人脈網絡中就像太陽為他人注入能量。來到團隊合作層面，給予者會用自己的才智來放大他人的智慧與能力，讓大家頭上燈泡亮起來、士氣大振。而這也和給予者對於成功的定義與想像有關，他們認為團體共存共榮、集結眾人之力才能帶來力量，若自己對團體有所貢獻，所有人都會有更好的成就，而這便是所謂的成功。
-不過要強調，給予者並非全然不在意自己的發展，只是他們選擇用不同的途徑來達成目標。表現最差的給予者 (濫好人)，以及表現最好的給予者差別即在與此。
-給予者注重團隊成就，避免責任認知偏誤 責任認知偏誤 (responsibility bias) 是指我們會放大自己在團體中的貢獻比例，而大多數人之所以會產生責任認知偏誤，和「資訊失調」有關。也就是說，我們深知自己給予了多少，卻不一定清楚別人付出多少，因此到了判斷功勞該歸於誰的時候，泰半較為在意自己的貢獻。索取者尤其容易產生責任認知偏誤。
-而由於給予者對成功的定義著重在創造價值、共存共榮，自然會注意整個團隊的成就，相較之下不容易出現責任認知偏誤。你好、我好、大家好。我多給一點、你多給一點、大家都多給一點，這塊餅就越來越大了。
-給予者能為團隊營造出心理安全感 所謂的心理安全感是指大家在團體中相信自己做有風險的事情也不會受到懲罰。根據研究，這樣的環境有助於學習以及創新，畢竟人只要想著「我就怕會被罵啊」，便容易裹足不前、不敢接受新事物或挑戰。而給予者平時嚴以律己、寬以待人，尤其能為團隊營造心理安全感。
-除此之外，由於給予者具備同理心，通常能夠克服「觀點落差」。舉例來說，今天團隊有人失戀了，身為一隻普通的哥布林此生自然和戀愛無緣，因此容易評論：「對象再找就好啦，幹嘛搞到像世界末日一樣啊？」但若是具備同理心的給予型哥布林則會反思：「嗯……雖然我是個戀愛絕緣體，沒有失戀的經驗，但那想必很難受、需要時間和空間來調適吧」，因而選擇給予對方心情上的支持。
-給予者的協商之道 提及影響力，我們習慣聯想到講話鏗鏘有力、態度堅定不移、不放手直到夢想到手的索取型人物。但亞當 ．葛蘭特發現，給予者在協商、發揮影響力方面其實不輸他人，關鍵就在於柔軟溝通術。
-柔軟溝通術：重視他人的觀點和利益 採取柔軟溝通法的人通常言語平實，不把話說滿，會大量聆聽別人的意見，他們言談間流露出自己的不完美及短處，也會使用免責的話語、委婉的規避語及不確定的語氣。
-老實說看到這邊，我對於免責的話語和不確定的語氣心存懷疑，這樣真的能夠取信於人嗎？不知道是不是翻譯的問題，但我認為作者想強調的應該是：用討論的心態，從對方的觀點和利益出發去溝通。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-27 17:04:19 +0800 CST'>一月 27, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 讀書心得 - 給予" href="http://localhost:1313/posts/reading/giveness/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">自由書寫術 - 找回靈感的絕佳方法
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>自由書寫術 - 找回靈感的絕佳方法 靈感絕對讓世上的創作者又愛又恨。無論你是公司行銷企劃、學校研究人員，或是快被截稿壓力逼瘋的作家，勢必都體驗過絞盡腦汁仍擠不出一咪咪靈感的痛苦。
-普男我前陣子就面臨嚴重的靈感乾旱期，完全找不到下一篇小說的創作想法，因此努力尋找相關資源後，發現了一本名為《自由書寫術》的書十分受人推崇，就抱著死馬當活馬醫的心情買來試試看，結果功效出奇地好！
-為了將這種排便通暢後的快感分享給更多人，我將從這本書受益的部分整理成心得文章，希望能幫助同樣身陷靈感地獄的創作者們，早日脫離苦海。
-故事只會發生在說故事的人身上 我們的大腦每一天都承載著巨量的印象、想法，但我們卻渾然不知。假如我們能善加掌握、深入挖掘這些原始素材，就有機會激發出靈感。所以自由書寫術，其實就是善用日常生活中看似平凡甚至荒誕的思緒或遭遇，幫助我們想出創意點子和問題解決方案。
-不要認為這些無聊的瑣事不值得紀錄。作者在書中提到，並不是所有的寫作內容都在我們面對電腦或拿著筆時所產生的，大多數內容是在我們打開信封或是和異性搭訕時發生的。
-只要我們秉持著寫作的意圖，就會開始留意身邊的事物並發揮創意，屆時原先平凡無趣的兩點一線生活，也能成為創作素材來源。所以找回靈感的第一步，就是要時時刻刻提醒自己：你是個說故事的人。
-有了這層認知還不夠。由於大多數人對自己的記性都太過自信，因而時常延宕不把想法和發現記錄下來，導致這些蘊含潛力的寶藏隱沒在記憶的流沙當中。所以千萬不要妥協，唯有白紙黑字寫下的想法，才有機會在日後化為靈感，否則轉瞬之間都只是場白日夢而已。
-安撫我們腦袋中的編輯 了解到透過書寫紀錄想法的重要性後，我們很容易落入第二個陷阱：腦袋中的編輯。沒錯，我們每個人腦中都住著一位編輯，如果你有看過海綿寶寶的話，可以直接套用正經八百小姐的形象。
-這位編輯的職責就是過濾我們的想法，讓我們表達出來的東西理性又符合社會的期待，聽起來很棒對吧？但這同時也阻礙了我們提出與眾不同的想法，限制住大腦發揮創意。
-那我們該做的倒也不是要宰了這位編輯，而是要適時安撫他，讓他暫時放下工作，給我們一個自由發想的空間。但說起來總比實際行動容易，由於我們已經長期受這位編輯控制，不用些方法實在很難脫離他的掌控。而這便是自由書寫術大放異彩的時候了！
-假如你能將自己從原本認定的刻板情境中釋放出來，採取不同的觀點，你一定可以找到出路。
-\ 不停地快寫，來場私密的腦力激盪
-透過不停地快寫，讓書寫的速度與思考的速度同步，我們便能有效地安撫腦袋的編輯，並將注意力集中到正在書寫的內容上。
-作者建議限定一段 10 ~ 20 分鐘左右的時間，順著思路將所有的想法忠實地記錄下來，無論內容有多麽違反常理，甚至不合邏輯，都要付諸文字。
-這樣的做法其實和腦力激盪非常類似，只不過傳統的腦力激盪是在公開場合進行，因此我們無法擺脫腦袋編輯進行價值判斷與審查，容易產生妥協，或是急就章的結論。
-相較之下，自由書寫只有你自己才會看見寫出來的東西，因此能夠捕捉到最為原始，而且不受約束的想法。所以當你回頭查看自由書寫的內容，發現裡面出現你專屬於你的「廚房語言」，很有可能你已經成功表達出內心真實的想法了。
-瀏覽過自由書寫的產物後，我們可能已經從中找出幾個有意思的觀點或方向，這時候可以再進行新一輪的自由書寫，或是參考其他領域的資料探詢更多可能性。當然這些「思緒片段」也很適合節錄到其他空間（我本身是建立 Heptabase 的卡片），作為日後公開發表文章的肥料，或是建立你專屬的點子資料庫。
-自由書寫的原則與心態 雖說自由書寫讓我們任意發揮的空間很大，但作者還是在書中提及了不少值得注意的大原則。這些原則也的確都對應到我實際進行自由書寫時遭逢的困難，所以我紀錄在這邊，以防同樣想嘗試的朋友踩雷。
-點子和想法越多越好，不存在最棒的想法 通常我們自由書寫背後都帶有目的，好比說尋找絕妙的靈感或是問題解決方案，但抱持這種心態，往往會因為吹毛求疵而對結果感到失望，最後索性狗急跳牆，隨便找個點子交差。
-作者提出一百個點子比一個點子還有幫助，畢竟我們必須先有材料，才能夠加以衡量與評斷。我自己則認為，自由書寫就像是從垃圾堆中挑黃金，同時提供自己回溯思考路徑的線索。但還是那句話，如果你死都不寫，等於放棄化腐朽為神奇的機會。
-放下自己的聰明才智，就算是顯而易見的事實也值得記錄下來。一項事實往往會帶出另一項事實，這是一個連鎖效應。
-把寫作和修改的步驟分開來做 我自己剛開始嘗試自由書寫時，每寫一句或是一個段落，就會忍不住想去潤飾文字，或是將語句修改得更符合邏輯。但這樣完全違背了「讓書寫的速度與思考的速度同步」這項原則。
-畢竟正如同作者所言，寫作是一項工作，而讓作品如行雲流水般流暢又是另一項工作。想要同時做好這兩樣工作，會讓你的腦袋超載。而腦袋超載會怎麼樣？當然就是負能量爆棚，結果又決定放棄不幹了。
-在自由書寫時，我們應該專注在書寫這項工作上，化身為無情的想法捕捉工具，等寫完之後，再來決定思緒片段的去留，如果要讓內容讀起來更為通順，也該是這時候才進行。
-從自己著迷的事物或想法入手 常言道無風不起浪，就算是自由書寫，我們總也該有個書寫的起點才能動筆。如果今天我們已經有想要釐清的困擾，或是希望解決的問題，那大可以直接延伸啟動。但如果是想寫一篇公開發表的文章，甚或是出書呢？
-針對這點，作者認為大家常常會把焦點放錯地方，放棄掉我們自己最擅長的事物，反而一昧盲猜讀者的喜好。老實說在流量為大的時代，這麼做好像問題也不大，但既然自由書寫是要從我們的腦袋中挖掘出寶藏，又何必捨近求遠呢？
-我們其實可以換個角度，尋找出某個能當作思考起點的概念。這個概念不需要具有深度，只要能引發我們想寫的衝動即可。所以就算是倒垃圾時覺得隔壁棟阿姨老是插隊很煩，這種生活瑣事，都是珍貴的靈感泉源。
-把自己想成一個過濾器。你在這個世界上的生活經驗、累積了無數的體驗、想法、故事與回憶，對你來說，都是獨一無二且意義重大的。
-結語：垃圾堆中也能綻放出鮮花，只要你肯動筆 我沒有想到自己有一天也會得出這麼雞湯類型的結論，但是經歷了自由書寫的洗禮後，我確實從原本不屑一顧的瑣碎雜念中，獲取了持續創作的靈感和方向，無論是你正在閱讀的這篇讀書心得，或是我其他的短篇小說。
-能透過寫作來解決問題當然很棒。不過截至目前，我認為自由書寫帶給我的最大收穫，還是重新讓我認識，一個人再怎麼普通，都蘊藏著尚未發掘的獨特故事。
-如果你也正好為寫作而苦，甚或體認到自身的平凡而感覺消沈的話，都歡迎和我交流看看。我們可以一同向上，或是一同沈淪。
-📭 tim88776@gmail.com
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-13 15:16:56 +0800 CST'>一月 13, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 自由書寫術 - 找回靈感的絕佳方法" href="http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">哥布林學 Python 物件導向 (OOP)
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>物件導向 (OOP) 是一種程式設計的規範 (paradigm)，遵循之後有助於寫出更容易管理、容易維護，且容易閱讀的程式碼。而 Python 本身借鏡了許多 OOP 的概念，雖然沒有像 Java 那樣嚴格，但諸如 flask、Pygame 等等熱門框架也以 OOP 為主旋律，多去了解絕對不吃虧。
-一切都由物件組成 OOP 的核心概念其實很簡單，那就是將我們日常生活中的人事物「建模」成一個一個又一個的物件，而每個物件當中會包含：
-屬性 (attribute)：類似於字典 (dictionary) 的 key-value 資料 方法 (method)：函式，沒錯，就是函式 舉個例子，假設我們用一個物件來代表「人」這個概念，那該物件裡面可能會有以下屬性：
-姓名 年齡 住址 興趣 職業 除此之外，該物件也會包含人的行為，這些行為便是所謂的方法，所以物件將包含以下函式：
-走路 跑步 吃飯 嗚啦 先有藍圖，才有物件 想像你是全知全能的天神，某日心血來潮想為世界增添趣味，於是決定創造名為哥布林的生物，讓他們自生自滅繁衍生息。你給自己泡了杯咖啡，創造了一隻、兩隻、三隻哥布林，漸漸發現如此單調重複的工作 超 . 級 . 無 . 聊，於是靈機一動，先打造了一套哥布林模型，注入神力讓模型依照既定規則自動生成哥布林……
-這基本上就是我們建立物件的方式。Python 透過 class 關鍵字讓我們先產出物件的藍圖，後續依循藍圖去建立單一物件。所以物件的屬性、方法都要在 class 當中先定義好。
-class Goblin: health = 5 damage = 3 Xavier = Goblin() print(Xavier.health) # 5 可以注意到若要從物件中提取屬性值，語法為 &lt;object_name&gt;.&lt;attribute&gt;。
-相較於 class 是物件的藍圖，我們依據藍圖所生成的物件則是 instance，實體。真實的資料會包裹在實體中。
-為物件增添函式 - method 前面提過綁定在 class 當中的函式被稱之為方法。方法和一般函式最大的差異，在於它能夠直接存取該物件的屬性。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-02-16 13:09:10 +0800 CST'>二月 16, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 哥布林學 Python 物件導向 (OOP)" href="http://localhost:1313/posts/programming/python/oop-overview/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">初探 Python 字典 (Dictionary)
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>什麼是字典 (Dictionary)？ 在 Python 中，字典用來儲存 key -&gt; value 組合的資料，和 JavaScript 的物件 (objects) 非常類似。字典使用 {} 來包裹住資料，每個鍵 (key) 都會對應到一個值 (value)：
-goblin = { &#34;name&#34;: &#34;Xavier&#34;, &#34;age&#34;: 28, &#34;pet&#34;: &#34;Mimiball&#34; } 不要重複 key 列表利用索引 (index) 來辨別資料，而字典則是依靠鍵 (key)。所以實作上我們不應該在字典中重複使用 key，如果不信邪，你會發現原先的值被覆寫過去了！
-goblin = { &#34;name&#34;: &#34;Xavier&#34;, &#34;name&#34;: &#34;Neo-Xavier&#34; &#34;age&#34;: 28, &#34;pet&#34;: &#34;Mimiball&#34; } 上面範例中，哥布林的名字從 Xavier 變成了 Neo-Xavier，因為兩筆資料的 key 都是 name，而後面的資料覆寫了前面一筆 key 相同的資料。
-操作字典中的資料 基本上不脫離取、增、刪、變四大操作，下面逐一說明。
-提取字典中的資料 使用 [] 來提取字典中的資料。前面提過字典是靠 key 來辨別每一筆資料，所以我們需要在 [] 帶入特定資料的 key，而且要用字串的方式帶入，也就是前後加上 &#34;&#34;。
-goblin = { &#34;name&#34;: &#34;Xavier&#34;, &#34;age&#34;: 28, &#34;pet&#34;: &#34;Mimiball&#34; } print(goblin[&#34;name&#34;]) 新增字典資料 實務上我們常常會先建立一個空字典，然後依照商業邏輯陸續新增動態資料到字典中。而新增資料到字典的方式和提取資料大同小異，一樣使用 [key_name] 的模式即可。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-25 22:47:27 +0800 CST'>一月 25, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 初探 Python 字典 (Dictionary)" href="http://localhost:1313/posts/programming/python/dictionary/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">初探 Python 元組 (Tuples)
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>什麼是元組 (Tuples)？ 元組是 Python 其中一種資料集合的型別，具有以下兩種特色：
-資料有序排列，可用索引提取資料 資料無法變更 所以基本上，我們可以將元組看作是固定長定、無法變更的列表。
-在建立列表時，我們通常不會置入不同型別的資料，但這在元組中不成問題，因為元組的長度是固定的，所以能輕易追蹤哪個索引儲存哪種型別的資料。
-和列表的 [] 不同，元組需要使用 () 來建立：
-my_tuple = (&#34;this is a tuple&#34;, 45, True) print(my_tuple[0]) # this is a tuple print(my_tuple[1]) # 45 print(my_tuple[2]) # True 元組通常用來儲存少量、固定不變的資料。
-元組和列表混用 由於元組本身就是資料的容器，所以我們可以將多個元組儲存在列表當中。
-語法上和一般資料相同，用半形逗號區隔不同的元組，然後每個元組在列表中都有自己的索引。也就是說，當我們要提取列表中的元組資料，第一個索引代表要選取哪個元組，而第二個索引代表要選取該元組中哪筆資料。
-my_tuples = [(&#34;this is the first tuple in the list&#34;, 45, True),(&#34;this is the second tuple in the list&#34;, 21, False)] print(my_tuples[0][0]) # this is the first tuple in the list print(my_tuples[0][1]) # 45 print(my_tuples[1][0]) # this is the second tuple in the list print(my_tuples[1][2]) # False 開箱元組 Tuple Unpacking 好像網路上有人翻譯成元組拆包，但我自己是習慣用「開箱元組」來指稱，因為開箱聽起來比較開心。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-23 22:15:24 +0800 CST'>一月 23, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 初探 Python 元組 (Tuples)" href="http://localhost:1313/posts/programming/python/tuples/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">初探 Python 列表 (List) - 續
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>不靠索引也能提取列表資料 如果不需要更新列表中的資料，我們其實可以用更精簡的語法去遞迴列表。in 關鍵字負責宣告 friend 變數，儲存每一次遞迴所提取的列表資料：
-friends = [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Small Goblin&#34;, &#34;Taipei Goblin&#34;] for friend in friends: print(friend) # Cute Goblin # Big Goblin # Small Goblin # Taipei Goblin 這種簡潔的語法在尋找列表資料時尤其方便，因為我們只在乎列表的資料值，索引直接捨棄也不用在意，像極了哥布林的愛情：
-def contains_small_goblin(friends): found = False for friend in friends: if friend == &#34;Small Goblin&#34;: found = True return found 尋找最大數 這算是個小技巧(?)，如果我們想從列表中找出最大數，可以先將初始值宣告為float(&#34;-inf&#34;)，這樣便能確保列表中每個數字都比它更大。接下來用遞迴陸續找出更大的數值，然後取代它就可以了。
-def find_max(nums): max_so_far = float(&#34;-inf&#34;) for num in nums: if num &gt; max_so_far: max_so_far = num return max_so_far 同理，若是要找出最小數，將初始值變數宣告為float(&#34;inf&#34;)即可。
-切割列表 我們可以用 : 切割出列表的特定區段，那回傳的會是一個新的列表。除了從哪裡開始、到哪裡結束之外，我們還能指定中間要跳過幾筆資料 (step)。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-20 22:30:06 +0800 CST'>一月 20, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 初探 Python 列表 (List) - 續" href="http://localhost:1313/posts/programming/python/list_continued/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">初探 Python 列表 (List)
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>什麼是列表？ 程式語言通常都會有負責組織、儲存多筆資料的資料型別。在 JavaScript 和 Golang 中，這種資料型別被稱為陣列 (array)，而 Python 則是列表 (list)。
-Python 中的列表用 [...] 宣告，每項資料中間以半形逗號區隔：
-friends = [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Small Goblin&#34;, &#34;Taipei Goblin&#34;] 上面的列表中清一色都是字串，但我們其實可以在列表中加入各種型別的資料。
-若資料量持續增加，我們可以將每筆資料一行一行拆開，讓程式碼更容易閱讀。畢竟很多東西，不是越長就越好：
-friends = [ &#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Small Goblin&#34;, &#34;Taipei Goblin&#34; ] goblin_age = [ 25, 18, 55 ] 用索 (index) 提取列表中的資料 首先我們要知道在程式的世界，通常都是從 0 開始計數的，而非日常生活中直覺的 1。
-列表中每一筆資料都有其索引 (index)，也就是該筆資料在列表中的位置。再提醒一次，務必要從 0 開始算起。
-friends = [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Small Goblin&#34;, &#34;Taipei Goblin&#34;] 以上述列表為例，每筆資料的索引如下：
-0：Cute Goblin 1：Big Goblin 2：Small Goblin 3：Taipei Goblin 再舉個例子，索引 1 等於列表當中第二筆資料。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-19 15:34:41 +0800 CST'>一月 19, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 初探 Python 列表 (List)" href="http://localhost:1313/posts/programming/python/list/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">迴圈 - 以 Python 為例
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>為什麼要有迴圈？ 原因只有一個，那就是人類很懶，假設今天要輸出 100 萬筆資料，我們需要一筆一筆手刻出來嗎？在被主管開除之前，我們應該會先無聊到開始裸奔吧。
-這個時候善用迴圈，用一組程式碼就能搞定大量的重複工作：
-for i in range(0, 1_000_000): print(i) 拆解 for 迴圈運作流程 上面以 for 關鍵字起頭的迴圈被稱為 for 迴圈，除了 Python 之外，Golang、JavaScript 等等眾多程式語言也都有類似的語法。本篇文章就以 Python 為例，拆解 for 迴圈的運作流程。
-迴圈從 i 等於 0 啟動 -&gt; i in range(0) 檢查若 i 不少於 1,000,000 就跳出迴圈運作 -&gt; range(0, 1_000_000)，否則繼續執行以下動作: 列印出 i 變數 -&gt; print(i) i 變數值加一 (range 預設會加一) 回到第二步驟檢查 i 是否不少於 1,000,000 最後我們會看到 0 ~ 999,999 列印出來。
-在 Python 中，range(a, b) 會包含 a 但不包含 b。所以 range(0, 1_000_000) 才不會列印出 1,000,000。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-18 11:54:14 +0800 CST'>一月 18, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 迴圈 - 以 Python 為例" href="http://localhost:1313/posts/programming/python/loop/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="http://localhost:1313/posts/page/2/">下一页&nbsp;&nbsp;»
-    </a>
-  </nav>
-</footer>
-    </main>
+    </header>
     
-<footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">哥布林 . 一起 . 強大</a></span> · 
+    <section class="article-list--compact">
+        
+            <article>
+    <a href="/posts/reading/%E8%B8%8F%E5%AF%A6%E6%84%9F%E7%9A%84%E7%B7%B4%E7%BF%92/">
+        <div class="article-details">
+            <h2 class="article-title">踏實感的練習</h2>
+            <footer class="article-time">
+                <time datetime='2025-04-20T15:05:40&#43;08:00'>Apr 20, 2025</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+            <article>
+    <a href="/posts/reading/%E6%85%A2%E9%80%9F%E5%B7%A5%E4%BD%9C%E5%8A%9B---%E4%B9%9F%E8%A8%B1%E6%88%91%E5%80%91%E9%83%BD%E8%AA%A4%E6%9C%83%E7%94%9F%E7%94%A2%E5%8A%9B%E7%9A%84%E6%84%8F%E7%BE%A9%E4%BA%86/">
+        <div class="article-details">
+            <h2 class="article-title">慢速工作力 - 打破生產力迷思</h2>
+            <footer class="article-time">
+                <time datetime='2025-01-27T10:18:19&#43;08:00'>Jan 27, 2025</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+            <article>
+    <a href="/posts/reading/giveness/">
+        <div class="article-details">
+            <h2 class="article-title">讀書心得 - 給予</h2>
+            <footer class="article-time">
+                <time datetime='2025-01-27T17:04:19&#43;08:00'>Jan 27, 2025</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+    </section>
+    <nav class='pagination'>
+        
+        
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
+        
+            
+                <span class='page-link current'>1</span>
+                
+            
+            
+                    <a class='page-link' href='/posts/page/2/'>2</a>
+                
+            
+            
+                    
+                        
+                        <span class='page-link dots'>&hellip;</span>
+                    
+                
+            
+            
+                    <a class='page-link' href='/posts/page/4/'>4</a>
+                
+            
+    </nav>
+
+<footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 哥布林 . 一起 . 強大
+    </section>
+    
+    <section class="powerby">
+         <br />
+        
+    </section>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
 
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.870cd5cebb2f1acb5c7cef2455296164611f31d10be63d9d8e7439ae6718051b.js" defer></script>
 <script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
 
+        document.head.appendChild(customFont);
+    }());
 </script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
+    </body>
 </html>

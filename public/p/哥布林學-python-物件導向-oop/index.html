@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-tw" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="透過 Python 學習封裝、抽象化、繼承、多型等物件導向概念">
+<title>哥布林學 Python 物件導向 (OOP)</title>
+
+<link rel='canonical' href='http://localhost:1313/p/%E5%93%A5%E5%B8%83%E6%9E%97%E5%AD%B8-python-%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91-oop/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="哥布林學 Python 物件導向 (OOP)">
+<meta property='og:description' content="透過 Python 學習封裝、抽象化、繼承、多型等物件導向概念">
+<meta property='og:url' content='http://localhost:1313/p/%E5%93%A5%E5%B8%83%E6%9E%97%E5%AD%B8-python-%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91-oop/'>
+<meta property='og:site_name' content='哥布林 . 一起 . 強大'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='電腦科學' /><meta property='article:published_time' content='2025-02-16T13:09:10&#43;08:00'/><meta property='article:modified_time' content='2025-02-16T13:09:10&#43;08:00'/>
+<meta name="twitter:title" content="哥布林學 Python 物件導向 (OOP)">
+<meta name="twitter:description" content="透過 Python 學習封裝、抽象化、繼承、多型等物件導向概念">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切換選單">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu15641611726506731249.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🇹🇼</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">哥布林 . 一起 . 強大</a></h1>
+            <h2 class="site-description">洞穴外的光......好強</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Xavier-Hsiao'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/yu-ting-hsaio-ba4619231/'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首頁</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文章歸檔</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜尋</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>深夜模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目錄</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一切都由物件組成">一切都由物件組成</a>
+      <ol>
+        <li><a href="#先有藍圖才有物件">先有藍圖，才有物件</a></li>
+        <li><a href="#為物件增添函式---method">為物件增添函式 - method</a></li>
+        <li><a href="#__init__-建構方法"><code>__init__</code> 建構方法</a></li>
+        <li><a href="#實體變數-vs-class-變數">實體變數 vs. class 變數</a></li>
+      </ol>
+    </li>
+    <li><a href="#封裝與抽象化">封裝與抽象化</a>
+      <ol>
+        <li><a href="#公開與隱私一場信任所建立的遊戲">公開與隱私，一場信任所建立的遊戲</a></li>
+        <li><a href="#用下底線-_-來搭建信任的橋樑吧">用下底線 <code>_</code> 來搭建信任的橋樑吧</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E5%AD%B8%E7%BF%92/" >
+                程式學習
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%93%A5%E5%B8%83%E6%9E%97%E5%AD%B8-python-%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91-oop/">哥布林學 Python 物件導向 (OOP)</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            透過 Python 學習封裝、抽象化、繼承、多型等物件導向概念
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 16, 2025</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><strong>物件導向 (OOP)</strong> 是一種程式設計的規範 (paradigm)，遵循之後有助於寫出更容易管理、容易維護，且容易閱讀的程式碼。而 Python 本身借鏡了許多 OOP 的概念，雖然沒有像 Java 那樣嚴格，但諸如 <code>flask</code>、<code>Pygame</code> 等等熱門框架也以 OOP 為主旋律，多去了解絕對不吃虧。</p>
+<h2 id="一切都由物件組成">一切都由物件組成
+</h2><p>OOP 的核心概念其實很簡單，那就是將我們日常生活中的人事物「建模」成一個一個又一個的物件，而每個物件當中會包含：</p>
+<ul>
+<li>屬性 (attribute)：類似於字典 (dictionary) 的 key-value 資料</li>
+<li>方法 (method)：函式，沒錯，就是函式</li>
+</ul>
+<p>舉個例子，假設我們用一個物件來代表「人」這個概念，那該物件裡面可能會有以下屬性：</p>
+<ul>
+<li>姓名</li>
+<li>年齡</li>
+<li>住址</li>
+<li>興趣</li>
+<li>職業</li>
+</ul>
+<p>除此之外，該物件也會包含人的<strong>行為</strong>，這些行為便是所謂的方法，所以物件將包含以下函式：</p>
+<ul>
+<li>走路</li>
+<li>跑步</li>
+<li>吃飯</li>
+<li>嗚啦</li>
+</ul>
+<hr>
+<h3 id="先有藍圖才有物件">先有藍圖，才有物件
+</h3><blockquote>
+<p>想像你是全知全能的天神，某日心血來潮想為世界增添趣味，於是決定創造名為哥布林的生物，讓他們<del>自生自滅</del>繁衍生息。你給自己泡了杯咖啡，創造了一隻、兩隻、三隻哥布林，漸漸發現如此單調重複的工作 <strong>超 . 級 . 無 . 聊</strong>，於是靈機一動，先打造了一套哥布林模型，注入神力讓模型依照既定規則自動生成哥布林&hellip;&hellip;</p>
+</blockquote>
+<p>這基本上就是我們建立物件的方式。Python 透過 <code>class</code> 關鍵字讓我們先產出<strong>物件的藍圖</strong>，後續依循藍圖去建立單一物件。所以物件的屬性、方法都要在 <code>class</code> 當中先定義好。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Goblin</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">health</span> <span class="o">=</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">  <span class="n">damage</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Xavier</span> <span class="o">=</span> <span class="n">Goblin</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">Xavier</span><span class="o">.</span><span class="n">health</span><span class="p">)</span> <span class="c1"># 5</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p> </p>
+<p>可以注意到若要從物件中提取屬性值，語法為 <code>&lt;object_name&gt;.&lt;attribute&gt;</code>。</p>
+<p>相較於 <code>class</code> 是物件的藍圖，我們依據藍圖所生成的物件則是 <code>instance</code>，實體。真實的資料會包裹在實體中。</p>
+<hr>
+<h3 id="為物件增添函式---method">為物件增添函式 - method
+</h3><p>前面提過綁定在 <code>class</code> 當中的函式被稱之為方法。方法和一般函式最大的差異，在於它能夠直接存取該物件的屬性。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Goblin</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">health</span> <span class="o">=</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">take_damage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">damage</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">health</span> <span class="o">-=</span> <span class="n">damage</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Xavier</span> <span class="o">=</span> <span class="n">Goblin</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Xaiver 會被帶入成 `take_damage` 方法的第一個參數 (self)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Xavier</span><span class="o">.</span><span class="n">take_damage</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">Xavier</span><span class="o">.</span><span class="n">health</span><span class="p">)</span> <span class="c1"># 3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>方法的第一個參數永遠都是呼叫 <code>class</code> 的物件實體本身。其實這個參數要叫什麼名字都可以，Python 是依照參數位置區別，但慣例上使用 <a class="link" href="https://app.heptabase.com/45a73641-738c-418c-ab35-9f2954232222/card/618f10df-56df-4f30-942c-e34ee8b29b2a"  target="_blank" rel="noopener"
+    ><code>self</code></a> 這個名稱，淺顯易懂。</p>
+<p>換個說法，<code>self</code> 是指向到物件實體的參數，我們需要使用它來讀取或更新 <code>class</code> 裡面所定義的屬性值。因此物件中的方法比起一般函式，比較少去回傳資料，而是直接修改資料。但方法一樣可以回傳資料的喔。</p>
+<p>看到這裡我們發現了一個大問題，目前 <code>class</code> 的屬性都是固定值，比方說 <code>health = 5</code>，造成每個建立出來的物件實體屬性值都相同，但每隻哥布林的健康狀況理當不一樣才對。有沒有辦法把屬性值當作參數，在建立物件實體的時候丟進去生成呢？</p>
+<hr>
+<h3 id="__init__-建構方法"><code>__init__</code> 建構方法
+</h3><p>既然方法都能透過 <code>self</code> 參數來存取屬性了，我們不妨也在 <code>class</code> 建立一個方法來為屬性賦值。</p>
+<p>Python 其實提供了 <code>__init__()</code> 這個特殊函式，負責為物件實體屬性賦值。當我們建立新的物件實體，Python 便會自動去呼叫 <code>__init__()</code>，省去了我們手動為每個物件賦值的苦勞，可謂懶人救星。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Goblin</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">health</span><span class="p">,</span> <span class="n">damage</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&#34;Goby&#34;</span> <span class="c1"># Computed prop!</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">health</span> <span class="o">=</span> <span class="n">health</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">damage</span> <span class="o">=</span> <span class="n">damage</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Xaiver will be passed into the &#39;__init__&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># method as the first argument (self)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Xavier</span> <span class="o">=</span> <span class="n">Goblin</span><span class="p">(</span><span class="s2">&#34;Xavier&#34;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">Xavier</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1"># XaiverGoby</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">Xaviier</span><span class="o">.</span><span class="n">health</span><span class="p">)</span> <span class="c1"># 5</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">Xavier</span><span class="o">.</span><span class="n">damage</span><span class="p">)</span> <span class="c1"># 10</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p> </p>
+<p>我們一樣在 <code>__init__()</code> 帶入 <code>self</code> 參數，代表物件實體本身。接著陸續帶入其他屬性參數，完成賦值即可。當然如果有些屬性是透過其他屬性計算出來的，也直接在 <code>__init__()</code> 中定義。</p>
+<p>但這又引發了另一個問題，如果某些屬性就剛好是每個物件實體都相同，該怎麼辦？只能在建立物件時重複帶入參數嗎？</p>
+<hr>
+<h3 id="實體變數-vs-class-變數">實體變數 vs. class 變數
+</h3><p>前面我們都是透過 <code>self</code> 來宣告變數，由於 <code>self</code> 代表物件實體本身，因此這些綁定 <code>self</code> 的變數，自然而然會跟著物件實體。</p>
+<p>倘若我們是在 <code>class</code> 的範圍內宣告變數，而非 <code>__int__()</code> 建構方法的話，該變數在不同的物件實體仍會保持相同值。不過還是能以 <code>&lt;class_name.&lt;attribute&gt;</code> 來變更變數值。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Bear</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mood</span> <span class="o">=</span> <span class="s2">&#34;happy&#34;</span>  <span class="c1"># This is a class variable</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">change_mood</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_mood</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">mood</span> <span class="o">=</span> <span class="n">new_mood</span>  <span class="c1"># This creates an instance variable</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create two bear instances</span>
+</span></span><span class="line"><span class="cl"><span class="n">bear1</span> <span class="o">=</span> <span class="n">Bear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">bear2</span> <span class="o">=</span> <span class="n">Bear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Access the class variable</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">Bear</span><span class="o">.</span><span class="n">mood</span><span class="p">)</span>  <span class="c1"># &#34;happy&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">bear1</span><span class="o">.</span><span class="n">mood</span><span class="p">)</span>  <span class="c1"># &#34;happy&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Modify using the instance</span>
+</span></span><span class="line"><span class="cl"><span class="n">bear1</span><span class="o">.</span><span class="n">change_mood</span><span class="p">(</span><span class="s2">&#34;grumpy&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Now:</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">bear1</span><span class="o">.</span><span class="n">mood</span><span class="p">)</span>  <span class="c1"># &#34;grumpy&#34; (instance variable)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">Bear</span><span class="o">.</span><span class="n">mood</span><span class="p">)</span>  <span class="c1"># &#34;happy&#34; (class variable still unchanged)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">bear2</span><span class="o">.</span><span class="n">mood</span><span class="p">)</span>  <span class="c1"># &#34;happy&#34; (still uses the class variable)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="封裝與抽象化">封裝與抽象化
+</h2><p>OOP 這種將屬性和行為包裹在一個物件當中的設計模式，背後蘊含了兩大原則：</p>
+<ul>
+<li><strong>封裝 (encapsulation)</strong>：將相關的公開 (public) 和隱私 (private) 資料包成一個群組</li>
+<li><strong>抽象化 (abstraction)</strong>：將複雜的邏輯藏起來，提供簡易使用的介面 (interface)。我們只需要知道車子怎麼開，不用理解引擎如何運作。</li>
+</ul>
+<p>兩者乍看之下非常相似，而事實上封裝和抽象化的確只是著重面向不同而已。</p>
+<blockquote>
+<p>因為有封裝，我們才能夠實現抽象化！</p>
+</blockquote>
+<p>這邊也值得注意，封裝所提到的公開和隱私資料，和我們一般認知中 <em>個資、密碼、機敏資料</em> 的資安概念不太一樣。封裝的意義在於更有效地管理程式碼，而非讓系統儲存的資料更加安全。在這層含義上，我們可以將封裝想像成未上鎖的檔案櫃，裡面的資料夾排列得井井有條，但知道檔案櫃所在位置的人都能自由查找資料。</p>
+<p>唉，不對啊，如果是這樣，那還分什麼公開和隱私資料？</p>
+<p>再想像一下，假設今天有甲、乙兩個開發團隊協作。甲團隊設計了一組 API，方便自己和乙團隊開發對應功能。如果乙團隊當中有人無心或刻意要攪亂一池春水，隨便亂調整背後邏輯的變數或函式，那大家就準備一起包包收拾滾回家去了。</p>
+<p>因此在一般開發協作，甚或函式庫開源的情境下，我們需要將資料分成公開、隱私變數，以免天下秩序大亂。</p>
+<p>接著底下會紀錄 Python 如何實現公開、隱私變數。爆個雷，不外乎兩個字：<strong>信任</strong>。</p>
+<hr>
+<h3 id="公開與隱私一場信任所建立的遊戲">公開與隱私，一場信任所建立的遊戲
+</h3><p>預設上所有在 <code>class</code> 宣告的屬性和方法都是公開的。也就是說任何人用 <code>.</code> 運算子即可提取資料。</p>
+<p>你可能會想說，只要在屬性或方法前面加上 <code>private</code> 或 <code>non-public</code> 之類的關鍵字，資料就會神奇地貼上隱私標籤對吧？</p>
+<p>我以前也是這麼以為的，但可惜事情沒有想像中那麼簡單。</p>
+<p>由於 Python 是動態語言 (dynamic language)，且由直譯器 (interpreter) 逐行執行程式碼，因此<strong>不會在執行前強制檢查變數的存取權限</strong>，這使得 Python 無法像 Golang、Rust 等靜態語言那樣，透過編譯 (compilation) 時的機制來嚴格限制屬性的可視性。</p>
+<p>因此 **Python 很吃重開發者之間<a class="link" href="https://app.heptabase.com/45a73641-738c-418c-ab35-9f2954232222/card/22afa5e2-fa7d-45b4-949f-9eb4012d7a85"  target="_blank" rel="noopener"
+    >約定俗成的慣例，也就是命名方式</a>**來實現資料公開與隱私。</p>
+<p> </p>
+<h3 id="用下底線-_-來搭建信任的橋樑吧">用下底線 <code>_</code> 來搭建信任的橋樑吧
+</h3><p>我們用以下範例來看看 Python 所謂的「慣例」長什麼模樣：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># Convention: &#34;this should be private&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">__password</span> <span class="o">=</span> <span class="s2">&#34;secret&#34;</span>  <span class="c1"># Name mangling, not true private</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&#34;Xavier&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">_name</span><span class="p">)</span>  <span class="c1"># Allowed, but conventionally discouraged</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">__password</span><span class="p">)</span>  <span class="c1"># AttributeError</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">_User__password</span><span class="p">)</span>  <span class="c1"># Bypasses name mangling!</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>單一下底線 <code>_</code></strong>：</p>
+<ul>
+<li>純慣例，代表該屬性或方法僅供 <code>class</code> 內使用。</li>
+<li>注意這只是慣例，所以就算在 <code>class</code> 外部仍舊能夠提取資料。</li>
+</ul>
+<p><strong>雙底線 <code>__</code></strong>：</p>
+<ul>
+<li>除了慣例之外，雙底線還會觸發 <code>name mangling</code>，也就是 Python 會自動改變該屬性、方法的名稱。</li>
+<li>由於名稱被更改了，所以能預防該屬性、方法被刻意繼承到其他子 <code>class</code> 當中。</li>
+<li>名稱更改的模式並非秘密，就是多加上 <code>class</code> 名稱罷了，所以能<a class="link" href="https://app.heptabase.com/45a73641-738c-418c-ab35-9f2954232222/card/22afa5e2-fa7d-45b4-949f-9eb4012d7a85"  target="_blank" rel="noopener"
+    >施以小計提取資料</a>。</li>
+</ul>
+<p>額外加映～<strong>前後雙底線 <code>__keyword__</code></strong>：</p>
+<ul>
+<li>這些是 Python 內建的<em>特殊方法</em>，像是常用的 <code>__repr__</code>、<code>__init__</code>等等。</li>
+</ul>
+<p>雙底線是滿常見的隱私命名方式，如果希望其他子 <code>class</code> 繼承，可以改用單底線，或是保留雙底線然後建立 <code>get_something()</code> 之類的 getter 方法。總歸一句話，一切都源自於信任兩個字，所以和團隊或合作對象是先溝通清楚才為上策。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/python/">Python</a>
+        
+            <a href="/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/">電腦科學</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相關文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E8%BF%B4%E5%9C%88-%E4%BB%A5-python-%E7%82%BA%E4%BE%8B/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">迴圈 - 以 Python 為例</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E4%BD%9C%E7%94%A8%E5%9F%9F-%E4%BB%A5-python-%E7%82%BA%E4%BE%8B/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">作用域 - 以 Python 為例</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 哥布林 . 一起 . 強大
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 建立 <br />
+        主題 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 設計
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.870cd5cebb2f1acb5c7cef2455296164611f31d10be63d9d8e7439ae6718051b.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

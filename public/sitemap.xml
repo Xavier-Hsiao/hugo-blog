@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/reading/%E8%B8%8F%E5%AF%A6%E6%84%9F%E7%9A%84%E7%B7%B4%E7%BF%92/</loc>
+    <loc>http://localhost:1313/p/%E8%B8%8F%E5%AF%A6%E6%84%9F%E7%9A%84%E7%B7%B4%E7%BF%92/</loc>
     <lastmod>2025-04-20T15:05:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/reading/%E6%85%A2%E9%80%9F%E5%B7%A5%E4%BD%9C%E5%8A%9B---%E4%B9%9F%E8%A8%B1%E6%88%91%E5%80%91%E9%83%BD%E8%AA%A4%E6%9C%83%E7%94%9F%E7%94%A2%E5%8A%9B%E7%9A%84%E6%84%8F%E7%BE%A9%E4%BA%86/</loc>
+    <loc>http://localhost:1313/p/%E6%85%A2%E9%80%9F%E5%B7%A5%E4%BD%9C%E5%8A%9B-%E6%89%93%E7%A0%B4%E7%94%9F%E7%94%A2%E5%8A%9B%E8%BF%B7%E6%80%9D/</loc>
     <lastmod>2025-01-27T10:18:19+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/reading/giveness/</loc>
+    <loc>http://localhost:1313/p/%E7%B5%A6%E4%BA%88/</loc>
     <lastmod>2025-01-27T17:04:19+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/reading/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93---%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</loc>
+    <loc>http://localhost:1313/p/%E8%87%AA%E7%94%B1%E6%9B%B8%E5%AF%AB%E8%A1%93-%E6%89%BE%E5%9B%9E%E9%9D%88%E6%84%9F%E7%9A%84%E7%B5%95%E4%BD%B3%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2025-01-13T15:16:56+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-04-20T15:05:40+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-04-20T15:05:40+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2025-04-20T15:05:40+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/</loc>
     <lastmod>2025-04-20T15:05:40+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
@@ -23,16 +32,10 @@
     <loc>http://localhost:1313/categories/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2025-04-20T15:05:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-04-20T15:05:40+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-04-20T15:05:40+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/</loc>
-    <lastmod>2025-04-20T15:05:40+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2025-02-16T13:09:10+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/%E5%93%A5%E5%B8%83%E6%9E%97%E5%AD%B8-python-%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91-oop/</loc>
     <lastmod>2025-02-16T13:09:10+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E7%A8%8B%E5%BC%8F%E5%AD%B8%E7%BF%92/</loc>
@@ -41,31 +44,36 @@
     <loc>http://localhost:1313/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/</loc>
     <lastmod>2025-02-16T13:09:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/programming/python/oop-overview/</loc>
-    <lastmod>2025-02-16T13:09:10+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/%E4%BA%BA%E9%9A%9B%E9%97%9C%E4%BF%82/</loc>
     <lastmod>2025-01-27T17:04:19+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/programming/python/dictionary/</loc>
+    <loc>http://localhost:1313/p/%E5%88%9D%E6%8E%A2-python-%E5%AD%97%E5%85%B8-dictionary/</loc>
     <lastmod>2025-01-25T22:47:27+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/programming/python/tuples/</loc>
+    <loc>http://localhost:1313/p/%E5%88%9D%E6%8E%A2-python-%E5%85%83%E7%B5%84-tuples/</loc>
     <lastmod>2025-01-23T22:15:24+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/programming/python/list_continued/</loc>
+    <loc>http://localhost:1313/p/%E5%88%9D%E6%8E%A2-python-%E5%88%97%E8%A1%A8-list-%E7%BA%8C/</loc>
     <lastmod>2025-01-20T22:30:06+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/programming/python/list/</loc>
+    <loc>http://localhost:1313/p/%E5%88%9D%E6%8E%A2-python-%E5%88%97%E8%A1%A8-list/</loc>
     <lastmod>2025-01-19T15:34:41+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/programming/python/loop/</loc>
+    <loc>http://localhost:1313/p/%E8%BF%B4%E5%9C%88-%E4%BB%A5-python-%E7%82%BA%E4%BE%8B/</loc>
     <lastmod>2025-01-18T11:54:14+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/programming/python/scope/</loc>
+    <loc>http://localhost:1313/p/%E4%BD%9C%E7%94%A8%E5%9F%9F-%E4%BB%A5-python-%E7%82%BA%E4%BE%8B/</loc>
     <lastmod>2025-01-15T15:16:56+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%AF%AB%E4%BD%9C%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2025-01-13T15:16:56+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/page/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
   </url>
 </urlset>
