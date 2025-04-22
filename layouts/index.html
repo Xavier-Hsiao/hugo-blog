@@ -1,0 +1,51 @@
+{{ define "main" }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $mainSections := .Site.Params.mainSections }}
+    {{ $pages := where .Site.RegularPages "Type" "in" $mainSections }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+    {{ $pag := .Paginate ($filtered) }}
+
+    {{ $categoryOrder := .Site.Params.categoryOrder }}
+    {{ $allCategories := .Site.Taxonomies.categories }}
+
+    {{/* Handle pinned post */}}
+    {{ $pinned := where $filtered "Params.pinned" true }}
+    {{ if gt (len $pinned) 0 }}
+        <section class="article-list">
+            {{ range $pinned }}
+                {{ partial "article-list/default" . }}
+            {{ end }}
+        </section>
+        <hr class="section-divider">
+    {{ end }}
+
+    {{ range $catName := $categoryOrder }}
+        {{ $catPages := index $allCategories $catName }}
+        {{ if $catPages }}
+            {{ $catPages = where $catPages "Type" "in" $mainSections }}
+            {{ $catPages = where $catPages "Params.hidden" "!=" true }}
+            {{ $catPages = sort $catPages "Date" "desc" }}
+            {{ if gt (len $catPages) 0 }}
+                <section class="article-list">
+                    <h2 class="section-title">{{ $catName | title }}</h2>
+                    {{ range first 3 $catPages }}
+                        {{ partial "article-list/default" . }}
+                    {{ end }}
+                    <div class="section-footer">
+                        <a class="btn" href="{{ "/categories/" | relURL }}{{ $catName | urlize }}">
+                            查看所有 <b>{{ $catName | title }}</b> 的文章 →
+                        </a>
+                    </div>
+                </section>
+                <hr class="section-divider">
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{- partial "pagination.html" . -}}
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}
