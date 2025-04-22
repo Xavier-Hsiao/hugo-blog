@@ -3,7 +3,6 @@ date: "2025-01-27T17:04:19+08:00"
 draft: false
 title: "給予"
 description: "這是《給予》的讀書心得，就算人類社會凶險，我還是想當樂於奉獻的哥布林。族長會以我為榮，對吧？"
-weight: 2
 categories:
   - 讀書心得
 tags:

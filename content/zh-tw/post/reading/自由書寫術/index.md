@@ -3,7 +3,6 @@ date: "2025-01-13T15:16:56+08:00"
 draft: false
 title: "自由書寫術 - 找回靈感的絕佳方法"
 description: "主動挖掘靈感，解放大腦內的豐富素材。"
-weight: 2
 categories:
   - 讀書心得
 tags:

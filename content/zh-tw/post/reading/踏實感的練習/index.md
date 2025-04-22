@@ -3,7 +3,6 @@ date: "2025-04-20T15:05:40+08:00"
 draft: false
 title: "踏實感的練習"
 description: "這篇文章是《踏實感的練習》讀書心得，既然當不成帥哥或有錢人，至少，嘗試當一隻踏實的哥布林吧。"
-weight: 1
 categories:
   - 讀書心得
 tags:
