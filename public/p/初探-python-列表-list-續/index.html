@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/%E5%88%9D%E6%8E%A2-python-%E5%88%97%E8%A1%A8-list-%E7%BA%8C/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="初探 Python 列表 (List) - 續">
+<link rel="stylesheet" href="/scss/style.min.e71541fb00de2d337e7bb45f8c51f5bec7dd58b36b529f3b666b94fcec7c4962.css"><meta property='og:title' content="初探 Python 列表 (List) - 續">
 <meta property='og:description' content="不靠索引也能提取列表資料 如果不需要更新列表中的資料，我們其實可以用更精簡的語法去遞迴列表。in 關鍵字負責宣告 friend 變數，儲存每一次遞迴所提取的列表資料：\n1 2 3 4 5 6 7 8 friends = [&#34;Cute Goblin&#34;, &#34;Big Goblin&#34;, &#34;Small Goblin&#34;, &#34;Taipei Goblin&#34;] for friend in friends: print(friend) # Cute Goblin # Big Goblin # Small Goblin # Taipei Goblin 這種簡潔的語法在尋找列表資料時尤其方便，因為我們只在乎列表的資料值，索引直接捨棄也不用在意，像極了哥布林的愛情：\n1 2 3 4 5 6 7 8 def contains_small_goblin(friends): found = False for friend in friends: if friend == &#34;Small Goblin&#34;: found = True return found 尋找最大數 這算是個小技巧(?)，如果我們想從列表中找出最大數，可以先將初始值宣告為float(&quot;-inf&quot;)，這樣便能確保列表中每個數字都比它更大。接下來用遞迴陸續找出更大的數值，然後取代它就可以了。\n1 2 3 4 5 6 7 def find_max(nums): max_so_far = float(&#34;-inf&#34;) for num in nums: if num &gt; max_so_far: max_so_far = num return max_so_far 同理，若是要找出最小數，將初始值變數宣告為float(&quot;inf&quot;)即可。\n">
 <meta property='og:url' content='http://localhost:1313/p/%E5%88%9D%E6%8E%A2-python-%E5%88%97%E8%A1%A8-list-%E7%BA%8C/'>
 <meta property='og:site_name' content='哥布林 . 一起 . 強大'>

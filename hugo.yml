@@ -16,13 +16,18 @@ services:
     id:
 
 pagination:
-  pagerSize: 8
+  pagerSize: 20
 
 permalinks:
   post: /p/:slug/
   page: /:slug/
 
 params:
+  categoryOrder:
+    - 讀書心得
+    - 程式學習
+    - 語言學習
+    - 雜記
   mainSections:
     - post
   featuredImageField: image
