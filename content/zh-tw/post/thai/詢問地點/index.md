@@ -1,7 +1,7 @@
 ---
 date: "2025-04-21T21:16:52+08:00"
 draft: false
-title: "泰語詢問地點"
+title: "哥布林學泰語：詢問地點"
 description: "用 ที่ใหน 句型詢問地點"
 categories:
   - 語言學習

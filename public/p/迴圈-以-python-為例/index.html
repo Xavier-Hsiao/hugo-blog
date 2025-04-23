@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/%E8%BF%B4%E5%9C%88-%E4%BB%A5-python-%E7%82%BA%E4%BE%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.b93de3e641d72d8d20135c8db6973bc234610beecc9407e8b5c098632adb9dbd.css"><meta property='og:title' content="迴圈 - 以 Python 為例">
+<link rel="stylesheet" href="/scss/style.min.b7a3b5294601083bae42a21af6360fc840dd4e53eb90e2a8c941a208941605d4.css"><meta property='og:title' content="迴圈 - 以 Python 為例">
 <meta property='og:description' content="為什麼要有迴圈？ 原因只有一個，那就是人類很懶，假設今天要輸出 100 萬筆資料，我們需要一筆一筆手刻出來嗎？在被主管開除之前，我們應該會先無聊到開始裸奔吧。\n這個時候善用迴圈，用一組程式碼就能搞定大量的重複工作：\n1 2 for i in range(0, 1_000_000): print(i) 拆解 for 迴圈運作流程 上面以 for 關鍵字起頭的迴圈被稱為 for 迴圈，除了 Python 之外，Golang、JavaScript 等等眾多程式語言也都有類似的語法。本篇文章就以 Python 為例，拆解 for 迴圈的運作流程。\n迴圈從 i 等於 0 啟動 -&gt; i in range(0) 檢查若 i 不少於 1,000,000 就跳出迴圈運作 -&gt; range(0, 1_000_000)，否則繼續執行以下動作: 列印出 i 變數 -&gt; print(i) i 變數值加一 (range 預設會加一) 回到第二步驟檢查 i 是否不少於 1,000,000 最後我們會看到 0 ~ 999,999 列印出來。\n在 Python 中，range(a, b) 會包含 a 但不包含 b。所以 range(0, 1_000_000) 才不會列印出 1,000,000。\n">
 <meta property='og:url' content='http://localhost:1313/p/%E8%BF%B4%E5%9C%88-%E4%BB%A5-python-%E7%82%BA%E4%BE%8B/'>
 <meta property='og:site_name' content='哥布林 . 一起 . 強大'>

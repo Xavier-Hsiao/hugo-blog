@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/%E5%88%9D%E6%8E%A2-python-%E5%85%83%E7%B5%84-tuples/'>
 
-<link rel="stylesheet" href="/scss/style.min.b93de3e641d72d8d20135c8db6973bc234610beecc9407e8b5c098632adb9dbd.css"><meta property='og:title' content="初探 Python 元組 (Tuples)">
+<link rel="stylesheet" href="/scss/style.min.b7a3b5294601083bae42a21af6360fc840dd4e53eb90e2a8c941a208941605d4.css"><meta property='og:title' content="初探 Python 元組 (Tuples)">
 <meta property='og:description' content="什麼是元組 (Tuples)？ 元組是 Python 其中一種資料集合的型別，具有以下兩種特色：\n資料有序排列，可用索引提取資料 資料無法變更 所以基本上，我們可以將元組看作是固定長定、無法變更的列表。\n在建立列表時，我們通常不會置入不同型別的資料，但這在元組中不成問題，因為元組的長度是固定的，所以能輕易追蹤哪個索引儲存哪種型別的資料。\n和列表的 [] 不同，元組需要使用 () 來建立：\n1 2 3 4 5 6 7 my_tuple = (&#34;this is a tuple&#34;, 45, True) print(my_tuple[0]) # this is a tuple print(my_tuple[1]) # 45 print(my_tuple[2]) # True 元組通常用來儲存少量、固定不變的資料。\n元組和列表混用 由於元組本身就是資料的容器，所以我們可以將多個元組儲存在列表當中。\n語法上和一般資料相同，用半形逗號區隔不同的元組，然後每個元組在列表中都有自己的索引。也就是說，當我們要提取列表中的元組資料，第一個索引代表要選取哪個元組，而第二個索引代表要選取該元組中哪筆資料。\n1 2 3 4 5 my_tuples = [(&#34;this is the first tuple in the list&#34;, 45, True),(&#34;this is the second tuple in the list&#34;, 21, False)] print(my_tuples[0][0]) # this is the first tuple in the list print(my_tuples[0][1]) # 45 print(my_tuples[1][0]) # this is the second tuple in the list print(my_tuples[1][2]) # False 開箱元組 Tuple Unpacking 好像網路上有人翻譯成元組拆包，但我自己是習慣用「開箱元組」來指稱，因為開箱聽起來比較開心。\n">
 <meta property='og:url' content='http://localhost:1313/p/%E5%88%9D%E6%8E%A2-python-%E5%85%83%E7%B5%84-tuples/'>
 <meta property='og:site_name' content='哥布林 . 一起 . 強大'>
