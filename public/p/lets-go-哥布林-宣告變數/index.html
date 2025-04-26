@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-tw" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="認識 ASCII、Unicode 和 UTF-8 的字元編碼演變，了解文件或試算表出現亂碼的原因。">
-<title>什麼是 Unicode 和 UTF 8</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="認識宣告 Go 變數的方式、海象運算符短宣告、const 常數">
+<title>Let&#39;s GO 哥布林 - 宣告變數</title>
 
-<link rel='canonical' href='http://localhost:1313/p/%E4%BB%80%E9%BA%BC%E6%98%AF-unicode-%E5%92%8C-utf-8/'>
+<link rel='canonical' href='http://localhost:1313/p/lets-go-%E5%93%A5%E5%B8%83%E6%9E%97-%E5%AE%A3%E5%91%8A%E8%AE%8A%E6%95%B8/'>
 
-<link rel="stylesheet" href="/scss/style.min.b7a3b5294601083bae42a21af6360fc840dd4e53eb90e2a8c941a208941605d4.css"><meta property='og:title' content="什麼是 Unicode 和 UTF 8">
-<meta property='og:description' content="認識 ASCII、Unicode 和 UTF-8 的字元編碼演變，了解文件或試算表出現亂碼的原因。">
-<meta property='og:url' content='http://localhost:1313/p/%E4%BB%80%E9%BA%BC%E6%98%AF-unicode-%E5%92%8C-utf-8/'>
+<link rel="stylesheet" href="/scss/style.min.b7a3b5294601083bae42a21af6360fc840dd4e53eb90e2a8c941a208941605d4.css"><meta property='og:title' content="Let's GO 哥布林 - 宣告變數">
+<meta property='og:description' content="認識宣告 Go 變數的方式、海象運算符短宣告、const 常數">
+<meta property='og:url' content='http://localhost:1313/p/lets-go-%E5%93%A5%E5%B8%83%E6%9E%97-%E5%AE%A3%E5%91%8A%E8%AE%8A%E6%95%B8/'>
 <meta property='og:site_name' content='哥布林 . 一起 . 強大'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='電腦科學' /><meta property='article:published_time' content='2025-04-25T20:34:48&#43;08:00'/><meta property='article:modified_time' content='2025-04-25T20:34:48&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/%E4%BB%80%E9%BA%BC%E6%98%AF-unicode-%E5%92%8C-utf-8/unicode.png' />
-<meta name="twitter:title" content="什麼是 Unicode 和 UTF 8">
-<meta name="twitter:description" content="認識 ASCII、Unicode 和 UTF-8 的字元編碼演變，了解文件或試算表出現亂碼的原因。"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/p/%E4%BB%80%E9%BA%BC%E6%98%AF-unicode-%E5%92%8C-utf-8/unicode.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Golang' /><meta property='article:published_time' content='2025-04-26T14:50:39&#43;08:00'/><meta property='article:modified_time' content='2025-04-26T14:50:39&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/lets-go-%E5%93%A5%E5%B8%83%E6%9E%97-%E5%AE%A3%E5%91%8A%E8%AE%8A%E6%95%B8/variable-declaration.png' />
+<meta name="twitter:title" content="Let's GO 哥布林 - 宣告變數">
+<meta name="twitter:description" content="認識宣告 Go 變數的方式、海象運算符短宣告、const 常數"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/lets-go-%E5%93%A5%E5%B8%83%E6%9E%97-%E5%AE%A3%E5%91%8A%E8%AE%8A%E6%95%B8/variable-declaration.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -224,8 +224,8 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#ascii">ASCII</a></li>
-    <li><a href="#unicode--utf-8">Unicode &amp; UTF-8</a></li>
+    <li><a href="#海象運算符短宣告">海象運算符短宣告</a></li>
+    <li><a href="#constants">Constants</a></li>
   </ol>
 </nav>
         </div>
@@ -240,13 +240,13 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E4%BB%80%E9%BA%BC%E6%98%AF-unicode-%E5%92%8C-utf-8/">
-                <img src="/p/%E4%BB%80%E9%BA%BC%E6%98%AF-unicode-%E5%92%8C-utf-8/unicode_hu7935784510199973845.png"
-                        srcset="/p/%E4%BB%80%E9%BA%BC%E6%98%AF-unicode-%E5%92%8C-utf-8/unicode_hu7935784510199973845.png 800w, /p/%E4%BB%80%E9%BA%BC%E6%98%AF-unicode-%E5%92%8C-utf-8/unicode_hu13563459621413478477.png 1600w"
+            <a href="/p/lets-go-%E5%93%A5%E5%B8%83%E6%9E%97-%E5%AE%A3%E5%91%8A%E8%AE%8A%E6%95%B8/">
+                <img src="/p/lets-go-%E5%93%A5%E5%B8%83%E6%9E%97-%E5%AE%A3%E5%91%8A%E8%AE%8A%E6%95%B8/variable-declaration_hu14147499791506965712.png"
+                        srcset="/p/lets-go-%E5%93%A5%E5%B8%83%E6%9E%97-%E5%AE%A3%E5%91%8A%E8%AE%8A%E6%95%B8/variable-declaration_hu14147499791506965712.png 800w, /p/lets-go-%E5%93%A5%E5%B8%83%E6%9E%97-%E5%AE%A3%E5%91%8A%E8%AE%8A%E6%95%B8/variable-declaration_hu7735819403870617452.png 1600w"
                         width="800" 
                         height="533" 
                         loading="lazy"
-                        alt="Featured image of post 什麼是 Unicode 和 UTF 8" />
+                        alt="Featured image of post Let&#39;s GO 哥布林 - 宣告變數" />
                 
             </a>
         </div>
@@ -265,12 +265,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E4%BB%80%E9%BA%BC%E6%98%AF-unicode-%E5%92%8C-utf-8/">什麼是 Unicode 和 UTF 8</a>
+            <a href="/p/lets-go-%E5%93%A5%E5%B8%83%E6%9E%97-%E5%AE%A3%E5%91%8A%E8%AE%8A%E6%95%B8/">Let&#39;s GO 哥布林 - 宣告變數</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            認識 ASCII、Unicode 和 UTF-8 的字元編碼演變，了解文件或試算表出現亂碼的原因。
+            認識宣告 Go 變數的方式、海象運算符短宣告、const 常數
         </h3>
         
     </div>
@@ -291,7 +291,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 25, 2025</time>
+                <time class="article-time--published">Apr 26, 2025</time>
             </div>
         
 
@@ -307,90 +307,97 @@
     <section class="article-content">
     
     
-    <p>前陣子幫同事處理文件出現亂碼的問題，因緣際會看到 Huli 大大寫的文章《<a class="link" href="https://life.huli.tw/2022/05/21/what-is-encoding-ascii-unicode-utf8-5fe55a98bee0/"  target="_blank" rel="noopener"
-    >為什麼打開檔案時會看到亂碼？跟著小明一起從傳紙條學習編碼</a>》，對我這種技術麻瓜來說幫助很大，因此想結合查到的其他字元編碼相關資料，整理成文章。</p>
-<p>先說結論：</p>
+    <p>一般變數需要透過關鍵字 <code>var</code> 進行宣告，後面接上變數名稱，最後別忘了加上變數的型別。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">mySkillIssues</span> <span class="kt">int</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mySkillIssues</span> <span class="p">=</span> <span class="mi">42</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><br>
+當然我們也可以一行解決變數宣告和賦值。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">mySkillIssues</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">42</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="海象運算符短宣告">海象運算符短宣告
+</h2><p>如果是在函式作用域裡面，建議改用<strong>海象運算符</strong>來宣告並賦值函式。海象運算符長這樣：<code>:=</code>。對，我沒有開玩笑，所以才叫 <strong>warlus operator</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">mySkillIssues</span> <span class="o">:=</span> <span class="mi">42</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><br>
+除了宣告和賦值一行處理之外，Go 還會進行<a class="link" href="https://zh.wikipedia.org/wiki/%E7%B1%BB%E5%9E%8B%E6%8E%A8%E8%AE%BA"  target="_blank" rel="noopener"
+    ><strong>型別推論 (Type Inference)</strong></a>，所以省去了手動定義型別的麻煩。注意上述程式碼並未提示 <code>mySkillIssues</code> 為 <code>int</code> 型別。</p>
 <blockquote>
-<p>亂碼就是在儲存跟顯示時使用了不同的編碼系統，可能導致的狀況，只要改用同一個編碼系統即可解決這個問題。</p>
+<p><strong>海象運算符僅限函式作用域使用</strong>，所以函式之外，只能用 <code>var</code> 或是 <code>const</code> 宣告變數。</p>
 </blockquote>
-<p>首先我們要知道電腦採取 <code>二進位系統</code> 來儲存資訊。也就是說所有資料都用一連串的 0 和 1 呈現。</p>
+<p>Go 和 Python 一樣，可以在一行內宣告多個變數。由於 Go 會自動推論型別，所以一次宣告多個不同型別的變數完全沒問題。我們只需要注意變數和值的對應順序即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span> <span class="o">:=</span> <span class="s">&#34;goblin&#34;</span><span class="p">,</span> <span class="mi">28</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="constants">Constants
+</h2><p><code>const</code> 變數被宣告後，其值就無法更改。要注意 <code>const</code> 的限制如下：</p>
 <ul>
 <li>
-<p>二進位系統中最基本的單位是 <code>位元 (bit)</code>，等於單一個 0 或 1</p>
+<p>無法透過海象運算符進行短宣告。</p>
 </li>
 <li>
-<p>下一級更大的單位是 <code>位元組 (byte)</code>，等於 8 個位元，例如：01101011</p>
+<p>只能是原始型別 (整數、字串、布林值……)</p>
+</li>
+<li>
+<p>不能是複合型別 (slice、map、struct)</p>
 </li>
 </ul>
-<p>以一篇文章來說，內容由非常多 <code>字元</code> 組成，而每個字元在電腦眼中都是一連串的位元，也就是一堆 0 和 1。</p>
-<hr>
-<h2 id="ascii">ASCII
-</h2><p><code>ASCII</code> 是美國於 1960 年代推出的標準編碼系統。</p>
-<blockquote>
-<p>所謂編碼是指將人類文字轉換成電腦二進位的流程。</p>
-</blockquote>
-<p>ASCII 支援以下符號：</p>
-<ul>
-<li>
-<p>大寫拉丁字母</p>
-</li>
-<li>
-<p>小寫拉丁字母</p>
-</li>
-<li>
-<p>阿拉伯數字 0 ~ 9</p>
-</li>
-<li>
-<p>常用標點符號</p>
-</li>
-</ul>
-<p>ASCII 為每個符號指派一組獨一無二的 <a class="link" href="https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html"  target="_blank" rel="noopener"
-    >ASCII Code</a> (三位數代碼組成)，以及<strong>一個獨一無二的位元組</strong>。所以 ASCII 最多能儲存 2^8 = 256 個符號。</p>
-<p>想想世界上那麼多語言使用不同的文字系統，加上 emoji 和各種顏文字，區區 256 個符號的扣打鐵定不夠，因此我們需要更先進、字元儲存量更大的編碼系統。</p>
-<hr>
-<h2 id="unicode--utf-8">Unicode &amp; UTF-8
-</h2><p><code>Unicode</code> 使用<a class="link" href="https://deliciousbrains.com/how-unicode-works/"  target="_blank" rel="noopener"
-    >更複雜的機制</a>，解決了 ASCII 空間不足的問題。每個符號還是會被分配到一組獨一無二的代碼，被稱為 <code>code point</code>，以十六進位紀錄，大概長這樣：<code>U+1F4A9</code>。</p>
-<blockquote>
-<p><strong>但 Unicode 本身不會將符號儲存為二進位</strong>。也就是電腦看不懂。</p>
-</blockquote>
-<p>所以我們需要另一套編碼方法 <code>UTF-8</code> 將 Unicode 轉換為二進位。</p>
-<p><code>UTF-8</code> 會將 <code>code point</code> 轉換成 1 ~ 4 個位元組：</p>
-<ul>
-<li>
-<p>常見符號，例如 C，佔據 8 位元</p>
-</li>
-<li>
-<p>罕見符號，例如 💕，佔據 32 位元</p>
-</li>
-<li>
-<p>其他符號則占據 16 ~ 24 位元不等</p>
-</li>
-</ul>
-<p>這麼做的好處是能夠更彈性地節省空間。只需要一個位元組的符號，就讓它佔據一個位元組；需要三個位元組的符號，就佔據三個整。不多也不少，快樂沒煩惱。</p>
-<p>題外話，由於 Golang 字串預設上用 <code>UTF-8</code> 編碼，所以我們可透過遞回去取得字串中每個字元的 <code>code point</code> 以及 <code>byte index</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">const</span> <span class="nx">home</span> <span class="p">=</span> <span class="s">&#34;The Cave&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Go 必須在編譯階段就知道 <code>const</code> 變數，所以我們<strong>無法宣告在 run-time 才計算的</strong> <code>const</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// currentTime 為函式回傳值，所以要等到 run-time 才會知道是多少
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">const</span> <span class="nx">currentTime</span> <span class="p">=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>相對來說，如果是在編譯階段就運算完成，那就沒問題：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="k">for</span> <span class="nx">pos</span><span class="p">,</span> <span class="nx">char</span> <span class="o">:=</span> <span class="k">range</span> <span class="s">&#34;日本\x80語&#34;</span> <span class="p">{</span> <span class="c1">// \x80 is an illegal UTF-8 encoding
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;character %#U starts at byte position %d\n&#34;</span><span class="p">,</span> <span class="nx">char</span><span class="p">,</span> <span class="nx">pos</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// prints
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">character</span> <span class="nx">U</span><span class="o">+</span><span class="mf">65E5</span> <span class="sc">&#39;日&#39;</span> <span class="nx">starts</span> <span class="nx">at</span> <span class="kt">byte</span> <span class="nx">position</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl"><span class="nx">character</span> <span class="nx">U</span><span class="o">+</span><span class="mi">672</span><span class="nx">C</span> <span class="sc">&#39;本&#39;</span> <span class="nx">starts</span> <span class="nx">at</span> <span class="kt">byte</span> <span class="nx">position</span> <span class="mi">3</span>
-</span></span><span class="line"><span class="cl"><span class="nx">character</span> <span class="nx">U</span><span class="o">+</span><span class="nx">FFFD</span> <span class="sc">&#39;�&#39;</span> <span class="nx">starts</span> <span class="nx">at</span> <span class="kt">byte</span> <span class="nx">position</span> <span class="mi">6</span>
-</span></span><span class="line"><span class="cl"><span class="nx">character</span> <span class="nx">U</span><span class="o">+</span><span class="mi">8</span><span class="nx">A9E</span> <span class="sc">&#39;語&#39;</span> <span class="nx">starts</span> <span class="nx">at</span> <span class="kt">byte</span> <span class="nx">position</span> <span class="mi">7</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">const</span> <span class="nx">firstName</span> <span class="p">=</span> <span class="s">&#34;Xavier&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">const</span> <span class="nx">title</span> <span class="p">=</span> <span class="s">&#34;The Goblin&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">const</span> <span class="nx">fullName</span> <span class="p">=</span> <span class="nx">firstName</span> <span class="o">+</span> <span class="s">&#34; &#34;</span> <span class="o">+</span> <span class="nx">title</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
@@ -401,7 +408,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/">電腦科學</a>
+            <a href="/tags/golang/">Golang</a>
         
     </section>
 
@@ -460,6 +467,30 @@
         <div class="flex article-list--tile">
             
                 
+<article class="has-image">
+    <a href="/p/%E4%BB%80%E9%BA%BC%E6%98%AF-unicode-%E5%92%8C-utf-8/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E4%BB%80%E9%BA%BC%E6%98%AF-unicode-%E5%92%8C-utf-8/unicode.6fc4272af74985513734bb45e1b3b386.6fc4272af74985513734bb45e1b3b386_hu14911376294059863298.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 什麼是 Unicode 和 UTF 8"
+                        
+                        data-hash="md5-b8QnKvdJhVE3NLtF4bOzhg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">什麼是 Unicode 和 UTF 8</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
 <article class="">
     <a href="/p/%E5%93%A5%E5%B8%83%E6%9E%97%E5%AD%B8-python-%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91-oop/">
         
@@ -467,30 +498,6 @@
 
         <div class="article-details">
             <h2 class="article-title">哥布林學 Python 物件導向 (OOP)</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/variable-declaration/">
-        
-        
-            <div class="article-image">
-                <img src="/p/variable-declaration/variable-declaration.eef5e249f23e5a511c96e3f4b11a5a15_hu12799691670209135848.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Variable Declaration"
-                        
-                        data-hash="md5-7vXiSfI&#43;WlEcluP0sRpaFQ==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Variable Declaration</h2>
         </div>
     </a>
 </article>
