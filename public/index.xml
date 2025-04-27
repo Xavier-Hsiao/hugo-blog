@@ -6,7 +6,7 @@
         <description>Recent content on 哥布林 . 一起 . 強大</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Sun, 27 Apr 2025 16:35:48 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 27 Apr 2025 20:41:20 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>為何架設部落格</title>
         <link>http://localhost:1313/p/%E7%82%BA%E4%BD%95%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC/</link>
         <pubDate>Tue, 22 Apr 2025 14:56:38 +0800</pubDate>
@@ -45,6 +45,53 @@
 &gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;我愛 Golang，所以此站選擇 Hugo 靜態網站產生器所建立。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>給予、請求幫忙</title>
+        <link>http://localhost:1313/p/%E7%B5%A6%E4%BA%88%E8%AB%8B%E6%B1%82%E5%B9%AB%E5%BF%99/</link>
+        <pubDate>Sun, 27 Apr 2025 20:41:20 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/%E7%B5%A6%E4%BA%88%E8%AB%8B%E6%B1%82%E5%B9%AB%E5%BF%99/</guid>
+        <description>&lt;p&gt;&lt;code&gt;ให้&lt;/code&gt; 可說是泰語中最常出現的用語，頻繁程度和 &lt;code&gt;ได้&lt;/code&gt; 有過之而無不及。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ให้&lt;/code&gt; 本身有給予的意思，但由於它在句子中出現的位置比較彈性，所以要能靈活運用也不容易 💦&lt;/p&gt;
+&lt;h2 id=&#34;為了某人做某事&#34;&gt;為了某人做某事
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;主詞 + 動詞 + ให้ + 對象&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第一種語境是把 &lt;code&gt;ให้&lt;/code&gt; 當作「為了&amp;hellip;某人」的介系詞，習慣放在動詞後面。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;คุณสมชายทำการบ้าน &lt;code&gt;ให้&lt;/code&gt; ผม 宋柴老師為了我寫作業&lt;/li&gt;
+&lt;li&gt;เขาซ่อมไอพ็อด &lt;code&gt;ให้&lt;/code&gt; ผม 他為我修理 iPhone&lt;/li&gt;
+&lt;li&gt;เขาว่าดรูป &lt;code&gt;ให้&lt;/code&gt; ผม 他為了我畫畫&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;給予東西給別人&#34;&gt;給予東西給別人
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;ให้ + 物品 + 對象&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第二種語境是直接把 &lt;code&gt;ให้&lt;/code&gt; 當成給予動詞，後面接上物品以及對象。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ผม &lt;code&gt;ให้&lt;/code&gt; เงินพ่อแม่ของผม 我給爸媽錢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;請求別人幫忙&#34;&gt;請求別人幫忙
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;ช่วย/กรุณา + 動詞 + ให้หน่อย&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第三種語境是請求他人協助，習慣是在句首使用 &lt;code&gt;ช่วย&lt;/code&gt; 或是 &lt;code&gt;กรุณา&lt;/code&gt; (更有禮貌)，然後於句尾加上 &lt;code&gt;ให้หน่อย&lt;/code&gt;。其中 &lt;code&gt;น่อย&lt;/code&gt; 是為了讓語氣聽起來更加謙卑，有點像中文「幫我一下」的「一下」。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ช่วยทำกับข้าวให้หน่อย 幫我煮一下飯&lt;/li&gt;
+&lt;li&gt;กรุณาทำกับข้าวให้หน่อย 請幫我煮一下飯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;請別人做某事&#34;&gt;請別人做某事
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;主詞 + ให้ + 對象 + 動詞&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這邊是我當初誤會最深的地雷區 💣&lt;/p&gt;
+&lt;p&gt;前面說過 &lt;strong&gt;動詞 + ให้ + 對象&lt;/strong&gt; 是為了某人做某事，但如果將 &lt;code&gt;ให้ + 對象&lt;/code&gt; 移動到動詞前面的話，語意瞬間就會變成請別人做某事！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ผมให้เขาซ่อมไอพ็อด 我請他修理 iPod&lt;/li&gt;
+&lt;li&gt;ผมให้เขาว่าดรูป 我請他畫畫&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
