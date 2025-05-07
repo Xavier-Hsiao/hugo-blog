@@ -9,7 +9,6 @@ categories:
 tags:
   - 隨筆
 image: "goblin-revolution.png"
-pinned: true
 ---
 
 2025 年，洞穴外世界末日論述氾濫。
