@@ -6,7 +6,7 @@
         <description>Recent content on 哥布林 . 一起 . 強大</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Sat, 10 May 2025 21:03:57 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 11 May 2025 21:50:46 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>為何架設部落格</title>
         <link>http://localhost:1313/p/%E7%82%BA%E4%BD%95%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC/</link>
         <pubDate>Tue, 22 Apr 2025 14:56:38 +0800</pubDate>
@@ -45,6 +45,94 @@
 &gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;我愛 Golang，所以此站選擇 Hugo 靜態網站產生器所建立。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>《原子習慣》讀後心得 1 - 培養好習慣前你該建立的觀念</title>
+        <link>http://localhost:1313/p/%E5%8E%9F%E5%AD%90%E7%BF%92%E6%85%A3%E8%AE%80%E5%BE%8C%E5%BF%83%E5%BE%97-1-%E5%9F%B9%E9%A4%8A%E5%A5%BD%E7%BF%92%E6%85%A3%E5%89%8D%E4%BD%A0%E8%A9%B2%E5%BB%BA%E7%AB%8B%E7%9A%84%E8%A7%80%E5%BF%B5/</link>
+        <pubDate>Sun, 11 May 2025 21:50:46 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/%E5%8E%9F%E5%AD%90%E7%BF%92%E6%85%A3%E8%AE%80%E5%BE%8C%E5%BF%83%E5%BE%97-1-%E5%9F%B9%E9%A4%8A%E5%A5%BD%E7%BF%92%E6%85%A3%E5%89%8D%E4%BD%A0%E8%A9%B2%E5%BB%BA%E7%AB%8B%E7%9A%84%E8%A7%80%E5%BF%B5/</guid>
+        <description>&lt;img src="http://localhost:1313/p/%E5%8E%9F%E5%AD%90%E7%BF%92%E6%85%A3%E8%AE%80%E5%BE%8C%E5%BF%83%E5%BE%97-1-%E5%9F%B9%E9%A4%8A%E5%A5%BD%E7%BF%92%E6%85%A3%E5%89%8D%E4%BD%A0%E8%A9%B2%E5%BB%BA%E7%AB%8B%E7%9A%84%E8%A7%80%E5%BF%B5/nubelson-fernandes-rfoH17_F7F8-unsplash.jpg" alt="Featured image of post 《原子習慣》讀後心得 1 - 培養好習慣前你該建立的觀念" /&gt;&lt;p&gt;《&lt;a class=&#34;link&#34; href=&#34;https://moo.im/a/agovHX&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;原子習慣&lt;/a&gt;》是習慣養成書籍的經典，也是至今仍歷久不衰的神作。我其實大約兩年前就讀完這本書，也實際在生活中運用 &lt;a class=&#34;link&#34; href=&#34;https://jamesclear.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;James Clear&lt;/a&gt; 所推崇的 &lt;code&gt;習慣法則&lt;/code&gt;，事實也證明確實有效。&lt;/p&gt;
+&lt;p&gt;今年由於訂下了定期產出讀書心得的計畫，所以重新整理了《原子習慣》的筆記，希望對未來的自己或正要開始入坑的哥布林或人類有幫助。我會盡量在文章中加入各個習慣法則的運用實例。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;為什麼要叫原子習慣&#34;&gt;為什麼要叫原子習慣？
+&lt;/h2&gt;&lt;p&gt;以前物理課有教過，原子是組成物體的基本單位。而 James Clear 會以原子來形容習慣，是因為他相信日常習慣造就了我們是否成功。與其寄望千載難逢的轉變，&lt;strong&gt;能夠持續運作的系統才值得我們信賴&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原子習慣就是構成大系統的小習慣。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原子習慣乍看之下渺小，但持續累積下去會產生可觀的複利效應，就和成功投資一樣。久而久之，時間會將你餵養的習慣加乘，最終放大成功系統和失敗系統之間的差距。好習慣讓時間成為盟友，壞習慣則讓時間與我們為敵。&lt;/p&gt;
+&lt;p&gt;聽起來滿厲害的……但我是想養成好習慣才買這本書，怎麼突然開始談起系統了？&lt;/p&gt;
+&lt;p&gt;別急，我起初也有這樣的疑惑，但後來才發現&lt;strong&gt;系統思維奠基了書中所有習慣法則&lt;/strong&gt;。現在若問我《原子習慣》最核心的概念是什麼？我會毫不猶豫地回答：建立系統、相信過程。&lt;/p&gt;
+&lt;p&gt;傳統上提到自我提升，我們下意識都會馬上制定目標。我想要脫魯！我想要八塊腹肌！我想要變成有錢人！然而夢想很豐滿、現實卻無比骨感，每當我們懷著滿腔熱血準備大幹一場，生活總無情地朝我們仍來一把又一把的鹽巴，然後我們傷痕累累又垂頭喪氣，拖著狼狽的身軀回到洞穴直到下波衝勁降臨。&lt;/p&gt;
+&lt;p&gt;這便是為什麼作者在進入習慣法則之前，花篇幅建議大家進行思維轉換：放下傳統的目標導向，要想成建立良好系統。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;培養好習慣要從系統面著手&#34;&gt;培養好習慣要從系統面著手
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;真正長遠的思考，是不顧目標的思考。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以目標導向錯在哪裡？&lt;/p&gt;
+&lt;p&gt;沒有錯，目標導向真的沒有錯，目標給了我們短期成功的方向，並激發我們贏得比賽的渴望。&lt;/p&gt;
+&lt;p&gt;但我們的人生可不是一場比賽就能作結的，倘若如此，贏得短期比賽之後，我們又該如何？&lt;/p&gt;
+&lt;p&gt;從長遠的人生的跨度看來，重點或許不在於任何單一成就，而在於&lt;strong&gt;不斷精煉與持續改善的循環&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;設定目標是為了贏得比賽，而建立系統則是為了持續待在比賽中。有趣的是，作者發現只要我們建構出良好的系統和 input，那麼所謂的 output (成果) 便自然而來。&lt;/p&gt;
+&lt;p&gt;太過聚焦於目標其實也容易造成問題，作者就提出了兩個，兩個我都非常認同：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;許多人達成目標後，短暫的獎勵於激情後消退，他們因此停止繼續精進，甚至重拾舊習。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目標設定受嚴重的 &lt;code&gt;倖存者偏差&lt;/code&gt; 影響。由於我們都只關注勝者，也就是倖存者，誤會他們是因為設定了雄心勃勃的目標才成功，卻沒有看見更多人設定了相同目標卻以失敗收場。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上述兩種沒那麼理想的情境，若改從系統面著手，風景將全然不同：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;運作良好的系統，本身即能帶來滿足以及內在動機。當我們愛上過程，就不必獲得外在條件許可才能快樂。只要系統持續運作，就能獲得滿足。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;人生無常，存在許多我們無法掌控的意外，若因此而無法達成當初的目標就容易氣餒。但相對來說，系統只是底層運作的機制，所以能夠以各種形式成功，不會侷限於我們起初所認定的那一個。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;無論我們當前的處境或天生資質如何，只要用對方式就有機會建立良好的系統。我覺得這也是原子習慣很能觸動人心的地方。作者不斷傳輸這個觀念：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重點不是你現在多成功或失敗，而是你的習慣是否把你放在通往成功的道路上。比起當前擁有的成果，你應該更關注身處的軌道。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;原子習慣要符合身份認同&#34;&gt;原子習慣要符合身份認同
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;建立習慣的過程，其實就是成為自己的過程。&lt;strong&gt;你採取的每個行動都像一張選票，投給你想要成為的那一種人&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以上大概是《&lt;a class=&#34;link&#34; href=&#34;https://moo.im/a/agovHX&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;原子習慣&lt;/a&gt;》最知名的引言了。作者認為我們在決定要培養什麼好習慣時，應該要以性格、身份認同為取向，而不是盲從時下最流行的習慣。因為我們越是以身份認同中的某個特定面向自豪，就越有動力去維持與之相關的習慣，而不會陷入被迫、交差了事的習慣。&lt;/p&gt;
+&lt;p&gt;這邊有個建議是用「我是……的人」來取代「我該做……的事情」：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;我是注重體態和身體健康的人，所以我習慣上健身房運動。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我是個喜歡說故事的人，所以我習慣寫文章。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我是個喜歡吸收新知識的人，所以我習慣閱讀。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可能想問，那如果好習慣不符合身份認同的話呢？&lt;/p&gt;
+&lt;p&gt;結果很簡單：你大概會憑藉意志力強迫自己執行一小段時間，然後就將該習慣棄之閣樓了。&lt;/p&gt;
+&lt;p&gt;舉例來說，我們都知道吃速食和垃圾食物對身體不好，但若我認定自己是壓力大時就大吃特吃的人，那麼均衡飲食的好習慣就與自我認同矛盾。&lt;/p&gt;
+&lt;p&gt;所以在選擇或選定了好習慣之後，都需要把「我是……的人」當作箴言，它會陪伴我們度過習慣養成的高峰和低谷，提醒我們每次實踐好習慣都是在成為更好的自己。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;後記&#34;&gt;後記
+&lt;/h2&gt;&lt;p&gt;原先我計畫將讀後心得寫成一篇文章就好，但由於這本書實在乾貨滿滿，光是培養習慣前的基本觀念就已經快兩千字了，所以還是拆分成兩篇文章好了 💦&lt;/p&gt;
+&lt;p&gt;下篇文章我會介紹 James Clear 從 &lt;code&gt;習慣迴圈&lt;/code&gt; 延伸出來的 &lt;code&gt;習慣四大法則&lt;/code&gt;，以及每個法則在實踐時能派上用場的小工具。每個法則我也會分享自身的應用經驗。&lt;/p&gt;
+&lt;p&gt;=========&lt;/p&gt;
+&lt;p&gt;感謝你閱讀這篇文章。&lt;/p&gt;
+&lt;p&gt;如果你對這本書有興趣，歡迎透過&lt;a class=&#34;link&#34; href=&#34;https://moo.im/a/agovHX&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;以下連結&lt;/a&gt;購買 Readmoo 電子書，我會收到微薄的回饋金。&lt;/p&gt;
+&lt;p&gt;回饋金除了供養貓咪之外，也會變成更多書籍，讓我產出更多文章。&lt;/p&gt;
+&lt;p&gt;=========&lt;/p&gt;
 </description>
         </item>
         <item>
