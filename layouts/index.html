@@ -19,30 +19,32 @@
         <hr class="section-divider">
     {{ end }}
 
-    {{ range $catName := $categoryOrder }}
-        {{ $catPages := index $allCategories $catName }}
-        {{ if $catPages }}
-            {{ $catPages = where $catPages "Type" "in" $mainSections }}
-            {{ $catPages = where $catPages "Params.hidden" "!=" true }}
-            {{ $catPages = sort $catPages "Date" "desc" }}
-            {{ if gt (len $catPages) 0 }}
-                <section class="article-list">
-                    <h2 class="section-title">{{ $catName | title }}</h2>
-                    {{ range first 3 $catPages }}
-                        {{ partial "article-list/default" . }}
-                    {{ end }}
-                    <div class="section-footer">
-                        <a class="btn" href="{{ "/categories/" | relURL }}{{ $catName | urlize }}">
-                            查看所有 <b>{{ $catName | title }}</b> 的文章 →
-                        </a>
-                    </div>
-                </section>
-                <hr class="section-divider">
-            {{ end }}
-        {{ end }}
-    {{ end }}
+    {{ $catName := "讀書心得" }}
+{{ $catPages := index .Site.Taxonomies.categories $catName }}
 
-    {{- partial "pagination.html" . -}}
+{{ if $catPages }}
+    {{ $catPages = where $catPages "Type" "in" .Site.Params.mainSections }}
+    {{ $catPages = where $catPages "Params.hidden" "!=" true }}
+    {{ $catPages = sort $catPages "Date" "desc" }}
+
+    {{ if gt (len $catPages) 0 }}
+        <section class="article-list">
+            <h2 class="section-title">{{ $catName | title }}</h2>
+            {{ range first 5 $catPages }}
+                {{ partial "article-list/default" . }}
+            {{ end }}
+            <div class="section-footer">
+                <a class="btn" href="{{ "/categories/" | relURL }}{{ $catName | urlize }}">
+                    查看所有 <b>{{ $catName | title }}</b> 的文章 →
+                </a>
+            </div>
+        </section>
+        <hr class="section-divider"> 
+    {{ end }}
+{{ end }}
+
+
+    <!-- {{- partial "pagination.html" . -}} -->
     {{- partial "footer/footer" . -}}
 {{ end }}
 
